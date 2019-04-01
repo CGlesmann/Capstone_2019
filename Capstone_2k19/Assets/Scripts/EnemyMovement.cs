@@ -19,6 +19,7 @@ public class EnemyMovement : MonoBehaviour
     private MoveController controller = null;
     private NavMeshAgent agent = null;
 
+    private PatrolPoint currentPPoint = null;
     private int pointIndex = 0;
     private float pauseTimer = 0f;
 
@@ -48,6 +49,17 @@ public class EnemyMovement : MonoBehaviour
                 // Timer is spent, change direction
                 ChangeCurrentPoint();
             }
+        } else {
+            // Check if agent is within acceptanceRange of the point
+            if (Vector3.Distance(transform.position, currentPPoint.wayPoint.transform.position) <= acceptanceRange)
+            {
+                // Stopping the Agent
+                agent.isStopped = true;
+
+                // Setting the Pause Timer (if Needed)
+                if (currentPPoint.pauseHere)
+                    pauseTimer = currentPPoint.pauseLength;
+            }
         }
     }
 
@@ -56,7 +68,13 @@ public class EnemyMovement : MonoBehaviour
     /// </summary>
     private void ChangeCurrentPoint()
     {
+        // Getting the Next Point
+        if (++pointIndex > wayPoints.Length - 1)
+            pointIndex = 0;
 
+        // Setting the Point and Starting the Agent
+        currentPPoint = wayPoints[pointIndex];
+        agent.SetDestination(currentPPoint.wayPoint.transform.position);
     }
 }
 
