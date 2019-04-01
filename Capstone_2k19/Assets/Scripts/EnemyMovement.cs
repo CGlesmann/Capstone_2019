@@ -4,40 +4,80 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMovement : MonoBehaviour
 {
-    [Header("Boss Movement Variables")]
+    [Header("Enemy Movement Variables")]
+    [SerializeField] private PatrolPoint[] wayPoints = null;
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float acceptanceRange = 1f;
 
     private MoveController controller = null;
-    private Vector3 motion = Vector3.zero;
+    private NavMeshAgent agent = null;
 
+    private int pointIndex = 0;
+    private float pauseTimer = 0f;
+
+    /// <summary>
+    /// Grabs Private References
+    /// </summary>
     private void Awake()
     {
         // Getting Reference to the MoveController
         controller = GetComponent<MoveController>();
-    }
-
-    private void Update()
-    {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        // Performing movement if Boss is in motion
-        if (motion != Vector3.zero)
-            controller.PerformMove(motion * moveSpeed * Time.deltaTime);
+        agent = GetComponent<NavMeshAgent>();
     }
 
     /// <summary>
-    /// Gets a new Wander Direction for the boss when in "Patrol" Mode
+    /// Checks for Point Change
     /// </summary>
-    /// <returns></returns>
-    private Vector3 GetNewDirection()
+    private void Update()
     {
-        return Vector3.zero;
+        // Check for movement
+        if (agent.velocity == Vector3.zero)
+        {
+            // Decrement the pauseTimer
+            if (pauseTimer > 0f)
+                pauseTimer -= Time.deltaTime;
+            else
+            {
+                // Timer is spent, change direction
+                ChangeCurrentPoint();
+            }
+        }
     }
 
+    /// <summary>
+    /// Gets the Next point and sets the agent to it.
+    /// </summary>
+    private void ChangeCurrentPoint()
+    {
+
+    }
+}
+
+[System.Serializable]
+public class PatrolPoint
+{
+    // Variable Declarations
+    public GameObject wayPoint;
+    public bool pauseHere;
+    public float pauseLength;
+
+    /// <summary>
+    /// Sets PatrolPoint variables
+    /// </summary>
+    /// <param name="point"></param>
+    /// <param name="pause"></param>
+    /// <param name="length"></param>
+    public PatrolPoint(GameObject point, bool pause, float length)
+    {
+        wayPoint = point;
+        pauseHere = pause;
+        pauseLength = length;
+    }
 }
