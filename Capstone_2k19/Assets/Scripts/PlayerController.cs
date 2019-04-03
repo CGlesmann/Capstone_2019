@@ -8,17 +8,25 @@ public class PlayerController : MonoBehaviour
     private float SetTime = 600f;
     private float Timer = 0f;
     private bool MouseClick = false;
-
-    void Update()
+    public Transform prefab;
+    void FixedUpdate()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             MouseClick = true;
         }
 
         if (Input.GetButtonUp("Fire1"))
         {
-
+            if(Timer >= 60)
+            {
+                Instantiate(prefab, transform.position + (transform.forward), transform.rotation);
+            }
+            else
+            {
+                Instantiate(prefab, transform.position + (transform.forward), transform.rotation);
+            }
+            
             Debug.Log(Timer);
             MouseClick = false;
             Timer = 0;
