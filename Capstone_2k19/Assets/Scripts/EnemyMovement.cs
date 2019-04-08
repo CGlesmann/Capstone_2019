@@ -31,11 +31,15 @@ public class EnemyMovement : MonoBehaviour
     private float pauseTimer = 0f;
 
     [Header("Enemy Chase Variables")]
-    [SerializeField] private string playerTag = "";
+    [SerializeField] private LayerMask playerLayer = new LayerMask();
+    [SerializeField] private Vector3 sightOffset = Vector3.zero;
+    [SerializeField] private Vector3 sightRange = Vector3.zero;
     [SerializeField] private float chaseSpeed = 7.5f;
+    [SerializeField] private float attackRange = 5f;
 
-    private bool playerSpotted = false;
-    private bool enemyCalled = false;
+    private Transform player = null;
+    private float updateCooldown = 1f;
+    private float updateTimer = 0f;
 
     /// <summary>
     /// Grabs Private References
@@ -47,7 +51,8 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         // Setting the Initial Path
-        ChangeCurrentPoint();
+        if (state == EnemyAIState.Patrolling)
+            ChangeCurrentPoint();
     }
 
     /// <summary>
@@ -55,26 +60,50 @@ public class EnemyMovement : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        Debug.Log("Destination: " + agent.destination.ToString());
+
         // Patrol AI / Patrol -> Chasing Transition
         if (state == EnemyAIState.Patrolling) {
-            // AI
+            // Patrolling AI
             ExecutePatrolAI();
             
             // Checking for Patrol -> Chasing Transition
-            if (playerSpotted || enemyCalled)
+            if (PlayerSpotted())
             {
+                // Resetting the NavMesh
+                agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z); ;
+                agent.speed = chaseSpeed;
+                updateTimer = updateCooldown;
+
+                // Setting State
                 state = EnemyAIState.Chasing;
                 return;
             }
         }
+
+        // Chasing AI / Chase -> Attack Transition
+        if (state == EnemyAIState.Chasing)
+        {
+            // Chasing AI
+            ExecuteChaseAI();
+
+            // Checking for Chase -> Attack Transition
+        }
     }
 
-    #region Patrol AI Function
+    private Vector3 Mult(Vector3 left, Vector3 right)
+    {
+        return new Vector3(left.x * right.x, left.y * right.y, left.z * right.z);
+    }
+
+    #region Patrol AI Functions
     /// <summary>
     /// Executes the AI for enemy patrolling behavior
     /// </summary>
     private void ExecutePatrolAI()
     {
+        Debug.Log("Patrolling");
+
         // Setting Movement Speed
         agent.speed = patrolSpeed;
 
@@ -127,6 +156,36 @@ public class EnemyMovement : MonoBehaviour
         // Setting the path
         pathStarted = true;
         agent.isStopped = false;
+    }
+    #endregion
+
+    #region Chasing AI Functions
+    // Check Functions
+    private bool PlayerSpotted()
+    {
+        // Getting the Player Reference
+        Collider[] col = Physics.OverlapBox(transform.position + Mult(sightOffset, GetComponent<NavMeshAgent>().velocity.normalized), sightRange / 2f, Quaternion.Euler(transform.forward), playerLayer);
+        player = (col.Length > 0) ? col[0].transform : null;
+
+        if (player != null)
+            Debug.Log(player.ToString());
+
+        // Returning Result
+        return (player != null);
+    }
+
+    // AI Loop
+    private void ExecuteChaseAI()
+    {
+        Debug.Log("Chasing");
+        // Checking for path update
+        updateTimer -= Time.deltaTime;
+
+        if (updateTimer <= 0f)
+        {
+            agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
+            updateTimer = updateCooldown;
+        }
     }
     #endregion
 }
