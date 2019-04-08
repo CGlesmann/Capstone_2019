@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 13760833}
   - component: {fileID: 13760832}
   m_Layer: 0
-  m_Name: Bridge 01 (22)
+  m_Name: Bridge 040_Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ Transform:
   m_LocalScale: {x: 12.556963, y: 0.52274996, z: 47.811462}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 339.193, z: 0}
 --- !u!65 &13760832
 BoxCollider:
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 34772199}
   - component: {fileID: 34772198}
   m_Layer: 0
-  m_Name: Bridge 01 (10)
+  m_Name: Bridge 00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,7 +447,7 @@ Transform:
   m_LocalScale: {x: 7.4018526, y: 0.52274996, z: 21.053406}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 401.652, z: 0}
 --- !u!65 &34772198
 BoxCollider:
@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 77936202}
   - component: {fileID: 77936207}
   m_Layer: 0
-  m_Name: Bridge 01 (17)
+  m_Name: Bridge 037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,7 +1028,7 @@ Transform:
   m_LocalScale: {x: 12.556963, y: 0.52274996, z: 87.98259}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 20
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 491.87402, z: 0}
 --- !u!65 &77936202
 BoxCollider:
@@ -1759,7 +1759,7 @@ GameObject:
   - component: {fileID: 107214356}
   - component: {fileID: 107214355}
   m_Layer: 0
-  m_Name: Bridge 01 (23)
+  m_Name: Bridge 04_Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1777,7 +1777,7 @@ Transform:
   m_LocalScale: {x: 12.556963, y: 0.52274996, z: 21.640152}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 32
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 396.227, z: 0}
 --- !u!65 &107214355
 BoxCollider:
@@ -2651,7 +2651,7 @@ GameObject:
   - component: {fileID: 176042984}
   - component: {fileID: 176042983}
   m_Layer: 0
-  m_Name: Bridge 01 (12)
+  m_Name: Bridge 022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2669,7 +2669,7 @@ Transform:
   m_LocalScale: {x: 5.8561416, y: 0.52274996, z: 82.1939}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 252.702, z: 0}
 --- !u!65 &176042983
 BoxCollider:
@@ -3599,7 +3599,7 @@ GameObject:
   - component: {fileID: 241649431}
   - component: {fileID: 241649430}
   m_Layer: 0
-  m_Name: Bridge 01 (24)
+  m_Name: Bridge 012_Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3617,7 +3617,7 @@ Transform:
   m_LocalScale: {x: 9.790592, y: 0.52274996, z: 39.160667}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 33
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 242.70898, z: 0}
 --- !u!65 &241649430
 BoxCollider:
@@ -3718,7 +3718,7 @@ GameObject:
   - component: {fileID: 242236774}
   - component: {fileID: 242236773}
   m_Layer: 0
-  m_Name: Bridge Center Open (17)
+  m_Name: Bridge 033_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3734,9 +3734,10 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.9950454, z: -0, w: -0.09942124}
   m_LocalPosition: {x: 116.96884, y: 136.28, z: 35.05002}
   m_LocalScale: {x: 8.14646, y: 0.52274996, z: 20.81633}
-  m_Children: []
+  m_Children:
+  - {fileID: 1498734487}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 42
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 191.41199, z: 0}
 --- !u!65 &242236773
 BoxCollider:
@@ -5005,7 +5006,7 @@ GameObject:
   - component: {fileID: 353272256}
   - component: {fileID: 353272255}
   m_Layer: 0
-  m_Name: Bridge Center Open (3)
+  m_Name: Bridge 09_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5021,9 +5022,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.3140692, z: -0, w: 0.94940007}
   m_LocalPosition: {x: -97.8, y: 136.28, z: 16.5}
   m_LocalScale: {x: 8.146457, y: 0.52274996, z: 48.10635}
-  m_Children: []
+  m_Children:
+  - {fileID: 2080528570}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 683.391, z: 0}
 --- !u!65 &353272255
 BoxCollider:
@@ -5124,7 +5126,7 @@ GameObject:
   - component: {fileID: 362349116}
   - component: {fileID: 362349115}
   m_Layer: 0
-  m_Name: Bridge Center Open (9)
+  m_Name: Bridge 023_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5140,9 +5142,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.78794575, z: -0, w: -0.6157447}
   m_LocalPosition: {x: 212.76, y: 136.28, z: -87.6}
   m_LocalScale: {x: 8.14646, y: 0.52274996, z: 38.36899}
-  m_Children: []
+  m_Children:
+  - {fileID: 902443986}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 463.988, z: 0}
 --- !u!65 &362349115
 BoxCollider:
@@ -5793,7 +5796,7 @@ GameObject:
   - component: {fileID: 436991779}
   - component: {fileID: 436991778}
   m_Layer: 0
-  m_Name: Bridge Center Open (1)
+  m_Name: Bridge 016_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5809,9 +5812,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.9203, z: -0, w: -0.39121354}
   m_LocalPosition: {x: 5.63, y: 136.28, z: -82.56}
   m_LocalScale: {x: 10.132794, y: 0.52274996, z: 64.758095}
-  m_Children: []
+  m_Children:
+  - {fileID: 2021761156}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 6
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 493.94, z: 0}
 --- !u!65 &436991778
 BoxCollider:
@@ -5824,8 +5828,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.24386603, y: 7.4890356, z: 0.8079311}
-  m_Center: {x: -0.578405, y: 3.2444074, z: 0.09877319}
+  m_Size: {x: 0.24386607, y: 7.489034, z: 0.7678687}
+  m_Center: {x: -0.57840383, y: 3.2444072, z: 0.11880475}
 --- !u!65 &436991779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5837,8 +5841,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2258813, y: 7.4890356, z: 0.8068852}
-  m_Center: {x: 0.5197732, y: 3.2444074, z: 0.09929354}
+  m_Size: {x: 0.22588123, y: 7.489034, z: 0.77278036}
+  m_Center: {x: 0.519775, y: 3.2444072, z: 0.11634596}
 --- !u!65 &436991780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5850,8 +5854,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22588408, y: 7.4890356, z: 0.14774366}
-  m_Center: {x: 0.5198292, y: 3.2444074, z: -0.42612955}
+  m_Size: {x: 0.22588407, y: 7.489034, z: 0.17736949}
+  m_Center: {x: 0.5198222, y: 3.2444072, z: -0.4113173}
 --- !u!65 &436991781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5863,8 +5867,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.20745249, y: 7.4890356, z: 0.14948359}
-  m_Center: {x: -0.56259173, y: 3.2444713, z: -0.42526025}
+  m_Size: {x: 0.20745245, y: 7.489035, z: 0.18533827}
+  m_Center: {x: -0.56260234, y: 3.244471, z: -0.40733278}
 --- !u!65 &436991782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5938,7 +5942,7 @@ GameObject:
   - component: {fileID: 440782681}
   - component: {fileID: 440782680}
   m_Layer: 0
-  m_Name: Bridge 01 (20)
+  m_Name: Bridge 011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5956,7 +5960,7 @@ Transform:
   m_LocalScale: {x: 9.790592, y: 0.52274996, z: 82.90087}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 29
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 211.888, z: 0}
 --- !u!65 &440782680
 BoxCollider:
@@ -6379,7 +6383,7 @@ GameObject:
   - component: {fileID: 463876254}
   - component: {fileID: 463876253}
   m_Layer: 0
-  m_Name: Bridge Center Open (13)
+  m_Name: Bridge 028_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6395,9 +6399,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.96933246, z: -0, w: 0.2457532}
   m_LocalPosition: {x: 200.96, y: 136.28, z: 3.7658}
   m_LocalScale: {x: 8.14646, y: 0.52274996, z: 17.538376}
-  m_Children: []
+  m_Children:
+  - {fileID: 1330225773}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 26
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 568.453, z: 0}
 --- !u!65 &463876253
 BoxCollider:
@@ -6642,7 +6647,7 @@ GameObject:
   - component: {fileID: 481862124}
   - component: {fileID: 481862123}
   m_Layer: 0
-  m_Name: Bridge 01 (21)
+  m_Name: Bridge 021_Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6660,7 +6665,7 @@ Transform:
   m_LocalScale: {x: 7.936237, y: 0.52274996, z: 42.722694}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 30
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 353.063, z: 0}
 --- !u!65 &481862123
 BoxCollider:
@@ -7117,7 +7122,7 @@ GameObject:
   - component: {fileID: 536751605}
   - component: {fileID: 536751604}
   m_Layer: 0
-  m_Name: Bridge Center Open (4)
+  m_Name: Bridge 07_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7130,12 +7135,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536751602}
-  m_LocalRotation: {x: -0, y: -0.854384, z: -0, w: 0.51964206}
-  m_LocalPosition: {x: -43.4, y: 136.28, z: 30.8}
-  m_LocalScale: {x: 3.7026875, y: 0.52274996, z: 21.84148}
+  m_LocalRotation: {x: -0, y: -0.70636517, z: -0, w: 0.7078477}
+  m_LocalPosition: {x: -0.013957101, y: 0, z: -0.54084104}
+  m_LocalScale: {x: 0.07697004, y: 1, z: 2.2130342}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 11
+  m_Father: {fileID: 1647937629}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 602.61597, z: 0}
 --- !u!65 &536751604
 BoxCollider:
@@ -7249,7 +7254,7 @@ GameObject:
   - component: {fileID: 543326699}
   - component: {fileID: 543326698}
   m_Layer: 0
-  m_Name: Bridge 01 (28)
+  m_Name: Bridge 031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7267,7 +7272,7 @@ Transform:
   m_LocalScale: {x: 8.988582, y: 0.52274996, z: 50.203243}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 37
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 188.749, z: 0}
 --- !u!65 &543326698
 BoxCollider:
@@ -7934,49 +7939,40 @@ Transform:
   m_LocalPosition: {x: -378.33963, y: -21.1, z: -359.14542}
   m_LocalScale: {x: 1, y: 0.38942674, z: 1}
   m_Children:
-  - {fileID: 1568457300}
-  - {fileID: 2095641446}
-  - {fileID: 1348557381}
   - {fileID: 34772197}
+  - {fileID: 1348557381}
   - {fileID: 1211755839}
-  - {fileID: 2021761156}
-  - {fileID: 436991777}
-  - {fileID: 2080528570}
-  - {fileID: 353272254}
   - {fileID: 1105464884}
-  - {fileID: 1099357531}
-  - {fileID: 536751603}
-  - {fileID: 1647937629}
-  - {fileID: 956418657}
-  - {fileID: 1316225582}
-  - {fileID: 176042982}
-  - {fileID: 902443986}
-  - {fileID: 362349114}
-  - {fileID: 1336287332}
-  - {fileID: 1664879805}
-  - {fileID: 77936201}
-  - {fileID: 1250166065}
-  - {fileID: 752894703}
-  - {fileID: 696536339}
-  - {fileID: 1084545571}
-  - {fileID: 1330225773}
-  - {fileID: 463876252}
-  - {fileID: 883418732}
-  - {fileID: 1045482318}
-  - {fileID: 440782679}
-  - {fileID: 481862122}
-  - {fileID: 13760831}
   - {fileID: 107214354}
+  - {fileID: 1099357531}
+  - {fileID: 1647937629}
+  - {fileID: 353272254}
+  - {fileID: 440782679}
   - {fileID: 241649429}
-  - {fileID: 838862282}
-  - {fileID: 615248180}
   - {fileID: 2020884229}
+  - {fileID: 615248180}
+  - {fileID: 2095641446}
+  - {fileID: 436991777}
+  - {fileID: 1316225582}
+  - {fileID: 1568457300}
+  - {fileID: 481862122}
+  - {fileID: 176042982}
+  - {fileID: 362349114}
+  - {fileID: 1664879805}
+  - {fileID: 1336287332}
+  - {fileID: 1084545571}
+  - {fileID: 463876252}
+  - {fileID: 838862282}
   - {fileID: 543326697}
+  - {fileID: 1250166065}
+  - {fileID: 242236772}
+  - {fileID: 696536339}
+  - {fileID: 77936201}
+  - {fileID: 1045482318}
+  - {fileID: 13760831}
   - {fileID: 1296276827}
   - {fileID: 804906590}
   - {fileID: 752657752}
-  - {fileID: 1498734487}
-  - {fileID: 242236772}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8243,7 +8239,7 @@ GameObject:
   - component: {fileID: 615248181}
   - component: {fileID: 615248186}
   m_Layer: 0
-  m_Name: Bridge 01 (26)
+  m_Name: Bridge 014_Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8261,7 +8257,7 @@ Transform:
   m_LocalScale: {x: 8.988582, y: 0.52274996, z: 45.962288}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 35
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 288.798, z: 0}
 --- !u!65 &615248181
 BoxCollider:
@@ -9062,7 +9058,7 @@ GameObject:
   - component: {fileID: 696536341}
   - component: {fileID: 696536340}
   m_Layer: 0
-  m_Name: Bridge Center Open (11)
+  m_Name: Bridge 035_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9078,9 +9074,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.13116737, z: -0, w: -0.99136025}
   m_LocalPosition: {x: 96.27603, y: 136.28, z: 6.8360596}
   m_LocalScale: {x: 8.14646, y: 0.52274996, z: 20.81633}
-  m_Children: []
+  m_Children:
+  - {fileID: 752894703}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 23
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 375.074, z: 0}
 --- !u!65 &696536340
 BoxCollider:
@@ -9655,7 +9652,7 @@ GameObject:
   - component: {fileID: 752657754}
   - component: {fileID: 752657753}
   m_Layer: 0
-  m_Name: Bridge 01 (31)
+  m_Name: Bridge 043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9673,7 +9670,7 @@ Transform:
   m_LocalScale: {x: 8.988582, y: 0.52274996, z: 81.83087}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 40
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 113.427, z: 0}
 --- !u!65 &752657753
 BoxCollider:
@@ -9775,7 +9772,7 @@ GameObject:
   - component: {fileID: 752894705}
   - component: {fileID: 752894704}
   m_Layer: 0
-  m_Name: Bridge Center Open (10)
+  m_Name: Bridge 036_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9788,12 +9785,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752894702}
-  m_LocalRotation: {x: -0, y: 0.6126827, z: -0, w: -0.790329}
-  m_LocalPosition: {x: 93.51, y: 136.28, z: -4.27}
-  m_LocalScale: {x: 3.0033944, y: 0.52274996, z: 21.841457}
+  m_LocalRotation: {x: -0, y: -0.7110547, z: -0, w: 0.7031368}
+  m_LocalPosition: {x: 0.026697101, y: 0, z: -0.5497245}
+  m_LocalScale: {x: 0.1443088, y: 1, z: 2.680894}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 22
+  m_Father: {fileID: 696536339}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 284.43298, z: 0}
 --- !u!65 &752894704
 BoxCollider:
@@ -10442,7 +10439,7 @@ GameObject:
   - component: {fileID: 804906592}
   - component: {fileID: 804906591}
   m_Layer: 0
-  m_Name: Bridge 01 (30)
+  m_Name: Bridge 042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10460,7 +10457,7 @@ Transform:
   m_LocalScale: {x: 8.988582, y: 0.52274996, z: 50.53986}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 39
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 138.432, z: 0}
 --- !u!65 &804906591
 BoxCollider:
@@ -11081,7 +11078,7 @@ GameObject:
   - component: {fileID: 838862284}
   - component: {fileID: 838862283}
   m_Layer: 0
-  m_Name: Bridge 01 (25)
+  m_Name: Bridge 030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11099,7 +11096,7 @@ Transform:
   m_LocalScale: {x: 8.988582, y: 0.52274996, z: 81.845535}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 34
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 254.664, z: 0}
 --- !u!65 &838862283
 BoxCollider:
@@ -11528,7 +11525,7 @@ GameObject:
   - component: {fileID: 883418734}
   - component: {fileID: 883418733}
   m_Layer: 0
-  m_Name: Bridge Center Open (14)
+  m_Name: Bridge 039_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11541,13 +11538,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883418731}
-  m_LocalRotation: {x: -0, y: -0.9231479, z: -0, w: -0.38444504}
-  m_LocalPosition: {x: 42.399, y: 136.28, z: 94.591}
-  m_LocalScale: {x: 3.8441203, y: 0.52274996, z: 24.208673}
+  m_LocalRotation: {x: -0, y: -0.70119286, z: -0, w: 0.7129717}
+  m_LocalPosition: {x: 0.042962052, y: 0, z: -0.2772522}
+  m_LocalScale: {x: 0.10827141, y: 1, z: 2.3852963}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 494.781, z: 0}
+  m_Father: {fileID: 1045482318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 630.954, z: 0}
 --- !u!65 &883418733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12076,7 +12073,7 @@ GameObject:
   - component: {fileID: 902443988}
   - component: {fileID: 902443987}
   m_Layer: 0
-  m_Name: Bridge Center Open (8)
+  m_Name: Bridge 024_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12089,13 +12086,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902443985}
-  m_LocalRotation: {x: -0, y: -0.071542524, z: -0, w: -0.9974376}
-  m_LocalPosition: {x: 192.22, y: 136.28, z: -83.11}
-  m_LocalScale: {x: 5.536007, y: 0.52274996, z: 21.841457}
+  m_LocalRotation: {x: -0, y: -0.70838666, z: -0, w: 0.7058247}
+  m_LocalPosition: {x: 0.075148, y: 0, z: -0.54772}
+  m_LocalScale: {x: 0.14971742, y: 1, z: 2.8894546}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 368.205, z: 0}
+  m_Father: {fileID: 362349114}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 269.792, z: 0}
 --- !u!65 &902443987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12133,8 +12130,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22588372, y: 7.4890356, z: 0.3308062}
-  m_Center: {x: 0.5197803, y: 3.2444074, z: -0.3345995}
+  m_Size: {x: 0.22588374, y: 7.489034, z: 0.35501286}
+  m_Center: {x: 0.5204472, y: 3.2444072, z: -0.32249588}
 --- !u!65 &902443990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12884,7 +12881,7 @@ GameObject:
   - component: {fileID: 956418659}
   - component: {fileID: 956418658}
   m_Layer: 0
-  m_Name: Bridge Center Open (6)
+  m_Name: Bridge019_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12897,13 +12894,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956418656}
-  m_LocalRotation: {x: -0, y: -0.9034485, z: -0, w: -0.42869648}
-  m_LocalPosition: {x: 81.98996, y: 136.28, z: -68.840004}
-  m_LocalScale: {x: 5.5360103, y: 0.52274996, z: 21.84148}
+  m_LocalRotation: {x: -0, y: -0.7062506, z: -0, w: 0.707962}
+  m_LocalPosition: {x: 0.045924332, y: 0, z: -0.5353726}
+  m_LocalScale: {x: 0.10403839, y: 1, z: 2.6804135}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 489.23, z: 0}
+  m_Father: {fileID: 1316225582}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 630.139, z: 0}
 --- !u!65 &956418658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13640,7 +13637,7 @@ GameObject:
   - component: {fileID: 1045482320}
   - component: {fileID: 1045482319}
   m_Layer: 0
-  m_Name: Bridge Center Open (15)
+  m_Name: Bridge 038_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13656,9 +13653,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.9333794, z: -0, w: 0.3588912}
   m_LocalPosition: {x: 36.09, y: 136.28, z: 86.95}
   m_LocalScale: {x: 10.132794, y: 0.52274996, z: 35.705868}
-  m_Children: []
+  m_Children:
+  - {fileID: 883418732}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 582.06396, z: 0}
 --- !u!65 &1045482319
 BoxCollider:
@@ -14021,7 +14019,7 @@ GameObject:
   - component: {fileID: 1084545572}
   - component: {fileID: 1084545578}
   m_Layer: 0
-  m_Name: Bridge 01 (19)
+  m_Name: Bridge 027_Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14039,7 +14037,7 @@ Transform:
   m_LocalScale: {x: 12.556963, y: 0.52274996, z: 51.02146}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 24
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 656.394, z: 0}
 --- !u!65 &1084545572
 BoxCollider:
@@ -14428,7 +14426,7 @@ GameObject:
   - component: {fileID: 1099357538}
   - component: {fileID: 1099357537}
   m_Layer: 0
-  m_Name: Bridge 01 (14)
+  m_Name: Bridge 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14446,7 +14444,7 @@ Transform:
   m_LocalScale: {x: 12.556958, y: 0.52274996, z: 74.80341}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 421.341, z: 0}
 --- !u!65 &1099357532
 BoxCollider:
@@ -14573,7 +14571,7 @@ GameObject:
   - component: {fileID: 1105464886}
   - component: {fileID: 1105464885}
   m_Layer: 0
-  m_Name: Bridge 01 (13)
+  m_Name: Bridge 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14591,7 +14589,7 @@ Transform:
   m_LocalScale: {x: 12.556963, y: 0.52274996, z: 67.65912}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 372.611, z: 0}
 --- !u!65 &1105464885
 BoxCollider:
@@ -15720,7 +15718,7 @@ GameObject:
   - component: {fileID: 1211755841}
   - component: {fileID: 1211755840}
   m_Layer: 0
-  m_Name: Bridge 01 (11)
+  m_Name: Bridge 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15738,7 +15736,7 @@ Transform:
   m_LocalScale: {x: 9.8025055, y: 0.52274996, z: 79.18628}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 372.496, z: 0}
 --- !u!65 &1211755840
 BoxCollider:
@@ -16178,7 +16176,7 @@ GameObject:
   - component: {fileID: 1250166066}
   - component: {fileID: 1250166071}
   m_Layer: 0
-  m_Name: Bridge 01 (18)
+  m_Name: Bridge 032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16196,7 +16194,7 @@ Transform:
   m_LocalScale: {x: 12.556963, y: 0.52274996, z: 79.14914}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 21
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 463.535, z: 0}
 --- !u!65 &1250166066
 BoxCollider:
@@ -16668,7 +16666,7 @@ GameObject:
   - component: {fileID: 1296276829}
   - component: {fileID: 1296276828}
   m_Layer: 0
-  m_Name: Bridge 01 (29)
+  m_Name: Bridge 041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16686,7 +16684,7 @@ Transform:
   m_LocalScale: {x: 8.988582, y: 0.52274996, z: 57.501575}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 38
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 201.859, z: 0}
 --- !u!65 &1296276828
 BoxCollider:
@@ -17003,7 +17001,7 @@ GameObject:
   - component: {fileID: 1316225584}
   - component: {fileID: 1316225583}
   m_Layer: 0
-  m_Name: Bridge Center Open (7)
+  m_Name: Bridge 018_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17019,7 +17017,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.9390164, z: -0, w: 0.34387237}
   m_LocalPosition: {x: 63.83998, y: 136.28, z: -90.869995}
   m_LocalScale: {x: 8.14646, y: 0.52274996, z: 53.300255}
-  m_Children: []
+  m_Children:
+  - {fileID: 956418657}
   m_Father: {fileID: 588437578}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 580.226, z: 0}
@@ -17200,7 +17199,7 @@ GameObject:
   - component: {fileID: 1330225775}
   - component: {fileID: 1330225774}
   m_Layer: 0
-  m_Name: Bridge Center Open (12)
+  m_Name: Bridge 029_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17213,12 +17212,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330225772}
-  m_LocalRotation: {x: -0, y: -0.8502808, z: -0, w: -0.52632946}
-  m_LocalPosition: {x: 206.53, y: 136.28, z: 13.44}
-  m_LocalScale: {x: 5.536007, y: 0.52274996, z: 21.841457}
+  m_LocalRotation: {x: -0, y: -0.7191474, z: -0, w: 0.6948576}
+  m_LocalPosition: {x: -0.035363562, y: 0, z: -0.6362842}
+  m_LocalScale: {x: 0.31608063, y: 1, z: 2.6794066}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 25
+  m_Father: {fileID: 463876252}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 476.484, z: 0}
 --- !u!65 &1330225774
 BoxCollider:
@@ -17332,7 +17331,7 @@ GameObject:
   - component: {fileID: 1336287334}
   - component: {fileID: 1336287333}
   m_Layer: 0
-  m_Name: Bridge 01 (15)
+  m_Name: Bridge 026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17350,7 +17349,7 @@ Transform:
   m_LocalScale: {x: 5.8561416, y: 0.52274996, z: 44.889153}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 165.17001, z: 0}
 --- !u!65 &1336287333
 BoxCollider:
@@ -17528,7 +17527,7 @@ GameObject:
   - component: {fileID: 1348557383}
   - component: {fileID: 1348557382}
   m_Layer: 0
-  m_Name: Bridge 01 (9)
+  m_Name: Bridge 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17546,7 +17545,7 @@ Transform:
   m_LocalScale: {x: 9.790592, y: 0.52274996, z: 59.895145}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 306.113, z: 0}
 --- !u!65 &1348557382
 BoxCollider:
@@ -18969,7 +18968,7 @@ GameObject:
   - component: {fileID: 1498734489}
   - component: {fileID: 1498734488}
   m_Layer: 0
-  m_Name: Bridge Center Open (16)
+  m_Name: Bridge 034_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18982,12 +18981,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498734486}
-  m_LocalRotation: {x: -0, y: 0.7703472, z: -0, w: 0.6376247}
-  m_LocalPosition: {x: 119.02, y: 136.28, z: 46.31}
-  m_LocalScale: {x: 3.0033944, y: 0.52274996, z: 21.841457}
+  m_LocalRotation: {x: -0, y: -0.7110544, z: -0, w: 0.70313704}
+  m_LocalPosition: {x: 0.026670644, y: 0, z: -0.54972285}
+  m_LocalScale: {x: 0.14430882, y: 1, z: 2.680894}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 41
+  m_Father: {fileID: 242236772}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 100.770004, z: 0}
 --- !u!65 &1498734488
 BoxCollider:
@@ -19831,7 +19830,7 @@ GameObject:
   - component: {fileID: 1568457304}
   - component: {fileID: 1568457305}
   m_Layer: 0
-  m_Name: Bridge 01 (7)
+  m_Name: Bridge 020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19849,7 +19848,7 @@ Transform:
   m_LocalScale: {x: 7.095295, y: 0.52274996, z: 91.38108}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 0
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 271.397, z: 0}
 --- !u!65 &1568457301
 BoxCollider:
@@ -20353,7 +20352,7 @@ GameObject:
   - component: {fileID: 1647937631}
   - component: {fileID: 1647937630}
   m_Layer: 0
-  m_Name: Bridge Center Open (5)
+  m_Name: Bridge 06_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20369,9 +20368,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0.23771673, z: -0, w: 0.9713346}
   m_LocalPosition: {x: -55.293007, y: 136.28, z: 53.940994}
   m_LocalScale: {x: 9.869436, y: 0.52274996, z: 48.106365}
-  m_Children: []
+  m_Children:
+  - {fileID: 536751603}
   m_Father: {fileID: 588437578}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 692.496, z: 0}
 --- !u!65 &1647937630
 BoxCollider:
@@ -20655,7 +20655,7 @@ GameObject:
   - component: {fileID: 1664879807}
   - component: {fileID: 1664879806}
   m_Layer: 0
-  m_Name: Bridge 01 (16)
+  m_Name: Bridge 025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24703,7 +24703,7 @@ GameObject:
   - component: {fileID: 2020884231}
   - component: {fileID: 2020884230}
   m_Layer: 0
-  m_Name: Bridge 01 (27)
+  m_Name: Bridge 013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24721,7 +24721,7 @@ Transform:
   m_LocalScale: {x: 8.988582, y: 0.52274996, z: 70.5463}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 36
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 276.53198, z: 0}
 --- !u!65 &2020884230
 BoxCollider:
@@ -24824,7 +24824,7 @@ GameObject:
   - component: {fileID: 2021761162}
   - component: {fileID: 2021761163}
   m_Layer: 0
-  m_Name: Bridge Center Open
+  m_Name: Bridge 017_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24837,13 +24837,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021761155}
-  m_LocalRotation: {x: -0, y: -0.39600343, z: -0, w: -0.918249}
-  m_LocalPosition: {x: -7.3594055, y: 136.28, z: -68.68979}
-  m_LocalScale: {x: 3.8441203, y: 0.52274996, z: 31.645136}
+  m_LocalRotation: {x: -0, y: -0.7070965, z: -0, w: 0.70711714}
+  m_LocalPosition: {x: -0.096132, y: 0, z: -0.29305753}
+  m_LocalScale: {x: 0.06008043, y: 1, z: 3.117122}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 406.657, z: 0}
+  m_Father: {fileID: 436991777}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 270.002, z: 0}
 --- !u!65 &2021761157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25583,7 +25583,7 @@ GameObject:
   - component: {fileID: 2080528572}
   - component: {fileID: 2080528571}
   m_Layer: 0
-  m_Name: Bridge Center Open (2)
+  m_Name: Bridge 010_Neighborhood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25596,12 +25596,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080528569}
-  m_LocalRotation: {x: -0, y: -0.89149237, z: -0, w: 0.45303577}
-  m_LocalPosition: {x: -82.95, y: 136.28, z: -4.98}
-  m_LocalScale: {x: 4.6590776, y: 0.52274996, z: 21.841473}
+  m_LocalRotation: {x: -0, y: -0.70409834, z: -0, w: 0.7101025}
+  m_LocalPosition: {x: -0.10916161, y: 0, z: -0.5425134}
+  m_LocalScale: {x: 0.09688382, y: 1, z: 2.680941}
   m_Children: []
-  m_Father: {fileID: 588437578}
-  m_RootOrder: 7
+  m_Father: {fileID: 353272254}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 593.877, z: 0}
 --- !u!65 &2080528571
 BoxCollider:
@@ -26061,7 +26061,7 @@ GameObject:
   - component: {fileID: 2095641448}
   - component: {fileID: 2095641447}
   m_Layer: 0
-  m_Name: Bridge 01 (8)
+  m_Name: Bridge 015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26079,7 +26079,7 @@ Transform:
   m_LocalScale: {x: 9.00028, y: 0.52274996, z: 91.25393}
   m_Children: []
   m_Father: {fileID: 588437578}
-  m_RootOrder: 1
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 285.572, z: 0}
 --- !u!65 &2095641447
 BoxCollider:
