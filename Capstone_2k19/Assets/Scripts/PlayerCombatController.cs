@@ -9,6 +9,7 @@ public class PlayerCombatController : MonoBehaviour
     public float fireBallSpeed = 500;
     public float setTime = 60;
     public float magicMax = 100;
+    public float lifeTimer = 10;
     private float Timer = 0;
     private float magicBuildUp = 0;
 
@@ -20,12 +21,13 @@ public class PlayerCombatController : MonoBehaviour
             {
                 magicBuildUp += .25f;
             }
-            if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10)
+            if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10 )
             {
                 Rigidbody fireBallInstance;
                 fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
                 fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
                 fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
+                fireBallInstance.GetComponent<FireBall>().enabled = false;
                 magicBuildUp = 0;
                 Timer = setTime;
             }
@@ -35,6 +37,7 @@ public class PlayerCombatController : MonoBehaviour
                 fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
                 fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
                 fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
+                fireBallInstance.useGravity = false;              
                 magicBuildUp = 0;
                 Timer = setTime;
             }
