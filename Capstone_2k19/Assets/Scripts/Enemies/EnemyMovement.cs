@@ -8,7 +8,7 @@ using UnityEngine.AI;
 using UnityEditor;
 #endif
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent), typeof(BattleAI))]
 public class EnemyMovement : MonoBehaviour
 {
     // Enum that tracks
@@ -35,11 +35,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Vector3 sightOffset = Vector3.zero;
     [SerializeField] private Vector3 sightRange = Vector3.zero;
     [SerializeField] private float chaseSpeed = 7.5f;
-    [SerializeField] private float attackRange = 5f;
 
     private Transform player = null;
     private float updateCooldown = 1f;
     private float updateTimer = 0f;
+    private float stopDistance = 0f;
 
     /// <summary>
     /// Grabs Private References
@@ -49,6 +49,9 @@ public class EnemyMovement : MonoBehaviour
         // Getting Reference to the MoveController
         controller = GetComponent<MoveController>();
         agent = GetComponent<NavMeshAgent>();
+
+        // Movement Behavior from combat character
+        
 
         // Setting the Initial Path
         if (state == EnemyAIState.Patrolling)
