@@ -1412,9 +1412,11 @@ MonoBehaviour:
     type: 3}
   magicHand: {fileID: 1286934527}
   fireBallSpeed: 500
-  setTime: 60
+  setTime: 10
   magicMax: 100
+  magicMana: 100
   lifeTimer: 10
+  magicBuildUp: 0
 --- !u!1 &1254669201
 GameObject:
   m_ObjectHideFlags: 0

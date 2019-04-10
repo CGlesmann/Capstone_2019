@@ -17,9 +17,17 @@ public class FireBall : MonoBehaviour
             lifeTime -= 1;
         }
     }
-    void OnTriggerEnter()
+    void OnCollisionEnter(Collision col)
     {
-        Destroy(gameObject);
+        if (col.gameObject.name == "Enemy (Test)")
+        {
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
+        else if (col.gameObject.name != "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 
 
