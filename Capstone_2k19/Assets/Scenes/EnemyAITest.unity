@@ -23,10 +23,10 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -277,7 +277,7 @@ Transform:
   m_LocalScale: {x: 0.20209791, y: 0.20209791, z: 0.72037804}
   m_Children: []
   m_Father: {fileID: 108904299}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &510483392
 MonoBehaviour:
@@ -291,7 +291,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf5825dac92cf54ca5fe42a4a5deb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2467911321720865128, guid: 45ebc1196ba95e840a1afc8050579135, type: 3}
+  fireBallPrefab: {fileID: 0}
+  magicHand: {fileID: 0}
+  fireBallSpeed: 500
+  setTime: 60
+  magicMax: 100
+  lifeTimer: 10
 --- !u!65 &510483393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -618,7 +623,6 @@ MonoBehaviour:
   sightOffset: {x: 10, y: 0, z: 25}
   sightRange: {x: 15, y: 6, z: 45}
   chaseSpeed: 12.5
-  attackRange: 5
 --- !u!195 &1121950582
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -852,7 +856,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

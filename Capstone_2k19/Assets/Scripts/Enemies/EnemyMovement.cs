@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Enemy AI State")]
     [SerializeField] private EnemyAIState state = EnemyAIState.Patrolling;
+    private bool executeMovementAI = true;
 
     [Header("Enemy Patrol Variables")]
     [SerializeField] private PatrolPoint[] wayPoints = null;
@@ -39,7 +40,9 @@ public class EnemyMovement : MonoBehaviour
     private Transform player = null;
     private float updateCooldown = 1f;
     private float updateTimer = 0f;
-    private float stopDistance = 0f;
+
+    [Header("Enemy Battle AI")]
+    private BattleAI battleAI = null;
 
     /// <summary>
     /// Grabs Private References
@@ -51,7 +54,7 @@ public class EnemyMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         // Movement Behavior from combat character
-        
+        battleAI = GetComponent<BattleAI>();
 
         // Setting the Initial Path
         if (state == EnemyAIState.Patrolling)
@@ -63,13 +66,12 @@ public class EnemyMovement : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        Debug.Log("Destination: " + agent.destination.ToString());
-
         // Patrol AI / Patrol -> Chasing Transition
-        if (state == EnemyAIState.Patrolling) {
+        if (state == EnemyAIState.Patrolling)
+        {
             // Patrolling AI
             ExecutePatrolAI();
-            
+
             // Checking for Patrol -> Chasing Transition
             if (PlayerSpotted())
             {
@@ -91,6 +93,33 @@ public class EnemyMovement : MonoBehaviour
             ExecuteChaseAI();
 
             // Checking for Chase -> Attack Transition
+            if (battleAI.PlayerInAttackRange())
+            {
+                state = EnemyAIState.Attacking;
+                battleAI.EngageAttackAI();
+                agent.isStopped = true;
+                updateTimer = 0f;
+            }
+        }
+
+        // Attacking -> Chasing Transition
+        if (state == EnemyAIState.Attacking)
+        {
+            if (!battleAI.PlayerInAttackRange())
+            {
+                // Disengaging from combat
+                battleAI.DisEngageAttackAI();
+                agent.isStopped = false;
+
+                // Resetting the NavMesh
+                agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z); ;
+                agent.speed = chaseSpeed;
+                updateTimer = updateCooldown * 2f;
+
+                // Setting State
+                state = EnemyAIState.Chasing;
+                return;
+            }
         }
     }
 
@@ -180,7 +209,6 @@ public class EnemyMovement : MonoBehaviour
     // AI Loop
     private void ExecuteChaseAI()
     {
-        Debug.Log("Chasing");
         // Checking for path update
         updateTimer -= Time.deltaTime;
 
