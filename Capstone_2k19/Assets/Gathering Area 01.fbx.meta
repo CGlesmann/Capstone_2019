@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: ba8eeee2b4fa96342ae5fe6bc35acc98
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Branches
+    100002: Branches_1
+    100004: Branches__1_
+    100006: Branches__1__1
+    100008: //RootNode
+    100010: Gathering_Area
+    100012: Gathering_Area__2_
+    100014: Gathering_Area__3_
+    100016: Gathering_Area__4_
+    100018: Gathering_Area__5_
+    100020: Gathering_Area__6_
+    100022: Plane
+    100024: Platforms
+    100026: Tree
+    100028: Tree2
+    100030: Tree3
+    100032: Tree4
+    100034: Tree_01
+    100036: Tree_01__1_
+    100038: Tree_02
+    100040: Tree_02__1_
+    100042: Trees
+    400000: Branches
+    400002: Branches_1
+    400004: Branches__1_
+    400006: Branches__1__1
+    400008: //RootNode
+    400010: Gathering_Area
+    400012: Gathering_Area__2_
+    400014: Gathering_Area__3_
+    400016: Gathering_Area__4_
+    400018: Gathering_Area__5_
+    400020: Gathering_Area__6_
+    400022: Plane
+    400024: Platforms
+    400026: Tree
+    400028: Tree2
+    400030: Tree3
+    400032: Tree4
+    400034: Tree_01
+    400036: Tree_01__1_
+    400038: Tree_02
+    400040: Tree_02__1_
+    400042: Trees
+    2100000: Branches
+    2100002: Tree_Trunk
+    2100004: Platforms
+    2100006: GatheringAreaMarker
+    2300000: Branches
+    2300002: Branches_1
+    2300004: Branches__1_
+    2300006: Branches__1__1
+    2300008: Gathering_Area
+    2300010: Gathering_Area__2_
+    2300012: Gathering_Area__3_
+    2300014: Gathering_Area__4_
+    2300016: Gathering_Area__5_
+    2300018: Gathering_Area__6_
+    2300020: Plane
+    2300022: Tree_01
+    2300024: Tree_01__1_
+    2300026: Tree_02
+    2300028: Tree_02__1_
+    3300000: Branches
+    3300002: Branches_1
+    3300004: Branches__1_
+    3300006: Branches__1__1
+    3300008: Gathering_Area
+    3300010: Gathering_Area__2_
+    3300012: Gathering_Area__3_
+    3300014: Gathering_Area__4_
+    3300016: Gathering_Area__5_
+    3300018: Gathering_Area__6_
+    3300020: Plane
+    3300022: Tree_01
+    3300024: Tree_01__1_
+    3300026: Tree_02
+    3300028: Tree_02__1_
+    4300000: Branches
+    4300002: Tree_02
+    4300004: Branches__1_
+    4300006: Tree_01
+    4300008: Branches_1
+    4300010: Tree_02__1_
+    4300012: Branches__1__1
+    4300014: Tree_01__1_
+    4300016: Gathering_Area__2_
+    4300018: Gathering_Area__3_
+    4300020: Gathering_Area__4_
+    4300022: Gathering_Area__5_
+    4300024: Gathering_Area__6_
+    4300026: Gathering_Area
+    4300028: Plane
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

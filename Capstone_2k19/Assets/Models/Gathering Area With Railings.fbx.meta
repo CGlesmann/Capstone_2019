@@ -1,0 +1,288 @@
+fileFormatVersion: 2
+guid: 57bca4285b6b41a4e92c0335d8e1d4fb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Branches
+    100002: Branches_1
+    100004: Branches__1_
+    100006: Branches__1__1
+    100008: //RootNode
+    100010: Gathering_Area
+    100012: Gathering_Area_01
+    100014: Gathering_Area__2_
+    100016: Gathering_Area__3_
+    100018: Gathering_Area__4_
+    100020: Gathering_Area__5_
+    100022: Gathering_Area__6_
+    100024: Plane
+    100026: Platforms
+    100028: Railing_02:group2
+    100030: Railing_02:group3
+    100032: Railing_02:group4
+    100034: Railing_02:group5
+    100036: Railing_02:Rail2
+    100038: Railing_02:Rail2 1
+    100040: Railing_02:Rail2 2
+    100042: Railing_02:Rail3
+    100044: Railing_02:Rail3 1
+    100046: Railing_02:Rail3 2
+    100048: Railing_02:Rail5
+    100050: Railing_02:Rail6
+    100052: Railing_02:Rail7
+    100054: Railing_02:Rail8
+    100056: Railing_02:Railing_01
+    100058: Railing_02:Torch
+    100060: Railing_02:Torch 1
+    100062: Railing_02:Torch 2
+    100064: Railing_02:Torch1
+    100066: Railing_02:Torch1 1
+    100068: Railing_02:Torch1 2
+    100070: Railing_02:Torch2
+    100072: Railing_02:Torch3
+    100074: Torch
+    100076: Tree
+    100078: Tree2
+    100080: Tree3
+    100082: Tree4
+    100084: Tree_01
+    100086: Tree_01__1_
+    100088: Tree_02
+    100090: Tree_02__1_
+    100092: Trees
+    400000: Branches
+    400002: Branches_1
+    400004: Branches__1_
+    400006: Branches__1__1
+    400008: //RootNode
+    400010: Gathering_Area
+    400012: Gathering_Area_01
+    400014: Gathering_Area__2_
+    400016: Gathering_Area__3_
+    400018: Gathering_Area__4_
+    400020: Gathering_Area__5_
+    400022: Gathering_Area__6_
+    400024: Plane
+    400026: Platforms
+    400028: Railing_02:group2
+    400030: Railing_02:group3
+    400032: Railing_02:group4
+    400034: Railing_02:group5
+    400036: Railing_02:Rail2
+    400038: Railing_02:Rail2 1
+    400040: Railing_02:Rail2 2
+    400042: Railing_02:Rail3
+    400044: Railing_02:Rail3 1
+    400046: Railing_02:Rail3 2
+    400048: Railing_02:Rail5
+    400050: Railing_02:Rail6
+    400052: Railing_02:Rail7
+    400054: Railing_02:Rail8
+    400056: Railing_02:Railing_01
+    400058: Railing_02:Torch
+    400060: Railing_02:Torch 1
+    400062: Railing_02:Torch 2
+    400064: Railing_02:Torch1
+    400066: Railing_02:Torch1 1
+    400068: Railing_02:Torch1 2
+    400070: Railing_02:Torch2
+    400072: Railing_02:Torch3
+    400074: Torch
+    400076: Tree
+    400078: Tree2
+    400080: Tree3
+    400082: Tree4
+    400084: Tree_01
+    400086: Tree_01__1_
+    400088: Tree_02
+    400090: Tree_02__1_
+    400092: Trees
+    2100000: phong1
+    2300000: Branches
+    2300002: Branches_1
+    2300004: Branches__1_
+    2300006: Branches__1__1
+    2300008: Gathering_Area
+    2300010: Gathering_Area__2_
+    2300012: Gathering_Area__3_
+    2300014: Gathering_Area__4_
+    2300016: Gathering_Area__5_
+    2300018: Gathering_Area__6_
+    2300020: Plane
+    2300022: Railing_02:Rail2
+    2300024: Railing_02:Rail2 1
+    2300026: Railing_02:Rail2 2
+    2300028: Railing_02:Rail3
+    2300030: Railing_02:Rail3 1
+    2300032: Railing_02:Rail3 2
+    2300034: Railing_02:Rail5
+    2300036: Railing_02:Rail6
+    2300038: Railing_02:Rail7
+    2300040: Railing_02:Rail8
+    2300042: Railing_02:Torch
+    2300044: Railing_02:Torch 1
+    2300046: Railing_02:Torch 2
+    2300048: Railing_02:Torch1
+    2300050: Railing_02:Torch1 1
+    2300052: Railing_02:Torch1 2
+    2300054: Railing_02:Torch2
+    2300056: Railing_02:Torch3
+    2300058: Torch
+    2300060: Tree_01
+    2300062: Tree_01__1_
+    2300064: Tree_02
+    2300066: Tree_02__1_
+    3300000: Branches
+    3300002: Branches_1
+    3300004: Branches__1_
+    3300006: Branches__1__1
+    3300008: Gathering_Area
+    3300010: Gathering_Area__2_
+    3300012: Gathering_Area__3_
+    3300014: Gathering_Area__4_
+    3300016: Gathering_Area__5_
+    3300018: Gathering_Area__6_
+    3300020: Plane
+    3300022: Railing_02:Rail2
+    3300024: Railing_02:Rail2 1
+    3300026: Railing_02:Rail2 2
+    3300028: Railing_02:Rail3
+    3300030: Railing_02:Rail3 1
+    3300032: Railing_02:Rail3 2
+    3300034: Railing_02:Rail5
+    3300036: Railing_02:Rail6
+    3300038: Railing_02:Rail7
+    3300040: Railing_02:Rail8
+    3300042: Railing_02:Torch
+    3300044: Railing_02:Torch 1
+    3300046: Railing_02:Torch 2
+    3300048: Railing_02:Torch1
+    3300050: Railing_02:Torch1 1
+    3300052: Railing_02:Torch1 2
+    3300054: Railing_02:Torch2
+    3300056: Railing_02:Torch3
+    3300058: Torch
+    3300060: Tree_01
+    3300062: Tree_01__1_
+    3300064: Tree_02
+    3300066: Tree_02__1_
+    4300000: Branches
+    4300002: Tree_02
+    4300004: Branches__1_
+    4300006: Tree_01
+    4300008: Branches_1
+    4300010: Tree_02__1_
+    4300012: Branches__1__1
+    4300014: Tree_01__1_
+    4300016: Gathering_Area__2_
+    4300018: Gathering_Area__3_
+    4300020: Gathering_Area__4_
+    4300022: Gathering_Area__5_
+    4300024: Gathering_Area__6_
+    4300026: Gathering_Area
+    4300028: Plane
+    4300030: Railing_02:Rail7
+    4300032: Railing_02:Torch2
+    4300034: Railing_02:Rail8
+    4300036: Railing_02:Torch3
+    4300038: Torch
+    4300040: Railing_02:Rail3
+    4300042: Railing_02:Torch
+    4300044: Railing_02:Rail2
+    4300046: Railing_02:Rail5
+    4300048: Railing_02:Torch1
+    4300050: Railing_02:Rail6
+    4300052: Railing_02:Torch
+    4300054: Railing_02:Rail3
+    4300056: Railing_02:Torch1
+    4300058: Railing_02:Rail2
+    4300060: Railing_02:Torch
+    4300062: Railing_02:Rail3
+    4300064: Railing_02:Torch1
+    4300066: Railing_02:Rail2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
