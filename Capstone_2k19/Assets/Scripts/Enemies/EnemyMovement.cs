@@ -44,6 +44,10 @@ public class EnemyMovement : MonoBehaviour
     [Header("Enemy Battle AI")]
     private BattleAI battleAI = null;
 
+    // AI toggles
+    public void EnableMovementAI() { executeMovementAI = true; }
+    public void DisableMovementAI() { executeMovementAI = false; }
+
     /// <summary>
     /// Grabs Private References
     /// </summary>
@@ -64,61 +68,65 @@ public class EnemyMovement : MonoBehaviour
     /// <summary>
     /// Checks for Point Change
     /// </summary>
-    private void Update()
+    private void FixedUpdate()
     {
-        // Patrol AI / Patrol -> Chasing Transition
-        if (state == EnemyAIState.Patrolling)
+        if (executeMovementAI)
         {
-            // Patrolling AI
-            ExecutePatrolAI();
-
-            // Checking for Patrol -> Chasing Transition
-            if (PlayerSpotted())
+            // Patrol AI / Patrol -> Chasing Transition
+            if (state == EnemyAIState.Patrolling)
             {
-                // Resetting the NavMesh
-                agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z); ;
-                agent.speed = chaseSpeed;
-                updateTimer = updateCooldown;
+                // Patrolling AI
+                ExecutePatrolAI();
 
-                // Setting State
-                state = EnemyAIState.Chasing;
-                return;
+                // Checking for Patrol -> Chasing Transition
+                if (PlayerSpotted())
+                {
+                    // Resetting the NavMesh
+                    agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z); ;
+                    agent.speed = chaseSpeed;
+                    updateTimer = updateCooldown;
+
+                    // Setting State
+                    state = EnemyAIState.Chasing;
+                    return;
+                }
             }
-        }
 
-        // Chasing AI / Chase -> Attack Transition
-        if (state == EnemyAIState.Chasing)
-        {
-            // Chasing AI
-            ExecuteChaseAI();
-
-            // Checking for Chase -> Attack Transition
-            if (battleAI.PlayerInAttackRange())
+            // Chasing AI / Chase -> Attack Transition
+            if (state == EnemyAIState.Chasing)
             {
-                state = EnemyAIState.Attacking;
-                battleAI.EngageAttackAI();
-                agent.isStopped = true;
-                updateTimer = 0f;
+                // Chasing AI
+                ExecuteChaseAI();
+
+                // Checking for Chase -> Attack Transition
+                if (battleAI.PlayerInAttackRange())
+                {
+                    state = EnemyAIState.Attacking;
+                    battleAI.EngageAttackAI();
+                    agent.isStopped = true;
+                    agent.speed = 0f;
+                    updateTimer = 0f;
+                }
             }
-        }
 
-        // Attacking -> Chasing Transition
-        if (state == EnemyAIState.Attacking)
-        {
-            if (!battleAI.PlayerInAttackRange())
+            // Attacking -> Chasing Transition
+            if (state == EnemyAIState.Attacking)
             {
-                // Disengaging from combat
-                battleAI.DisEngageAttackAI();
-                agent.isStopped = false;
+                if (!battleAI.PlayerInAttackRange())
+                {
+                    // Disengaging from combat
+                    battleAI.DisEngageAttackAI();
+                    agent.isStopped = false;
 
-                // Resetting the NavMesh
-                agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z); ;
-                agent.speed = chaseSpeed;
-                updateTimer = updateCooldown * 2f;
+                    // Resetting the NavMesh
+                    agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
+                    agent.speed = chaseSpeed;
+                    updateTimer = updateCooldown * 2f;
 
-                // Setting State
-                state = EnemyAIState.Chasing;
-                return;
+                    // Setting State
+                    state = EnemyAIState.Chasing;
+                    return;
+                }
             }
         }
     }
