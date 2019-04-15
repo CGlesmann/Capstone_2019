@@ -13,10 +13,45 @@ public class PlayerCombatController : MonoBehaviour
     public float lifeTimer = 10;
     public float magicBuildUp = 0;
     private float Timer = 0;
-    
+
+
+    public void rangedAttackSmall()
+    {
+        Rigidbody fireBallInstance;
+        fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
+        fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
+        fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
+        fireBallInstance.useGravity = false;
+        magicMana -= 1;
+        magicBuildUp = 0;
+        Timer = setTime;
+    }
+
+    public void rangedAttackBig()
+    {
+        Rigidbody fireBallInstance;
+        fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
+        fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
+        fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
+        fireBallInstance.GetComponent<FireBall>().enabled = false;
+        magicMana -= magicBuildUp;
+        magicBuildUp = 0;
+        Timer = setTime;
+    }
+
+    public void meleeAttack()
+    {
+        
+    }
+
+    public void blocking()
+    {
+
+    }
 
     void Update()
     {
+        //FireBall Scripting
         if (Timer == 0)
         {
             if (Input.GetButton("Fire1") && magicBuildUp < magicMana)
@@ -25,34 +60,26 @@ public class PlayerCombatController : MonoBehaviour
             }
             if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10 )
             {
-                Rigidbody fireBallInstance;
-                fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
-                fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
-                fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
-                fireBallInstance.GetComponent<FireBall>().enabled = false;
-                magicMana -= magicBuildUp;
-                magicBuildUp = 0;
-                Timer = setTime;
+                rangedAttackBig();
             }
             else if(Input.GetButtonUp("Fire1") && magicMana > 1)
             {
-                Rigidbody fireBallInstance;
-                fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
-                fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
-                fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
-                fireBallInstance.useGravity = false;
-                magicMana -= 1;
-                magicBuildUp = 0;
-                Timer = setTime;
+                rangedAttackSmall();
             }
         }
         else 
-        {
-            
+        {          
             Timer -= 1;
         }
 
-        if(magicMana < magicMax)
+        //Melee Attack Scripting
+        if(Input.GetButton("Fire2"))
+        {
+            blocking();
+        }
+
+        //Mana Stuff
+        if (magicMana < magicMax)
         {
             magicMana += Time.deltaTime;
         }

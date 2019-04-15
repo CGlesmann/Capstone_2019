@@ -2525,6 +2525,10 @@ PrefabInstance:
       propertyPath: m_WalkSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1744788885, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
+      propertyPath: m_RunSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 446231274, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -2556,6 +2560,11 @@ PrefabInstance:
     - target: {fileID: 939489030, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_AllowMSAA
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575628547597658801, guid: 983fcb68f73ff6748a91659d7e5db707,
+        type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
