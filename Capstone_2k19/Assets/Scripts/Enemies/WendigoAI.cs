@@ -27,6 +27,8 @@ public class WendigoAI : MeleeAI
 
             Vector3 force = Vector3.Scale(transform.forward, jumpForce);
             GetComponent<Rigidbody>().AddForce(force);
+
+            attackInProgress = false;
         }
     }
 }

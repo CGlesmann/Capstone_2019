@@ -131,11 +131,6 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private Vector3 Mult(Vector3 left, Vector3 right)
-    {
-        return new Vector3(left.x * right.x, left.y * right.y, left.z * right.z);
-    }
-
     #region Patrol AI Functions
     /// <summary>
     /// Executes the AI for enemy patrolling behavior
@@ -204,7 +199,7 @@ public class EnemyMovement : MonoBehaviour
     private bool PlayerSpotted()
     {
         // Getting the Player Reference
-        Collider[] col = Physics.OverlapBox(transform.position + Mult(sightOffset, GetComponent<NavMeshAgent>().velocity.normalized), sightRange / 2f, Quaternion.Euler(transform.forward), playerLayer);
+        Collider[] col = Physics.OverlapBox(transform.position + Vector3.Scale(sightOffset, GetComponent<NavMeshAgent>().velocity.normalized), sightRange / 2f, Quaternion.Euler(transform.forward), playerLayer);
         player = (col.Length > 0) ? col[0].transform : null;
 
         if (player != null)

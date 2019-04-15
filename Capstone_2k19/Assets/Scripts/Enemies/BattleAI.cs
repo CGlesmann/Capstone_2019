@@ -82,7 +82,6 @@ public class BattleAI : MonoBehaviour
     {
         // Get the player reference
         CombatCharacter player = GetPlayer();
-        Debug.Log("Player recieved is " + player);
 
         // If player is not null then the player has been found
         return (player != null);

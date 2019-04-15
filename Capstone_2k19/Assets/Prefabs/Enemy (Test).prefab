@@ -16,11 +16,10 @@ GameObject:
   - component: {fileID: 8697226200860221680}
   - component: {fileID: 8697226200860221683}
   - component: {fileID: 8697226200860221694}
-  - component: {fileID: 5080239213195512867}
   - component: {fileID: 1802785134154939074}
   m_Layer: 11
   m_Name: Enemy (Test)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,65 +201,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &5080239213195512867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8697226200860221705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ff728c27792b84e9cd939f68e22c74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  attackPattern:
-  - minAttackRange: {x: 7.5, y: 3, z: 7.5}
-    maxAttackRange: {x: 10, y: 3, z: 10}
-    attackCooldown: 0.75
-    attackEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 5080239213195512867}
-          m_MethodName: ExecuteJumpAttack
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - minAttackRange: {x: 15, y: 0, z: 15}
-    maxAttackRange: {x: 15, y: 0, z: 15}
-    attackCooldown: 1.25
-    attackEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 5080239213195512867}
-          m_MethodName: ClawSwipe
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  nextAttackID: 0
-  attackAIEngaged: 0
-  attackInProgress: 0
-  clawDamage: 10
-  jumpForce: {x: 1, y: 1, z: 15}
 --- !u!114 &1802785134154939074
 MonoBehaviour:
   m_ObjectHideFlags: 0

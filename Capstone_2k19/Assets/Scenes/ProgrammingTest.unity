@@ -713,6 +713,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682756893}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &829784619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8697226200860221705, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8697226200382050294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &829784620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829784619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ff728c27792b84e9cd939f68e22c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  attackPattern:
+  - minAttackRange: {x: 0, y: 0, z: 0}
+    maxAttackRange: {x: 0, y: 0, z: 0}
+    attackCooldown: 0
+    attackEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - minAttackRange: {x: 0, y: 0, z: 0}
+    maxAttackRange: {x: 0, y: 0, z: 0}
+    attackCooldown: 0
+    attackEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  nextAttackID: 0
+  attackAIEngaged: 0
+  attackInProgress: 0
+  clawDamage: 10
+  jumpForce: {x: 1, y: 1, z: 1}
 --- !u!1 &845733153
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,18 +847,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845733153}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &893511709 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-    type: 3}
-  m_PrefabInstance: {fileID: 8697226200382050294}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49934624d6b606645aa190fb1988fb49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &897621100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,13 +2356,13 @@ PrefabInstance:
       propertyPath: TrailModule.enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 939489027, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.73
-      objectReference: {fileID: 0}
     - target: {fileID: 908675111, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 939489027, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.73
       objectReference: {fileID: 0}
     - target: {fileID: 939489030, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_AllowMSAA
@@ -2623,6 +2654,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8697226200860221705, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Wendigo (Test)
+      objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.size
@@ -2647,32 +2683,32 @@ PrefabInstance:
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].minAttackRange.x
-      value: 750
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].minAttackRange.y
-      value: 3
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].minAttackRange.z
-      value: 750
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.x
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.y
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.z
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
@@ -2693,7 +2729,7 @@ PrefabInstance:
         type: 3}
       propertyPath: attackPattern.Array.data[0].attackEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 893511709}
+      objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].attackEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2703,11 +2739,6 @@ PrefabInstance:
         type: 3}
       propertyPath: attackPattern.Array.data[0].attackEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697226200860221705, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Wendigo (Test)
       objectReference: {fileID: 0}
     - target: {fileID: 8697226200860221682, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
@@ -2789,51 +2820,42 @@ PrefabInstance:
       propertyPath: wayPoints.Array.data[3].wayPoint
       value: 
       objectReference: {fileID: 160634136}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[0].minAttackRange.x
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[0].minAttackRange.z
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.x
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.z
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[1].minAttackRange.x
       value: 7.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[1].minAttackRange.z
       value: 7.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[1].maxAttackRange.x
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: attackPattern.Array.data[1].maxAttackRange.z
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: nextAttackID
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5080239213195512867, guid: 108dce1ee1ce35e47b51133fdfd5ab8e, type: 3}
+    - {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 108dce1ee1ce35e47b51133fdfd5ab8e, type: 3}
