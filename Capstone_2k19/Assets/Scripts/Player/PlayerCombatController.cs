@@ -6,16 +6,19 @@ public class PlayerCombatController : MonoBehaviour
 {
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
-    public GameObject hitBox;
     public float fireBallSpeed = 500;
     public float setTime = 60;
+
     private float magicMax = 100;
     private float magicMana = 100;
     private float lifeTimer = 10;
     private float magicBuildUp = 0;
     private float Timer = 0;
-    private bool Blocking = false;
     private float blockTimer = 0;
+
+    public bool Attaking = false;
+    private bool Blocking = false;
+    
 
 
     public void rangedAttackSmall()
@@ -48,8 +51,7 @@ public class PlayerCombatController : MonoBehaviour
 
     public void meleeAttack()
     {
-        hitBox.GetComponent<BoxCollider>().enabled = true;
-           
+        Attaking = true;
     }
 
     public void blocking()
