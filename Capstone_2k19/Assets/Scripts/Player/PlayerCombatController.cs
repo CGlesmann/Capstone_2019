@@ -12,7 +12,7 @@ public class PlayerCombatController : MonoBehaviour
     private float magicMax = 100;
     private float magicMana = 100;
     private float lifeTimer = 10;
-    private float magicBuildUp = 0;
+    [SerializeField] private float magicBuildUp = 0;
     private float Timer = 0;
     private float blockTimer = 0;
 
@@ -44,6 +44,8 @@ public class PlayerCombatController : MonoBehaviour
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
         fireBallInstance.GetComponent<FireBall>().enabled = false;
+
+        Debug.Log("Magic Buildup: " + magicBuildUp.ToString());
         gameObject.GetComponent<CombatCharacter>().DrainMana(magicBuildUp); 
         magicBuildUp = 0;
         Timer = setTime;
