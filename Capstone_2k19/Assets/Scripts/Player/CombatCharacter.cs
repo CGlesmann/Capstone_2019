@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CombatCharacter : MonoBehaviour
 {
@@ -37,5 +38,7 @@ public class CombatCharacter : MonoBehaviour
     /// <summary>
     /// Default Death event, can be overrode in the inspector
     /// </summary>
-    public void DestroyCharacter() { GameObject.Destroy(gameObject); }
+    public void DestroyCharacter() { GameObject.Destroy(gameObject);}
+
+    public void RestartGame() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
 }
