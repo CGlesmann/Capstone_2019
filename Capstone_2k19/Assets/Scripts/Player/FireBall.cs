@@ -24,7 +24,7 @@ public class FireBall : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
-        else if (col.gameObject.name != "Player")
+        else if (col.gameObject.tag != "Player")
         {
             Destroy(gameObject);
         }
