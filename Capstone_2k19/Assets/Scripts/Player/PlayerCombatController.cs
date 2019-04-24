@@ -6,16 +6,17 @@ public class PlayerCombatController : MonoBehaviour
 {
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
-    
+
     [SerializeField] private float magicBuildUp = 0;
     private float maxMana = 100;
     private float mana = 100;
-    private float fireBallSpeed = 500;        
+    private float fireBallSpeed = 500;
     private float blockTimer = 0;
     private float coolDownTimer = 0;
+    private float attackTimer = 0;
     private float setTime = 10;
     private bool Blocking = false;
-    [HideInInspector] public bool Attaking = false;
+    public bool Attacking = false;
     
 
     public void rangedAttackSmall()
@@ -48,7 +49,11 @@ public class PlayerCombatController : MonoBehaviour
         coolDownTimer = setTime;
     }
 
-    public void meleeAttack(){ Attaking = true; }
+    public void meleeAttack()
+    {
+        Attacking = true;
+        attackTimer += 1;
+    }
 
     public void blocking()
     {
@@ -109,7 +114,6 @@ public class PlayerCombatController : MonoBehaviour
             {
                 meleeAttack();
                 blockTimer = 0;
-                Debug.Log("Attacked");
             }
             //if you are finished blocking than triggers code to allow to to attack again
             else if(Blocking == true)
@@ -117,6 +121,15 @@ public class PlayerCombatController : MonoBehaviour
                 Blocking = false;
                 blockTimer = 0;
             }
+        }
+
+        if(attackTimer == 0)
+        {
+            Attacking = false;
+        }
+        else
+        {
+            attackTimer -= 1;
         }
 
         //Restoring Mana 

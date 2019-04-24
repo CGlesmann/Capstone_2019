@@ -10,9 +10,9 @@ public class MeleeHitBox : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         PlayerCombatController script = player.GetComponent<PlayerCombatController>();
 
-        if (col.gameObject.name == "Enemy (Test)" && script.Attaking == true)
+        if (col.gameObject.tag == "Enemy" && script.Attacking == true)
         {
-            Destroy(col.gameObject);
+            Destroy(col.gameObject);            
         }
     }
 }
