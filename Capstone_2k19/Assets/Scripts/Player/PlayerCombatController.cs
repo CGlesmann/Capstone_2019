@@ -52,7 +52,7 @@ public class PlayerCombatController : MonoBehaviour
     public void meleeAttack()
     {
         Attacking = true;
-        attackTimer += 1;
+        attackTimer = 10;
     }
 
     public void blocking()
@@ -123,14 +123,7 @@ public class PlayerCombatController : MonoBehaviour
             }
         }
 
-        if(attackTimer == 0)
-        {
-            Attacking = false;
-        }
-        else
-        {
-            attackTimer -= 1;
-        }
+        if(attackTimer)
 
         //Restoring Mana 
         manaGain();

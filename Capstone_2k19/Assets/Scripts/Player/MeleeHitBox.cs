@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleeHitBox : MonoBehaviour
 {
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerStay(Collider col)
     {
         GameObject player = GameObject.Find("Player");
         PlayerCombatController script = player.GetComponent<PlayerCombatController>();
