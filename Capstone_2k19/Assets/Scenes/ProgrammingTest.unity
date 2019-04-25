@@ -713,49 +713,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682756893}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &829784619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8697226200860221705, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+--- !u!4 &829784628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8697226200860221682, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
     type: 3}
   m_PrefabInstance: {fileID: 8697226200382050294}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &829784620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829784619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ff728c27792b84e9cd939f68e22c74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  attackPattern:
-  - minAttackRange: {x: 0, y: 0, z: 0}
-    maxAttackRange: {x: 0, y: 0, z: 0}
-    attackCooldown: 0
-    attackEvent:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - minAttackRange: {x: 0, y: 0, z: 0}
-    maxAttackRange: {x: 0, y: 0, z: 0}
-    attackCooldown: 0
-    attackEvent:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  nextAttackID: 0
-  attackAIEngaged: 0
-  attackInProgress: 0
-  clawDamage: 10
-  jumpForce: {x: 1, y: 1, z: 1}
 --- !u!1 &845733153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,6 +2037,50 @@ Transform:
   m_Father: {fileID: 268460011}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1838143748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838143749}
+  - component: {fileID: 1838143750}
+  m_Layer: 11
+  m_Name: VisionCone
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1838143749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838143748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 829784628}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1838143750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838143748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.75, y: 1.75, z: 1.4401395}
+  m_Center: {x: 0, y: 0, z: 1.2200701}
 --- !u!1 &1866544333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2451,18 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 1
       enableBigTilePrepass: 1
       isFptlEnabled: 1
+--- !u!114 &1887206854 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5575628547597658801, guid: 983fcb68f73ff6748a91659d7e5db707,
+    type: 3}
+  m_PrefabInstance: {fileID: 1887206851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171738436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c9f12fa5f8caa4a805822984262579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1887206855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 939489027, guid: 983fcb68f73ff6748a91659d7e5db707,
@@ -2654,6 +2673,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[0].minAttackRange.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[0].minAttackRange.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[0].maxAttackRange.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[0].maxAttackRange.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[1].minAttackRange.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[1].minAttackRange.z
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[1].maxAttackRange.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: attackPattern.Array.data[1].maxAttackRange.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: nextAttackID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8697226200860221705, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: m_Name
@@ -2683,32 +2738,32 @@ PrefabInstance:
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].minAttackRange.x
-      value: 7.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].minAttackRange.y
-      value: 7.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].minAttackRange.z
-      value: 7.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.x
-      value: 10
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.y
-      value: 10
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: attackPattern.Array.data[0].maxAttackRange.z
-      value: 10
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
@@ -2820,42 +2875,53 @@ PrefabInstance:
       propertyPath: wayPoints.Array.data[3].wayPoint
       value: 
       objectReference: {fileID: 160634136}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[0].minAttackRange.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[0].minAttackRange.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[0].maxAttackRange.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[0].maxAttackRange.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[1].minAttackRange.x
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[1].minAttackRange.z
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[1].maxAttackRange.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: attackPattern.Array.data[1].maxAttackRange.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: nextAttackID
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 108dce1ee1ce35e47b51133fdfd5ab8e, type: 3}
+--- !u!1 &8697226200382050295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8697226200860221705, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8697226200382050294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8697226200382050296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697226200382050295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ff728c27792b84e9cd939f68e22c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  attackPattern:
+  - minAttackRange: 30
+    maxAttackRange: 27
+    attackCooldown: 0.5
+    attackEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8697226200382050296}
+          m_MethodName: ExecuteJumpAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  nextAttackID: 0
+  target: {fileID: 1887206854}
+  attackAIEngaged: 0
+  attackInProgress: 0
+  clawDamage: 10
+  jumpForce: {x: 1, y: 15, z: 100}

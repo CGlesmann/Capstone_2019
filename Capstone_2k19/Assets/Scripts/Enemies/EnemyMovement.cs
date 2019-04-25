@@ -82,7 +82,7 @@ public class EnemyMovement : MonoBehaviour
                 if (PlayerSpotted())
                 {
                     // Resetting the NavMesh
-                    agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z); ;
+                    agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
                     agent.speed = chaseSpeed;
                     updateTimer = updateCooldown;
 
@@ -90,11 +90,7 @@ public class EnemyMovement : MonoBehaviour
                     state = EnemyAIState.Chasing;
                     return;
                 }
-            }
-
-            // Chasing AI / Chase -> Attack Transition
-            if (state == EnemyAIState.Chasing)
-            {
+            } else if (state == EnemyAIState.Chasing) {
                 // Chasing AI
                 ExecuteChaseAI();
 
@@ -106,12 +102,10 @@ public class EnemyMovement : MonoBehaviour
                     agent.isStopped = true;
                     agent.speed = 0f;
                     updateTimer = 0f;
-                }
-            }
 
-            // Attacking -> Chasing Transition
-            if (state == EnemyAIState.Attacking)
-            {
+                    return;
+                }
+            } else if (state == EnemyAIState.Attacking) {
                 if (!battleAI.PlayerInAttackRange())
                 {
                     // Disengaging from combat

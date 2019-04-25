@@ -13,22 +13,15 @@ public class WendigoAI : MeleeAI
     /// </summary>
     public void ExecuteJumpAttack()
     {
-        Debug.Log("Try Jump");
-        // Check if the wendigo is in JumpRange
-        CombatCharacter player = GetPlayer();
-        if (player != null) {
-            Debug.Log("Jumping");
-
+        if (target != null) {
             // Stop the Agent
             GetComponent<NavMeshAgent>().isStopped = true;
 
             // Apply the Jump Force
-            transform.LookAt(player.transform);
+            transform.LookAt(target.transform);
 
-            Vector3 force = Vector3.Scale(transform.forward, jumpForce);
-            GetComponent<Rigidbody>().AddForce(force);
-
-            attackInProgress = false;
+            Vector3 force = Vector3.Scale(transform.forward + new Vector3(0f, 1f, 0f), jumpForce);
+            GetComponent<NavMeshAgent>().velocity = force;
         }
     }
 }

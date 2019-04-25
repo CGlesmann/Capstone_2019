@@ -16,7 +16,7 @@ public class BattleAI : MonoBehaviour
     protected float currentCooldown = 0f;
 
     // State Variables
-    protected CombatCharacter target = null;
+    [SerializeField] protected CombatCharacter target = null;
     public bool attackAIEngaged = false;
     [SerializeField] protected bool attackInProgress = false;
 
@@ -36,8 +36,8 @@ public class BattleAI : MonoBehaviour
                     if (++nextAttackID > attackPattern.Length - 1)
                         nextAttackID = 0;
 
-                    attackPattern[nextAttackID].attackEvent.Invoke();
                     attackInProgress = true;
+                    attackPattern[nextAttackID].attackEvent.Invoke();
 
                     // Setting the Cooldown
                     currentCooldown = attackPattern[nextAttackID].attackCooldown;
@@ -51,40 +51,21 @@ public class BattleAI : MonoBehaviour
     /// <summary>
     /// Sets the AttackAI to be active
     /// </summary>
-    public void EngageAttackAI() { attackAIEngaged = true; target = GetPlayer(); }
+    public void EngageAttackAI() { attackAIEngaged = true;}
     /// <summary>
     /// Sets the AttackAI to be disabled
     /// </summary>
-    public void DisEngageAttackAI() { attackAIEngaged = false; target = null; }
+    public void DisEngageAttackAI() { attackAIEngaged = false;}
 
     /// <summary>
     /// Returns the Enemy's attack range
     /// Used for movement
     /// </summary>
     /// <returns></returns>
-    protected CombatCharacter GetPlayer()
-    {
-        // Getting the hitbox
-        Vector3 hitbox = attackAIEngaged ? attackPattern[nextAttackID].maxAttackRange : attackPattern[nextAttackID].minAttackRange;
-
-        // Get amount of colliders
-        Collider[] colliders = null;
-        colliders = Physics.OverlapBox(transform.position, hitbox * 2f, Quaternion.Euler(Vector3.forward), enemyLayer);
-
-        return ((colliders.Length > 0) ? (colliders[0].GetComponent<CombatCharacter>()) : null);
-    }
-
-    /// <summary>
-    /// Checks whether the player is in range
-    /// </summary>
-    /// <returns></returns>
     public bool PlayerInAttackRange()
     {
-        // Get the player reference
-        CombatCharacter player = GetPlayer();
-
-        // If player is not null then the player has been found
-        return (player != null);
+        float dist = (attackAIEngaged ? attackPattern[nextAttackID].minAttackRange : attackPattern[nextAttackID].maxAttackRange);
+        return (Vector3.Distance(transform.position, target.transform.position) <= dist);
     }
 }
 
@@ -92,8 +73,10 @@ public class BattleAI : MonoBehaviour
 public class Attack
 {
     // Attack Variables
-    public Vector3 minAttackRange = Vector3.zero;
-    public Vector3 maxAttackRange = Vector3.zero;
+    //public Vector3 minAttackRange = Vector3.zero;
+    //public Vector3 maxAttackRange = Vector3.zero;
+    public float minAttackRange = 0f;
+    public float maxAttackRange = 0f;
     public float attackCooldown = 0f;
     public UnityEvent attackEvent = null;
 }
