@@ -13,7 +13,7 @@ public class BattleAI : MonoBehaviour
     [Header("Attack Variables")]
     [SerializeField] protected Attack[] attackPattern = null;
     [SerializeField] protected int nextAttackID = 0;
-    protected float currentCooldown = 0f;
+    [SerializeField] protected float currentCooldown = 0f;
 
     // State Variables
     [SerializeField] protected CombatCharacter target = null;

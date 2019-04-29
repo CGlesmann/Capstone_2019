@@ -11,8 +11,6 @@ public class MeleeAI : BattleAI
     #region Attack Functions
     public void ClawSwipe()
     {
-        Debug.Log("Claw Swipe");
-
         // Dealing Damage
         target.TakeDamage(clawDamage);
 

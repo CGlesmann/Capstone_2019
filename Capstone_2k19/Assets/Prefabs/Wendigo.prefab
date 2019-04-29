@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 8697226200860221687}
   - component: {fileID: 8697226200860221686}
   - component: {fileID: 8697226200860221680}
-  - component: {fileID: 8697226200860221683}
   - component: {fileID: 8697226200860221694}
+  - component: {fileID: 625266435946998596}
   - component: {fileID: 1802785134154939074}
   m_Layer: 11
-  m_Name: Enemy (Test)
+  m_Name: Wendigo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,40 +135,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8697226200860221683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8697226200860221705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 432863a1a03af054eab263d8d683ba77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  wayPoints:
-  - wayPoint: {fileID: 0}
-    pauseHere: 0
-    pauseLength: 0
-  - wayPoint: {fileID: 0}
-    pauseHere: 1
-    pauseLength: 1.5
-  - wayPoint: {fileID: 0}
-    pauseHere: 0
-    pauseLength: 0
-  - wayPoint: {fileID: 0}
-    pauseHere: 1
-    pauseLength: 1.5
-  patrolSpeed: 10
-  acceptanceRange: 1
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  sightOffset: {x: 10, y: 0, z: 25}
-  sightRange: {x: 15, y: 6, z: 45}
-  chaseSpeed: 12.5
 --- !u!114 &8697226200860221694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +167,44 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &625266435946998596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697226200860221705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c767aa858dcb5994ab6dc1683f098fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  wayPoints:
+  - wayPoint: {fileID: 0}
+    pauseHere: 0
+    pauseLength: 0
+  - wayPoint: {fileID: 0}
+    pauseHere: 0
+    pauseLength: 0
+  - wayPoint: {fileID: 0}
+    pauseHere: 0
+    pauseLength: 0
+  - wayPoint: {fileID: 0}
+    pauseHere: 0
+    pauseLength: 0
+  patrolSpeed: 5
+  acceptanceRange: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  sightOffset: {x: 0, y: 0, z: 0}
+  sightRange: {x: 50, y: 3, z: 50}
+  chaseSpeed: 7.5
+  jumpCooldown: 3
+  jumpRange: 25
+  jumpForce: {x: 1, y: 1, z: 85}
+  jumpAcceptanceRange: 1
 --- !u!114 &1802785134154939074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,9 +219,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
-  attackPattern: []
+    m_Bits: 1024
+  attackPattern:
+  - minAttackRange: 12.5
+    maxAttackRange: 10
+    attackCooldown: 0.5
+    attackEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1802785134154939074}
+          m_MethodName: ClawSwipe
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
   nextAttackID: 0
+  currentCooldown: 0
+  target: {fileID: 0}
   attackAIEngaged: 0
   attackInProgress: 0
   clawDamage: 10
