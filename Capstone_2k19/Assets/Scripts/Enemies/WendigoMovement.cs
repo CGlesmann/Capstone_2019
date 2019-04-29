@@ -109,7 +109,6 @@ public class WendigoMovement : EnemyMovement
         agent.isStopped = true;
 
         // Look at the player and set velocity
-        //transform.LookAt(player);
         agent.velocity *= jumpForce;
 
         // Set the state to jumping
