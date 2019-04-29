@@ -54,7 +54,7 @@ public class WendigoMovement : EnemyMovement
                 ExecutePatrolAI();
 
                 // Checking for Patrol -> Chasing Transition
-                if (PlayerSpotted())
+                if (PlayerSpotted() || player != null)
                 {
                     SetChasePath();
 
@@ -87,11 +87,7 @@ public class WendigoMovement : EnemyMovement
                 {
                     // Disengaging from combat
                     battleAI.DisEngageAttackAI();
-                    agent.isStopped = false;
-
-                    // Resetting the NavMesh
-                    agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
-                    agent.speed = chaseSpeed;
+                    SetChasePath();
 
                     // Setting State
                     state = EnemyAIState.Chasing;

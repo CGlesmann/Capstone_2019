@@ -299,10 +299,7 @@ MonoBehaviour:
   magicHand: {fileID: 0}
   fireBallSpeed: 500
   setTime: 60
-  magicMax: 100
-  magicMana: 100
-  lifeTimer: 10
-  magicBuildUp: 0
+  Attaking: 0
 --- !u!65 &510483393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -430,6 +427,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &538536161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1744788882, guid: 983fcb68f73ff6748a91659d7e5db707,
+    type: 3}
+  m_PrefabInstance: {fileID: 450561770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &538536162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5575628547597658801, guid: 983fcb68f73ff6748a91659d7e5db707,
+    type: 3}
+  m_PrefabInstance: {fileID: 450561770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538536161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c9f12fa5f8caa4a805822984262579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &538536168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538536161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf5825dac92cf54ca5fe42a4a5deb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBallPrefab: {fileID: 8908094258037918525, guid: 45ebc1196ba95e840a1afc8050579135,
+    type: 3}
+  magicHand: {fileID: 816223594}
+  fireBallSpeed: 500
+  setTime: 60
+  Attaking: 0
 --- !u!1 &669300624
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +523,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &816223594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 908675111, guid: 983fcb68f73ff6748a91659d7e5db707,
+    type: 3}
+  m_PrefabInstance: {fileID: 450561770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044544633
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +653,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (Test)
       objectReference: {fileID: 0}
+    - target: {fileID: 1802785134154939074, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 538536162}
     - target: {fileID: 8697226200860221682, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -690,6 +734,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1262945289}
     - target: {fileID: 8697226200860221683, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+        type: 3}
+      propertyPath: wayPoints.Array.data[3].wayPoint
+      value: 
+      objectReference: {fileID: 669300624}
+    - target: {fileID: 625266435946998596, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+        type: 3}
+      propertyPath: jumpForce
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 625266435946998596, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+        type: 3}
+      propertyPath: wayPoints.Array.data[0].wayPoint
+      value: 
+      objectReference: {fileID: 499196830}
+    - target: {fileID: 625266435946998596, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+        type: 3}
+      propertyPath: wayPoints.Array.data[1].wayPoint
+      value: 
+      objectReference: {fileID: 704932534}
+    - target: {fileID: 625266435946998596, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
+        type: 3}
+      propertyPath: wayPoints.Array.data[2].wayPoint
+      value: 
+      objectReference: {fileID: 1262945289}
+    - target: {fileID: 625266435946998596, guid: 108dce1ee1ce35e47b51133fdfd5ab8e,
         type: 3}
       propertyPath: wayPoints.Array.data[3].wayPoint
       value: 

@@ -82,7 +82,7 @@ public class EnemyMovement : MonoBehaviour
                 ExecutePatrolAI();
 
                 // Checking for Patrol -> Chasing Transition
-                if (PlayerSpotted())
+                if (PlayerSpotted() || player != null)
                 {
                     // Resetting the NavMesh
                     agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
@@ -112,11 +112,7 @@ public class EnemyMovement : MonoBehaviour
                 {
                     // Disengaging from combat
                     battleAI.DisEngageAttackAI();
-                    agent.isStopped = false;
-
-                    // Resetting the NavMesh
-                    agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
-                    agent.speed = chaseSpeed;
+                    SetChasePath();
 
                     // Setting State
                     state = EnemyAIState.Chasing;
