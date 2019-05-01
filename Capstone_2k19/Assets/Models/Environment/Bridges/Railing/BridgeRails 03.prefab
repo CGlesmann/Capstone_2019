@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2839842298058972769}
   - component: {fileID: 3254587492404923067}
   - component: {fileID: 4689038652567182746}
-  - component: {fileID: 7058313496546183277}
   m_Layer: 0
   m_Name: Torch_Handle 1
   m_TagString: Untagged
@@ -78,20 +77,72 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7058313496546183277
-CapsuleCollider:
+--- !u!1 &916489262175946325
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 567846100914262154}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36920667
-  m_Height: 5.3183556
-  m_Direction: 1
-  m_Center: {x: -0.000022888184, y: 0, z: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6692565521989649281}
+  m_Layer: 0
+  m_Name: Railings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6692565521989649281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916489262175946325}
+  m_LocalRotation: {x: 0.97603077, y: 0.00032822162, z: -0.21762705, w: -0.0015123521}
+  m_LocalPosition: {x: -44.530006, y: 2.4270782, z: 4.849991}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5507973195275332039}
+  - {fileID: 5507973195275332035}
+  - {fileID: 5507973195275332047}
+  - {fileID: 5507973195275332043}
+  m_Father: {fileID: 5507973195275332055}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2376146284054380376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4103406744371001969}
+  m_Layer: 0
+  m_Name: Torches
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4103406744371001969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376146284054380376}
+  m_LocalRotation: {x: 0.05802732, y: -0.080531634, z: 0.7165964, w: 0.6903891}
+  m_LocalPosition: {x: -52.61792, y: 2.985489, z: 6.5051994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5507973195275332059}
+  - {fileID: 4559735413749969041}
+  m_Father: {fileID: 5507973195275332055}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4559735413671349277
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,14 +244,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4559735413749969038}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 98.97, y: -3.6648767, z: -27.9}
+  m_LocalRotation: {x: -0.05802729, y: 0.08053165, z: -0.7165964, w: 0.6903892}
+  m_LocalPosition: {x: -9.028479, y: -83.9724, z: -15.490191}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4559735414687549755}
   - {fileID: 4559735413671349276}
-  m_Father: {fileID: 5507973195275332049}
-  m_RootOrder: 2
+  m_Father: {fileID: 4103406744371001969}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4559735414687549752
 GameObject:
@@ -213,7 +264,6 @@ GameObject:
   - component: {fileID: 4559735414687549755}
   - component: {fileID: 4559735414687549756}
   - component: {fileID: 4559735414687549757}
-  - component: {fileID: 4559735414687549754}
   m_Layer: 0
   m_Name: Torch_Handle
   m_TagString: Untagged
@@ -280,20 +330,40 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &4559735414687549754
-CapsuleCollider:
+--- !u!1 &5135364279129773376
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4559735414687549752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36920664
-  m_Height: 5.3183556
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: -0.000045776367}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8618504008325077226}
+  m_Layer: 0
+  m_Name: Railings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8618504008325077226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5135364279129773376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5507973195275332037}
+  - {fileID: 5507973195275332033}
+  - {fileID: 5507973195275332045}
+  - {fileID: 5507973195275332041}
+  m_Father: {fileID: 5507973195275332053}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5234363837222724121
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,13 +387,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5234363837222724121}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.044, y: -3.6648767, z: -36.882}
+  m_LocalRotation: {x: -0, y: -0.60506964, z: -0, w: 0.7961725}
+  m_LocalPosition: {x: 62.19598, y: -3.6648767, z: 56.502693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2839842298058972769}
   - {fileID: 3727901109967053876}
-  m_Father: {fileID: 6513682965857954639}
+  m_Father: {fileID: 5507973195275332049}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5253126421953214707
@@ -349,13 +419,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5253126421953214707}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.92048, y: -3.6648767, z: -20.42923}
+  m_LocalRotation: {x: -0, y: -0.60506964, z: -0, w: 0.7961725}
+  m_LocalPosition: {x: 46.043213, y: -3.6648767, z: 59.825966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9061388725682638875}
   - {fileID: 8736294943004480588}
-  m_Father: {fileID: 6513682965857954639}
+  m_Father: {fileID: 5507973195275332049}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5507973195275564513
@@ -369,7 +439,6 @@ GameObject:
   - component: {fileID: 5507973195275332033}
   - component: {fileID: 5507973195278723553}
   - component: {fileID: 5507973195277757217}
-  - component: {fileID: 4559735413879554505}
   m_Layer: 0
   m_Name: Bridge_Rail_02 1
   m_TagString: Untagged
@@ -384,11 +453,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564513}
-  m_LocalRotation: {x: -0.07144167, y: 0.9667513, z: -0.24552442, w: -0.0024153774}
-  m_LocalPosition: {x: -7.739427, y: -1.6882814, z: 3.0988288}
+  m_LocalRotation: {x: -0.07144167, y: 0.9667513, z: -0.24552444, w: -0.0024153588}
+  m_LocalPosition: {x: -7.739441, y: -1.6882794, z: 3.0988455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332053}
+  m_Father: {fileID: 8618504008325077226}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5507973195278723553
@@ -436,20 +505,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4559735413879554505
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507973195275564513}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: 7a3a78376da88e94cb28bc29a2769b70, type: 3}
 --- !u!1 &5507973195275564515
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +516,6 @@ GameObject:
   - component: {fileID: 5507973195275332035}
   - component: {fileID: 5507973195278723555}
   - component: {fileID: 5507973195277757219}
-  - component: {fileID: 4559735413879554506}
   m_Layer: 0
   m_Name: Bridge_Rail_02
   m_TagString: Untagged
@@ -476,11 +530,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564515}
-  m_LocalRotation: {x: -0.07144167, y: 0.9667513, z: -0.24552442, w: -0.0024153774}
-  m_LocalPosition: {x: -60.59436, y: 1.0604763, z: 8.290492}
+  m_LocalRotation: {x: -0.20784512, y: -0.2566483, z: -0.94375676, w: -0.015975548}
+  m_LocalPosition: {x: -16.006056, y: 1.356227, z: 3.7060747}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332055}
+  m_Father: {fileID: 6692565521989649281}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5507973195278723555
@@ -528,20 +582,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4559735413879554506
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507973195275564515}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300018, guid: 7a3a78376da88e94cb28bc29a2769b70, type: 3}
 --- !u!1 &5507973195275564517
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +593,6 @@ GameObject:
   - component: {fileID: 5507973195275332037}
   - component: {fileID: 5507973195278723557}
   - component: {fileID: 5507973195277757221}
-  - component: {fileID: 4559735413879554504}
   m_Layer: 0
   m_Name: Bridge_Rail_01 2
   m_TagString: Untagged
@@ -568,11 +607,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564517}
-  m_LocalRotation: {x: 0, y: 0.005708792, z: -0, w: 0.9999837}
-  m_LocalPosition: {x: -7.74, y: -0.53967994, z: 3.38}
+  m_LocalRotation: {x: -0, y: 0.0057088435, z: -0, w: 0.9999838}
+  m_LocalPosition: {x: -7.7400284, y: -0.5396817, z: 3.3800116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332053}
+  m_Father: {fileID: 8618504008325077226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5507973195278723557
@@ -620,20 +659,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4559735413879554504
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507973195275564517}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 7a3a78376da88e94cb28bc29a2769b70, type: 3}
 --- !u!1 &5507973195275564519
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +670,6 @@ GameObject:
   - component: {fileID: 5507973195275332039}
   - component: {fileID: 5507973195278723559}
   - component: {fileID: 5507973195277757223}
-  - component: {fileID: 4559735413879554509}
   m_Layer: 0
   m_Name: Bridge_Rail_01 1
   m_TagString: Untagged
@@ -660,11 +684,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564519}
-  m_LocalRotation: {x: 0, y: 0.005708792, z: -0, w: 0.9999837}
-  m_LocalPosition: {x: -60.594936, y: 2.2090776, z: 8.571678}
+  m_LocalRotation: {x: -0.97725725, y: -0.00033685003, z: 0.21205148, w: -0.0015104535}
+  m_LocalPosition: {x: -16.124557, y: 0.2067643, z: 3.4549847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332055}
+  m_Father: {fileID: 6692565521989649281}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5507973195278723559
@@ -712,20 +736,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4559735413879554509
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507973195275564519}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300016, guid: 7a3a78376da88e94cb28bc29a2769b70, type: 3}
 --- !u!1 &5507973195275564521
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +747,6 @@ GameObject:
   - component: {fileID: 5507973195275332041}
   - component: {fileID: 5507973195278723561}
   - component: {fileID: 5507973195277757225}
-  - component: {fileID: 5507973195275564520}
   m_Layer: 0
   m_Name: Bridge_Rail_04 1
   m_TagString: Untagged
@@ -752,11 +761,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564521}
-  m_LocalRotation: {x: 0.90473914, y: -0.004734531, z: -0.19136757, w: 0.38053012}
+  m_LocalRotation: {x: 0.90473914, y: -0.0047345306, z: -0.19136754, w: 0.38053012}
   m_LocalPosition: {x: 8.288677, y: -1.4001858, z: -0.35387516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332053}
+  m_Father: {fileID: 8618504008325077226}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 136.627, y: 28.772995, z: 12.247986}
 --- !u!33 &5507973195278723561
@@ -804,20 +813,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5507973195275564520
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507973195275564521}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300008, guid: 7a3a78376da88e94cb28bc29a2769b70, type: 3}
 --- !u!1 &5507973195275564523
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,11 +838,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564523}
-  m_LocalRotation: {x: 0.9354023, y: 0.007903293, z: -0.1833476, w: 0.30223125}
-  m_LocalPosition: {x: -44.49, y: 1.3485718, z: 4.79}
-  m_LocalScale: {x: 1.007373, y: 1, z: 0.80572}
+  m_LocalRotation: {x: -0.29806146, y: 0.024504792, z: 0.05864415, w: 0.9524284}
+  m_LocalPosition: {x: 0.060296882, y: 1.0786862, z: 0.034313083}
+  m_LocalScale: {x: 1.0073732, y: 1, z: 0.80572}
   m_Children: []
-  m_Father: {fileID: 5507973195275332055}
+  m_Father: {fileID: 6692565521989649281}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 145.367, y: 24.271988, z: 6.7029877}
 --- !u!33 &5507973195278723563
@@ -906,7 +901,6 @@ GameObject:
   - component: {fileID: 5507973195275332045}
   - component: {fileID: 5507973195278723565}
   - component: {fileID: 5507973195277757229}
-  - component: {fileID: 5507973195275564524}
   m_Layer: 0
   m_Name: Bridge_Rail_03 1
   m_TagString: Untagged
@@ -921,11 +915,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564525}
-  m_LocalRotation: {x: 0.9781494, y: 0.00034326533, z: -0.20789737, w: -0.001509008}
+  m_LocalRotation: {x: 0.9781494, y: 0.00034326533, z: -0.20789734, w: -0.0015090079}
   m_LocalPosition: {x: 8.320087, y: -0.32167935, z: -0.35276508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332053}
+  m_Father: {fileID: 8618504008325077226}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -179.839, y: 23.997986, z: -0.07397461}
 --- !u!33 &5507973195278723565
@@ -973,20 +967,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5507973195275564524
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507973195275564525}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300006, guid: 7a3a78376da88e94cb28bc29a2769b70, type: 3}
 --- !u!1 &5507973195275564527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,11 +992,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564527}
-  m_LocalRotation: {x: 0.97603077, y: 0.00032822162, z: -0.21762711, w: -0.0015123521}
-  m_LocalPosition: {x: -44.530006, y: 2.4270782, z: 4.849991}
+  m_LocalRotation: {x: 1.1641531e-10, y: 5.6843412e-14, z: 2.9103827e-11, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332055}
+  m_Father: {fileID: 6692565521989649281}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -179.839, y: 25.14, z: -0.07397461}
 --- !u!33 &5507973195278723567
@@ -1074,7 +1054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5507973195275332049}
   m_Layer: 0
-  m_Name: Torch
+  m_Name: Torches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,15 +1067,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564529}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.92048, y: 3.6648767, z: 20.42923}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.500504, y: 0.91612124, z: 4.719245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5507973195275332059}
-  - {fileID: 6513682965857954639}
-  - {fileID: 4559735413749969041}
-  m_Father: {fileID: 5507973195275332055}
-  m_RootOrder: 4
+  - {fileID: 97842097150057403}
+  - {fileID: 8435188268646864821}
+  m_Father: {fileID: 5507973195275332053}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5507973195275564531
 GameObject:
@@ -1107,7 +1086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5507973195275332051}
   m_Layer: 0
-  m_Name: Mid Bridge Rails 01 (2)
+  m_Name: BridgeRails 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1126,6 +1105,7 @@ Transform:
   m_Children:
   - {fileID: 5507973195275332055}
   - {fileID: 5507973195275332053}
+  - {fileID: 5115723462044621905}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 89.628006, z: 0}
@@ -1156,10 +1136,8 @@ Transform:
   m_LocalPosition: {x: -49.42, y: 2.7487576, z: 15.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5507973195275332037}
-  - {fileID: 5507973195275332033}
-  - {fileID: 5507973195275332045}
-  - {fileID: 5507973195275332041}
+  - {fileID: 8618504008325077226}
+  - {fileID: 5507973195275332049}
   m_Father: {fileID: 5507973195275332051}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1190,11 +1168,8 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5507973195275332039}
-  - {fileID: 5507973195275332035}
-  - {fileID: 5507973195275332047}
-  - {fileID: 5507973195275332043}
-  - {fileID: 5507973195275332049}
+  - {fileID: 6692565521989649281}
+  - {fileID: 4103406744371001969}
   m_Father: {fileID: 5507973195275332051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1209,7 +1184,6 @@ GameObject:
   - component: {fileID: 5507973195275332059}
   - component: {fileID: 5507973195278723573}
   - component: {fileID: 5507973195277757237}
-  - component: {fileID: 4559735413879554513}
   m_Layer: 0
   m_Name: Torch_Connector1
   m_TagString: Untagged
@@ -1224,11 +1198,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5507973195275564539}
-  m_LocalRotation: {x: 0.058027327, y: -0.08053168, z: 0.71659636, w: 0.69038916}
-  m_LocalPosition: {x: 14.302559, y: -0.6793878, z: -13.924011}
+  m_LocalRotation: {x: 0.0000000037252894, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5507973195275332049}
+  m_Father: {fileID: 4103406744371001969}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5507973195278723573
@@ -1276,20 +1250,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &4559735413879554513
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5507973195275564539}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.4169557
-  m_Height: 0.6792136
-  m_Direction: 1
-  m_Center: {x: -0.22724453, y: 0.014504716, z: 0.106062636}
 --- !u!1 &6179153415430303589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,38 +1328,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &6544591787024323902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6513682965857954639}
-  m_Layer: 0
-  m_Name: Torch 1 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6513682965857954639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6544591787024323902}
-  m_LocalRotation: {x: -0, y: -0.60506964, z: -0, w: 0.79617256}
-  m_LocalPosition: {x: 8.44, y: 0, z: 0.82}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 97842097150057403}
-  - {fileID: 8435188268646864821}
-  m_Father: {fileID: 5507973195275332049}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -74.468, z: 0}
 --- !u!1 &6566664240127169370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1406,64 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &8444650025345611071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5115723462044621905}
+  - component: {fileID: 6069488846961082860}
+  - component: {fileID: 2482257498550207694}
+  m_Layer: 0
+  m_Name: Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5115723462044621905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8444650025345611071}
+  m_LocalRotation: {x: -0, y: -0.62467635, z: -0, w: 0.7808837}
+  m_LocalPosition: {x: -49.19, y: -0.7379074, z: 17.4}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 34.824978}
+  m_Children: []
+  m_Father: {fileID: 5507973195275332051}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -77.317, z: 0}
+--- !u!65 &6069488846961082860
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8444650025345611071}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2482257498550207694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8444650025345611071}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8502915, y: 1, z: 1.0236424}
+  m_Center: {x: -12.09874, y: 0, z: 0.005062905}
 --- !u!1 &9190266389567543014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1475,6 @@ GameObject:
   - component: {fileID: 9061388725682638875}
   - component: {fileID: 4596977205990566722}
   - component: {fileID: 4017623207225414588}
-  - component: {fileID: 4559735413879554510}
   m_Layer: 0
   m_Name: Torch_Handle 1
   m_TagString: Untagged
@@ -1556,17 +1541,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &4559735413879554510
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9190266389567543014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36920667
-  m_Height: 5.3183556
-  m_Direction: 1
-  m_Center: {x: -0.000022888184, y: 0, z: 0}
