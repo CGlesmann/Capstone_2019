@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerCombatController : MonoBehaviour
 {
+    public Rigidbody EnemyPrefab;
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
-
-    [SerializeField] private float magicBuildUp = 0;
+    public Transform EnemySpawn;
+    
+    [SerializeField] private float magicBuildUp = 0;    
     private float maxMana = 100;
     private float mana = 100;
     private float fireBallSpeed = 1000;
@@ -15,8 +17,13 @@ public class PlayerCombatController : MonoBehaviour
     private float coolDownTimer = 0;
     private float setTime = 10;
     private bool Blocking = false;
+    private bool inRange = false;
     [SerializeField] public bool Attacking = false;
-    
+
+    public void SpawnEnemy()
+    {
+        Instantiate(EnemyPrefab, EnemySpawn.position, EnemySpawn.rotation);
+    }
 
     public void rangedAttackSmall()
     {
@@ -49,14 +56,7 @@ public class PlayerCombatController : MonoBehaviour
 
     public void meleeAttack()
     {
-        GameObject player = GameObject.Find("Player");
-        MeleeHitBox script = player.GetComponent<MeleeHitBox>();
         Attacking = true;
-
-        if(script.inRange == false)
-        {
-            Attacking = false;
-        }
     }
 
     public void blocking()
@@ -106,7 +106,7 @@ public class PlayerCombatController : MonoBehaviour
         {
             blockTimer += 1;
 
-            if (blockTimer >= 10)
+            if (blockTimer >= 30)
             {
                 blocking();
                 Debug.Log("Blocking");
@@ -127,6 +127,12 @@ public class PlayerCombatController : MonoBehaviour
                 Blocking = false;
                 blockTimer = 0;
             }
+        }
+
+        //SpawnEnemy
+        if(Input.GetKeyDown("f"))
+        {
+            SpawnEnemy();
         }
 
         //Restoring Mana 

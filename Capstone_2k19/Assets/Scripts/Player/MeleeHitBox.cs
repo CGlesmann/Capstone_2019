@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class MeleeHitBox : MonoBehaviour
 {
-    public bool inRange = false;
-    private void OnTriggerEnter(Collider col)
-    {
-        inRange = true;
-        if (col.gameObject.tag == "Enemy") { Debug.Log("Enemy Entered"); }        
+    public void OnTriggerEnter(Collider col)
+    {      
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Enemy Entered");
+        }        
     }
 
-    void OnTriggerStay(Collider col)
+    public void OnTriggerStay(Collider col)
     {
-        GameObject player = GameObject.Find("Player");
-        PlayerCombatController script = player.GetComponent<PlayerCombatController>();
-
-        if (col.gameObject.tag == "Enemy" && script.Attacking == true)
+        if (col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);            
+            Debug.Log("Enemy Stay");            
         }
     }
 
-    private void OnTriggerExit(Collider col)
+    public void OnTriggerExit(Collider col)
     {
-        inRange = false;
-        if (col.gameObject.tag == "Enemy") { Debug.Log("Enemy Exited"); }
+        
+        if (col.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Enemy Exited");
+        }
     }
 }

@@ -19,7 +19,7 @@ public class FireBall : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Enemy (Test)")
+        if (col.gameObject.tag == "Enemy")
         {
             Destroy(col.gameObject);
             Destroy(gameObject);
