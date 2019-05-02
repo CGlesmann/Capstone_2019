@@ -10,13 +10,12 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField] private float magicBuildUp = 0;
     private float maxMana = 100;
     private float mana = 100;
-    private float fireBallSpeed = 500;
+    private float fireBallSpeed = 1000;
     private float blockTimer = 0;
     private float coolDownTimer = 0;
-    private float attackTimer = 0;
     private float setTime = 10;
     private bool Blocking = false;
-    public bool Attacking = false;
+    [SerializeField] public bool Attacking = false;
     
 
     public void rangedAttackSmall()
@@ -27,7 +26,6 @@ public class PlayerCombatController : MonoBehaviour
         fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
-        fireBallInstance.useGravity = false;
         gameObject.GetComponent<CombatCharacter>().DrainMana(1);
         mana -= 1;
         magicBuildUp = 0;
@@ -51,14 +49,22 @@ public class PlayerCombatController : MonoBehaviour
 
     public void meleeAttack()
     {
+        GameObject player = GameObject.Find("Player");
+        MeleeHitBox script = player.GetComponent<MeleeHitBox>();
         Attacking = true;
-        attackTimer = 10;
+
+        if(script.inRange == false)
+        {
+            Attacking = false;
+        }
     }
 
     public void blocking()
     {
+        float DR;
         Blocking = true;
-        gameObject.GetComponent<CombatCharacter>().SetDamageReduction(1);
+        DR = mana / maxMana;
+        gameObject.GetComponent<CombatCharacter>().SetDamageReduction(DR);
     }
 
     public void manaGain()
@@ -122,8 +128,6 @@ public class PlayerCombatController : MonoBehaviour
                 blockTimer = 0;
             }
         }
-
-        if(attackTimer)
 
         //Restoring Mana 
         manaGain();

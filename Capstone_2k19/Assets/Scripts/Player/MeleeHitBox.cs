@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MeleeHitBox : MonoBehaviour
 {
+    public bool inRange = false;
+    private void OnTriggerEnter(Collider col)
+    {
+        inRange = true;
+        if (col.gameObject.tag == "Enemy") { Debug.Log("Enemy Entered"); }        
+    }
 
     void OnTriggerStay(Collider col)
     {
@@ -14,5 +20,11 @@ public class MeleeHitBox : MonoBehaviour
         {
             Destroy(col.gameObject);            
         }
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        inRange = false;
+        if (col.gameObject.tag == "Enemy") { Debug.Log("Enemy Exited"); }
     }
 }
