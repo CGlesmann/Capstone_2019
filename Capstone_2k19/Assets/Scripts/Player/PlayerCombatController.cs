@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCombatController : MonoBehaviour
 {
-    public Rigidbody EnemyPrefab;
+    public GameObject EnemyPrefab;
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
     public Transform EnemySpawn;
@@ -17,7 +17,6 @@ public class PlayerCombatController : MonoBehaviour
     private float coolDownTimer = 0;
     private float setTime = 10;
     private bool Blocking = false;
-    private bool inRange = false;
     [SerializeField] public bool Attacking = false;
 
     public void SpawnEnemy()
@@ -56,7 +55,14 @@ public class PlayerCombatController : MonoBehaviour
 
     public void meleeAttack()
     {
-        Attacking = true;
+        //GameObject Player = GameObject.Find("Player");
+        //MeleeHitBox script = Player.GetComponent<MeleeHitBox>();
+
+        //if (script.InRange == true)
+        //{
+            Attacking = true;
+            Debug.Log("Attack");
+        //}
     }
 
     public void blocking()
@@ -120,12 +126,14 @@ public class PlayerCombatController : MonoBehaviour
             {
                 meleeAttack();
                 blockTimer = 0;
+                Attacking = false;
             }
             //if you are finished blocking than triggers code to allow to to attack again
             else if(Blocking == true)
             {
                 Blocking = false;
                 blockTimer = 0;
+                Attacking = false;
             }
         }
 
