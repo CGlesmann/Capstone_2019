@@ -82,7 +82,7 @@ public class EnemyMovement : MonoBehaviour
                 ExecutePatrolAI();
 
                 // Checking for Patrol -> Chasing Transition
-                if (PlayerSpotted() || player != null)
+                if (player != null || PlayerSpotted())
                 {
                     // Resetting the NavMesh
                     agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
@@ -95,11 +95,13 @@ public class EnemyMovement : MonoBehaviour
             }
             else if (state == EnemyAIState.Chasing)
             {
+                Debug.Log("Destination: " + agent.destination);
                 // Checking for Chase -> Attack Transition
                 if (battleAI.PlayerInAttackRange())
                 {
                     state = EnemyAIState.Attacking;
                     battleAI.EngageAttackAI();
+                    //executeMovementAI = false;
                     agent.isStopped = true;
                     agent.speed = 0f;
 
@@ -108,10 +110,12 @@ public class EnemyMovement : MonoBehaviour
             }
             else if (state == EnemyAIState.Attacking)
             {
+                Debug.Log("Attacking");
                 if (!battleAI.PlayerInAttackRange())
                 {
                     // Disengaging from combat
                     battleAI.DisEngageAttackAI();
+                    //executeMovementAI = true;
                     SetChasePath();
 
                     // Setting State
@@ -189,6 +193,7 @@ public class EnemyMovement : MonoBehaviour
     // Check Functions
     protected bool PlayerSpotted()
     {
+        Debug.Log("Looking for a player");
         // Getting the Player Reference
         Collider[] col = Physics.OverlapBox(transform.position + Vector3.Scale(sightOffset, GetComponent<NavMeshAgent>().velocity.normalized), sightRange / 2f, Quaternion.Euler(transform.forward), playerLayer);
         player = (col.Length > 0) ? col[0].transform : null;
@@ -205,6 +210,8 @@ public class EnemyMovement : MonoBehaviour
         // Resetting the NavMesh
         agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
         agent.speed = chaseSpeed;
+
+        agent.isStopped = false;
     }
     #endregion
 }

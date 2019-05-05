@@ -54,7 +54,7 @@ public class WendigoMovement : EnemyMovement
                 ExecutePatrolAI();
 
                 // Checking for Patrol -> Chasing Transition
-                if (PlayerSpotted() || player != null)
+                if (player != null || PlayerSpotted())
                 {
                     SetChasePath();
 
@@ -65,6 +65,7 @@ public class WendigoMovement : EnemyMovement
             }
             else if (state == EnemyAIState.Chasing)
             {
+                agent.destination = player.transform.position;
                 if (Vector3.Distance(transform.position, player.position) > jumpRange || jumpTimer > 0f)
                 {
                     // Checking for Chase -> Attack Transition
@@ -72,12 +73,13 @@ public class WendigoMovement : EnemyMovement
                     {
                         state = EnemyAIState.Attacking;
                         battleAI.EngageAttackAI();
+                        //executeMovementAI = false;
                         agent.isStopped = true;
                         agent.speed = 0f;
 
                         return;
                     }
-                } else if (jumpTimer <= 0f) {
+                } else if (jumpTimer <= 0f && Physics.Raycast(transform.position, transform.forward, 15f, playerLayer)) {
                     BeginJump();
                 }
             }
@@ -87,6 +89,7 @@ public class WendigoMovement : EnemyMovement
                 {
                     // Disengaging from combat
                     battleAI.DisEngageAttackAI();
+                    //executeMovementAI = true;
                     SetChasePath();
 
                     // Setting State

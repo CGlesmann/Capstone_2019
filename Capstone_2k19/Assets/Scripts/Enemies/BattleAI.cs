@@ -51,11 +51,13 @@ public class BattleAI : MonoBehaviour
     /// <summary>
     /// Sets the AttackAI to be active
     /// </summary>
-    public void EngageAttackAI() { attackAIEngaged = true;}
+    public void EngageAttackAI() { attackAIEngaged = true; }
     /// <summary>
     /// Sets the AttackAI to be disabled
     /// </summary>
-    public void DisEngageAttackAI() { attackAIEngaged = false;}
+    public void DisEngageAttackAI() { attackAIEngaged = false; }
+
+    public float DistanceToPlayer() { return Vector3.Distance(transform.position, target.transform.position); }
 
     /// <summary>
     /// Returns the Enemy's attack range
@@ -65,6 +67,7 @@ public class BattleAI : MonoBehaviour
     public bool PlayerInAttackRange()
     {
         float dist = (attackAIEngaged ? attackPattern[nextAttackID].minAttackRange : attackPattern[nextAttackID].maxAttackRange);
+        Debug.Log(name + " is " + dist + " units away");
         return (Vector3.Distance(transform.position, target.transform.position) <= dist);
     }
 }
