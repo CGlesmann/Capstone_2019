@@ -55,14 +55,14 @@ public class PlayerCombatController : MonoBehaviour
 
     public void meleeAttack()
     {
-        //GameObject Player = GameObject.Find("Player");
-        //MeleeHitBox script = Player.GetComponent<MeleeHitBox>();
+        GameObject hitbox = GameObject.Find("HitBox");
+        BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
+        
 
-        //if (script.InRange == true)
-        //{
-            Attacking = true;
-            Debug.Log("Attack");
-        //}
+        boxCollider.enabled = true;
+        Attacking = true;
+        Debug.Log("Attack");
+            
     }
 
     public void blocking()
