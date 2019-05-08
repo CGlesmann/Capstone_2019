@@ -9,9 +9,9 @@ public class MeleeHitBox : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             BoxCollider hitbox = gameObject.GetComponent<BoxCollider>();
+            col.gameObject.GetComponent<CombatCharacter>().TakeDamage(20);
 
             Debug.Log("Enemy Entered");
-            Destroy(col.gameObject);
             hitbox.enabled = false;
 
 

@@ -34,7 +34,7 @@ public class PlayerCombatController : MonoBehaviour
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
         gameObject.GetComponent<CombatCharacter>().DrainMana(1);
-        mana -= 1;
+        mana -= 5;
         magicBuildUp = 0;
         coolDownTimer = setTime;
     }
@@ -48,6 +48,7 @@ public class PlayerCombatController : MonoBehaviour
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
         fireBallInstance.GetComponent<FireBall>().enabled = false;
+        fireBallInstance.GetComponent<FireBall>().manaCharge(magicBuildUp);
         gameObject.GetComponent<CombatCharacter>().DrainMana(magicBuildUp);
         mana -= magicBuildUp;
         magicBuildUp = 0;
