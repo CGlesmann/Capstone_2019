@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCombatController : MonoBehaviour
 {
+    public static PlayerCombatController controller = null;
     public GameObject EnemyPrefab;
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
@@ -87,7 +88,16 @@ public class PlayerCombatController : MonoBehaviour
             mana = maxMana;
         }
     }
-
+    private void Awake()
+    {
+        if (controller == null)
+        {
+            controller = this;
+            GameObject.DontDestroyOnLoad(gameObject);
+        }
+        else
+            GameObject.Destroy(gameObject);
+    }
     void Update()
     {
         //FireBall Scripting
