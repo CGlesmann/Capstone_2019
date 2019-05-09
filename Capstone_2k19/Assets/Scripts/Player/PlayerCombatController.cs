@@ -33,7 +33,7 @@ public class PlayerCombatController : MonoBehaviour
         fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
-        gameObject.GetComponent<CombatCharacter>().DrainMana(1);
+        gameObject.GetComponent<CombatCharacter>().DrainMana(5);
         mana -= 5;
         magicBuildUp = 0;
         coolDownTimer = setTime;
@@ -60,11 +60,9 @@ public class PlayerCombatController : MonoBehaviour
         GameObject hitbox = GameObject.Find("HitBox");
         BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
         
-
         boxCollider.enabled = true;
         Attacking = true;
-        Debug.Log("Attack");
-            
+        Debug.Log("Attack");            
     }
 
     public void blocking()
@@ -80,7 +78,7 @@ public class PlayerCombatController : MonoBehaviour
         if (mana < maxMana)
         {
             float addMana = 0f;
-            addMana += 2 * Time.deltaTime;
+            addMana += .25f;
             mana += addMana;
             gameObject.GetComponent<CombatCharacter>().RestoreMana(addMana);
         }
@@ -149,11 +147,8 @@ public class PlayerCombatController : MonoBehaviour
         }
 
         //SpawnEnemy
-        if(Input.GetKeyDown("f"))
-        {
-            SpawnEnemy();
-        }
-
+        if(Input.GetKeyDown("f")){ SpawnEnemy(); }
+        
         //Restoring Mana 
         manaGain();
     }
