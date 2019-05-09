@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MeleeHitBox : MonoBehaviour
 {
-
-    void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
-        GameObject player = GameObject.Find("Player");
-        PlayerCombatController script = player.GetComponent<PlayerCombatController>();
-
-        if (col.gameObject.name == "Enemy (Test)" && script.Attaking == true)
+        if (col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+            BoxCollider hitbox = gameObject.GetComponent<BoxCollider>();
+            col.gameObject.GetComponent<CombatCharacter>().TakeDamage(20);
+
+            Debug.Log("Enemy Entered");
+            hitbox.enabled = false;
+
+
         }
     }
 }

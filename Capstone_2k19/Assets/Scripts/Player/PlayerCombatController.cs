@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class PlayerCombatController : MonoBehaviour
 {
+    public static PlayerCombatController controller = null;
+    public GameObject EnemyPrefab;
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
-    public float fireBallSpeed = 500;
-    public float setTime = 60;
-
-    private float magicMax = 100;
-    private float magicMana = 100;
-    private float lifeTimer = 10;
-    private float magicBuildUp = 0;
-    private float Timer = 0;
-    private float blockTimer = 0;
-
-    public bool Attaking = false;
-    private bool Blocking = false;
+    public Transform EnemySpawn;
     
+    [SerializeField] private float magicBuildUp = 0;    
+    private float maxMana = 100;
+    private float mana = 100;
+    private float fireBallSpeed = 1000;
+    private float blockTimer = 0;
+    private float coolDownTimer = 0;
+    private float setTime = 10;
+    private bool Blocking = false;
+    [SerializeField] public bool Attacking = false;
 
+    public void SpawnEnemy()
+    {
+        Instantiate(EnemyPrefab, EnemySpawn.position, EnemySpawn.rotation);
+    }
 
     public void rangedAttackSmall()
     {
@@ -29,10 +33,10 @@ public class PlayerCombatController : MonoBehaviour
         fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
-        fireBallInstance.useGravity = false;
         gameObject.GetComponent<CombatCharacter>().DrainMana(1);
+        mana -= 5;
         magicBuildUp = 0;
-        Timer = setTime;
+        coolDownTimer = setTime;
     }
 
     public void rangedAttackBig()
@@ -44,48 +48,73 @@ public class PlayerCombatController : MonoBehaviour
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
         fireBallInstance.GetComponent<FireBall>().enabled = false;
-        gameObject.GetComponent<CombatCharacter>().DrainMana(magicBuildUp); 
+        fireBallInstance.GetComponent<FireBall>().manaCharge(magicBuildUp);
+        gameObject.GetComponent<CombatCharacter>().DrainMana(magicBuildUp);
+        mana -= magicBuildUp;
         magicBuildUp = 0;
-        Timer = setTime;
+        coolDownTimer = setTime;
     }
 
     public void meleeAttack()
     {
-        Attaking = true;
+        GameObject hitbox = GameObject.Find("HitBox");
+        BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
+        
+
+        boxCollider.enabled = true;
+        Attacking = true;
+        Debug.Log("Attack");
+            
     }
 
     public void blocking()
     {
+        float DR;
         Blocking = true;
+        DR = mana / maxMana;
+        gameObject.GetComponent<CombatCharacter>().SetDamageReduction(DR);
     }
 
+    public void manaGain()
+    {
+        if (mana < maxMana)
+        {
+            float addMana = 0f;
+            addMana += 2 * Time.deltaTime;
+            mana += addMana;
+            gameObject.GetComponent<CombatCharacter>().RestoreMana(addMana);
+        }
+        else if (mana > maxMana)
+        {
+            mana = maxMana;
+        }
+    }
+    private void Awake()
+    {
+        if (controller == null)
+        {
+            controller = this;
+            GameObject.DontDestroyOnLoad(gameObject);
+        }
+        else
+            GameObject.Destroy(gameObject);
+    }
     void Update()
     {
         //FireBall Scripting
-        if (Timer == 0)
+        if (coolDownTimer == 0)
         {
             //builds up magic counter
-            if (Input.GetButton("Fire1") && magicBuildUp < magicMana)
-            {
-                magicBuildUp += .25f;
-            }
+            if (Input.GetButton("Fire1") && magicBuildUp < mana){ magicBuildUp += .25f; }
+            
             //checks if magic counter is greater than 10 if so triggers big FireBall
-            if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10 )
-            {
-                rangedAttackBig();
-            }
+            if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10){ rangedAttackBig(); }            
+            
             //if magic counter is less than 10 makes small FireBall            
-            else if(Input.GetButtonUp("Fire1") && magicMana > 1)
-            {
-                
-                rangedAttackSmall();
-            }
+            else if(Input.GetButtonUp("Fire1") && mana > 1){ rangedAttackSmall(); }
         }        
-        else 
-        { 
-            //this is a cool dow timer before you can shoot another FireBall         
-            Timer -= 1;
-        }
+        else //this is subtracking from cool down timer         
+        { coolDownTimer -= 1; }
 
         //Blocking
         //has time counter to ceck if you are wanting to block
@@ -94,7 +123,7 @@ public class PlayerCombatController : MonoBehaviour
         {
             blockTimer += 1;
 
-            if (blockTimer >= 10)
+            if (blockTimer >= 30)
             {
                 blocking();
                 Debug.Log("Blocking");
@@ -108,24 +137,24 @@ public class PlayerCombatController : MonoBehaviour
             {
                 meleeAttack();
                 blockTimer = 0;
-                Debug.Log("Attacked");
+                Attacking = false;
             }
             //if you are finished blocking than triggers code to allow to to attack again
             else if(Blocking == true)
             {
                 Blocking = false;
                 blockTimer = 0;
+                Attacking = false;
             }
         }
 
-        //Mana Stuff 
-        if (magicMana < magicMax)
+        //SpawnEnemy
+        if(Input.GetKeyDown("f"))
         {
-            magicMana += Time.deltaTime;
+            SpawnEnemy();
         }
-        else if(magicMana > magicMax)
-        {
-            magicMana = magicMax;
-        }
+
+        //Restoring Mana 
+        manaGain();
     }
 }
