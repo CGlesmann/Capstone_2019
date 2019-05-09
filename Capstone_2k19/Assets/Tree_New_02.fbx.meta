@@ -1,29 +1,82 @@
 fileFormatVersion: 2
-guid: 92715ce8977fd874d87f2f9e5f9082f9
+guid: a778ae92e264647469061aa2269dc4f1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Rail 1
-    100002: Rail1
-    100004: //RootNode
-    100006: Torch
-    400000: Rail 1
-    400002: Rail1
-    400004: //RootNode
-    400006: Torch
+    100000: Bottom_Branches
+    100002: Bottom_Branches1
+    100004: Bottom_Branches2
+    100006: strokeFir1
+    100008: strokeFir1 1
+    100010: strokeFir1 2
+    100012: strokePine11
+    100014: strokePine11 1
+    100016: strokePine11 2
+    100018: strokePine12
+    100020: strokePine12 1
+    100022: strokePine12 2
+    100024: strokePine13
+    100026: strokePine13 1
+    100028: strokePine13 2
+    100030: strokePine14
+    100032: strokePine14 1
+    100034: strokePine14 2
+    100036: strokePine15
+    100038: strokePine15 1
+    100040: strokePine15 2
+    100042: strokePine2
+    100044: strokePine2 1
+    100046: strokePine2 2
+    100048: strokePine3
+    100050: strokePine3 1
+    100052: strokePine3 2
+    100054: strokePine5
+    100056: strokePine5 1
+    100058: strokePine5 2
+    100060: strokePine8
+    100062: strokePine8 1
+    100064: strokePine8 2
+    100066: //RootNode
+    100068: Trunk
+    400000: Bottom_Branches
+    400002: Bottom_Branches1
+    400004: Bottom_Branches2
+    400006: strokeFir1
+    400008: strokeFir1 1
+    400010: strokeFir1 2
+    400012: strokePine11
+    400014: strokePine11 1
+    400016: strokePine11 2
+    400018: strokePine12
+    400020: strokePine12 1
+    400022: strokePine12 2
+    400024: strokePine13
+    400026: strokePine13 1
+    400028: strokePine13 2
+    400030: strokePine14
+    400032: strokePine14 1
+    400034: strokePine14 2
+    400036: strokePine15
+    400038: strokePine15 1
+    400040: strokePine15 2
+    400042: strokePine2
+    400044: strokePine2 1
+    400046: strokePine2 2
+    400048: strokePine3
+    400050: strokePine3 1
+    400052: strokePine3 2
+    400054: strokePine5
+    400056: strokePine5 1
+    400058: strokePine5 2
+    400060: strokePine8
+    400062: strokePine8 1
+    400064: strokePine8 2
+    400066: //RootNode
+    400068: Trunk
     2100000: phong1
-    2300000: Rail 1
-    2300002: Rail1
-    2300004: Torch
-    3300000: Rail 1
-    3300002: Rail1
-    3300004: Torch
-    4300000: Rail1
-    4300002: Rail
-    4300004: Torch
-    6400000: Rail 1
-    6400002: Rail1
-    6400004: Torch
+    2300000: Trunk
+    3300000: Trunk
+    4300000: Trunk
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -57,7 +110,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1

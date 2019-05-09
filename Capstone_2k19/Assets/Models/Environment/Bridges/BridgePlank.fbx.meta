@@ -1,27 +1,21 @@
 fileFormatVersion: 2
-guid: 3072c577312e3244b94e7365d9e3704a
+guid: ead8567e5b6c0644d9c157761bb3f4ca
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Rail 1
-    100002: Rail1
-    100004: //RootNode
-    100006: Torch
-    400000: Rail 1
-    400002: Rail1
-    400004: //RootNode
-    400006: Torch
-    2100000: phong1
-    2300000: Rail 1
-    2300002: Rail1
-    2300004: Torch
-    3300000: Rail 1
-    3300002: Rail1
-    3300004: Torch
-    4300000: Rail1
-    4300002: Rail
-    4300004: Torch
-  externalObjects: {}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambertBridgePlank
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: BridgePlank
+    6400000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertBridgePlank
+    second: {fileID: 2100000, guid: 169629b20abac6e45ae0b580d453b3d4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
