@@ -54,7 +54,7 @@ public class WendigoMovement : EnemyMovement
                 ExecutePatrolAI();
 
                 // Checking for Patrol -> Chasing Transition
-                if (player != null || PlayerSpotted())
+                if (player != null && (battleAI.PlayerInAttackRange() || Vector3.Distance(transform.position, player.position) <= jumpRange))
                 {
                     SetChasePath();
 

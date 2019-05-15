@@ -20,6 +20,11 @@ public class BattleAI : MonoBehaviour
     public bool attackAIEngaged = false;
     [SerializeField] protected bool attackInProgress = false;
 
+    protected virtual void Start()
+    {
+        target = PlayerCombatController.controller.GetComponent<CombatCharacter>();
+    }
+
     /// <summary>
     /// Loop that executes the attack AI
     /// </summary>

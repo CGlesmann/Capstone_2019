@@ -9,16 +9,19 @@ public class BossMovement : EnemyMovement
     [Header("Movement Settings")]
     public bool fightingEngaged = false;
 
-    protected override void Awake()
+    private void Start()
     {
-        base.Awake();
-
-        // Getting the Player
-        player = battleAI.target.transform;
+        // Get player reference
+        player = PlayerCombatController.controller.transform;
 
         // Resetting the NavMesh
         agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
         agent.speed = chaseSpeed;
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
 
         // Setting State
         state = EnemyAIState.Chasing;
