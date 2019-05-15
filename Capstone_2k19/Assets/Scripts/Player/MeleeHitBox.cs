@@ -13,8 +13,6 @@ public class MeleeHitBox : MonoBehaviour
 
             Debug.Log("Enemy Entered");
             hitbox.enabled = false;
-
-
         }
     }
 }

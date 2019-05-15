@@ -42,7 +42,18 @@ public class CombatCharacter : MonoBehaviour
     /// <summary>
     /// Default Death event, can be overrode in the inspector
     /// </summary>
-    public void DestroyCharacter() { GameObject.Destroy(gameObject);}
+    public void DestroyCharacter()
+    {
+        if (gameObject.tag == "Enemy")
+        {
+            GameObject Player = GameObject.Find("Player");
+            float award = 30;
+            //can add moe if statements to check each creature type and award mana/health in different amounts  
+            Player.GetComponent<CombatCharacter>().RestoreMana(award/2);
+            Player.GetComponent<CombatCharacter>().RestoreHealth(award/2);
+        }
+        GameObject.Destroy(gameObject);
+    }
 
     public void RestartGame() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
 }

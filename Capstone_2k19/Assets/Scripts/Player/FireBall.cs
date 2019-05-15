@@ -15,13 +15,9 @@ public class FireBall : MonoBehaviour
     void Update()
     {
         if(lifeTime == 0)
-        {
             Destroy(gameObject);
-        }
         else
-        {
             lifeTime -= 1;
-        }
     }
     void OnCollisionEnter(Collision col)
     {
@@ -39,9 +35,7 @@ public class FireBall : MonoBehaviour
             {                
                 col.gameObject.GetComponent<CombatCharacter>().TakeDamage(30);
                 Destroy(gameObject);
-            }
-            
-            
+            }           
         }
         else if (col.gameObject.tag != "Player")
         {

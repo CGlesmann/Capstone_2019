@@ -13,7 +13,7 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField] private float magicBuildUp = 0;    
     private float maxMana = 100;
     private float mana = 100;
-    private float fireBallSpeed = 1000;
+    private float fireBallSpeed = 600;
     private float blockTimer = 0;
     private float coolDownTimer = 0;
     private float setTime = 10;
@@ -32,8 +32,8 @@ public class PlayerCombatController : MonoBehaviour
         Rigidbody fireBallInstance;
         fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
-        fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
-        gameObject.GetComponent<CombatCharacter>().DrainMana(1);
+        fireBallInstance.transform.localScale = new Vector3(.5f, .5f, .5f);
+        gameObject.GetComponent<CombatCharacter>().DrainMana(5);
         mana -= 5;
         magicBuildUp = 0;
         coolDownTimer = setTime;
@@ -46,7 +46,7 @@ public class PlayerCombatController : MonoBehaviour
         Rigidbody fireBallInstance;
         fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
-        fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
+        fireBallInstance.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         fireBallInstance.GetComponent<FireBall>().enabled = false;
         fireBallInstance.GetComponent<FireBall>().manaCharge(magicBuildUp);
         gameObject.GetComponent<CombatCharacter>().DrainMana(magicBuildUp);
@@ -60,11 +60,9 @@ public class PlayerCombatController : MonoBehaviour
         GameObject hitbox = GameObject.Find("HitBox");
         BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
         
-
         boxCollider.enabled = true;
         Attacking = true;
-        Debug.Log("Attack");
-            
+        Debug.Log("Attack");            
     }
 
     public void blocking()
@@ -80,7 +78,7 @@ public class PlayerCombatController : MonoBehaviour
         if (mana < maxMana)
         {
             float addMana = 0f;
-            addMana += 2 * Time.deltaTime;
+            addMana += .25f;
             mana += addMana;
             gameObject.GetComponent<CombatCharacter>().RestoreMana(addMana);
         }
@@ -149,11 +147,8 @@ public class PlayerCombatController : MonoBehaviour
         }
 
         //SpawnEnemy
-        if(Input.GetKeyDown("f"))
-        {
-            SpawnEnemy();
-        }
-
+        if(Input.GetKeyDown("f")){ SpawnEnemy(); }
+        
         //Restoring Mana 
         manaGain();
     }
