@@ -8,61 +8,78 @@ using UnityEngine.Events;
 public class BattleAI : MonoBehaviour
 {
     [Header("Battle AI Variables")]
-    [SerializeField] private LayerMask enemyLayer = new LayerMask();
-    [SerializeField] private float attackRange = 0f;
+    [SerializeField] protected LayerMask enemyLayer = new LayerMask();
+
+    [Header("Attack Variables")]
+    [SerializeField] protected Attack[] attackPattern = null;
+    [SerializeField] protected int nextAttackID = 0;
+    [SerializeField] protected float currentCooldown = 0f;
 
     // State Variables
-    protected CombatCharacter target = null;
-    protected bool attackAIEngaged = false;
+    [SerializeField] protected CombatCharacter target = null;
+    public bool attackAIEngaged = false;
+    [SerializeField] protected bool attackInProgress = false;
+
+    /// <summary>
+    /// Loop that executes the attack AI
+    /// </summary>
+    protected virtual void Update()
+    {
+        if (attackAIEngaged)
+        {
+            if (!attackInProgress)
+            {
+                // Check if enemy is ready for the next attack
+                if (currentCooldown <= 0f)
+                {
+                    // Execute the next attack
+                    if (++nextAttackID > attackPattern.Length - 1)
+                        nextAttackID = 0;
+
+                    attackInProgress = true;
+                    attackPattern[nextAttackID].attackEvent.Invoke();
+
+                    // Setting the Cooldown
+                    currentCooldown = attackPattern[nextAttackID].attackCooldown;
+                }
+                else
+                    currentCooldown -= Time.deltaTime;
+            }
+        }
+    }
 
     /// <summary>
     /// Sets the AttackAI to be active
     /// </summary>
-    public void EngageAttackAI()
-    {
-        attackAIEngaged = true;
-        target = GetPlayer();
-    }
-
+    public void EngageAttackAI() { attackAIEngaged = true; }
     /// <summary>
     /// Sets the AttackAI to be disabled
     /// </summary>
-    public void DisEngageAttackAI()
-    {
-        attackAIEngaged = false;
-        target = null;
-    }
+    public void DisEngageAttackAI() { attackAIEngaged = false; }
+
+    public float DistanceToPlayer() { return Vector3.Distance(transform.position, target.transform.position); }
 
     /// <summary>
     /// Returns the Enemy's attack range
     /// Used for movement
     /// </summary>
     /// <returns></returns>
-    private CombatCharacter GetPlayer()
-    {
-        // Get amount of colliders
-        Collider[] colliders = null;
-        colliders = Physics.OverlapBox(transform.position,
-                                       new Vector3(attackRange, transform.localScale.y, attackRange),
-                                       Quaternion.identity, enemyLayer);
-
-        return ((colliders.Length > 0) ? (colliders[0].GetComponent<CombatCharacter>()) : null);
-    }
-
-    public float GetRange() { return attackRange; }
     public bool PlayerInAttackRange()
     {
-        // Get the player reference
-        CombatCharacter player = GetPlayer();
-
-        // If player is not null then the player has been found
-        return (player != null);
+        float dist = (attackAIEngaged ? attackPattern[nextAttackID].minAttackRange : attackPattern[nextAttackID].maxAttackRange);
+        Debug.Log(name + " is " + dist + " units away");
+        return (Vector3.Distance(transform.position, target.transform.position) <= dist);
     }
+}
 
-    private void OnDrawGizmosSelected()
-    {
-        // Drawing the Attack Range
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireCube(transform.position, new Vector3(attackRange * 2f, 1f, attackRange * 2f));
-    }
+[System.Serializable]
+public class Attack
+{
+    // Attack Variables
+    //public Vector3 minAttackRange = Vector3.zero;
+    //public Vector3 maxAttackRange = Vector3.zero;
+    public float minAttackRange = 0f;
+    public float maxAttackRange = 0f;
+    public float attackCooldown = 0f;
+    public UnityEvent attackEvent = null;
 }
