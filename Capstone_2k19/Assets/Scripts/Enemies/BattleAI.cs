@@ -16,7 +16,7 @@ public class BattleAI : MonoBehaviour
     [SerializeField] protected float currentCooldown = 0f;
 
     // State Variables
-    [SerializeField] protected CombatCharacter target = null;
+    [SerializeField] public CombatCharacter target = null;
     public bool attackAIEngaged = false;
     [SerializeField] protected bool attackInProgress = false;
 
@@ -27,13 +27,13 @@ public class BattleAI : MonoBehaviour
     {
         if (attackAIEngaged)
         {
-            if (!attackInProgress)
+            if (!attackInProgress && PlayerInAttackRange())
             {
                 // Check if enemy is ready for the next attack
                 if (currentCooldown <= 0f)
                 {
                     // Execute the next attack
-                    if (++nextAttackID > attackPattern.Length - 1)
+                    if (nextAttackID > attackPattern.Length - 1)
                         nextAttackID = 0;
 
                     attackInProgress = true;
@@ -43,7 +43,12 @@ public class BattleAI : MonoBehaviour
                     currentCooldown = attackPattern[nextAttackID].attackCooldown;
                 }
                 else
+                {
                     currentCooldown -= Time.deltaTime;
+                    if (currentCooldown <= 0f)
+                        if (++nextAttackID >= attackPattern.Length)
+                            nextAttackID = 0;
+                }
             }
         }
     }
@@ -66,9 +71,12 @@ public class BattleAI : MonoBehaviour
     /// <returns></returns>
     public bool PlayerInAttackRange()
     {
-        float dist = (attackAIEngaged ? attackPattern[nextAttackID].minAttackRange : attackPattern[nextAttackID].maxAttackRange);
-        Debug.Log(name + " is " + dist + " units away");
-        return (Vector3.Distance(transform.position, target.transform.position) <= dist);
+        if (nextAttackID <= attackPattern.Length - 1 && nextAttackID >= 0)
+        {
+            float dist = (attackAIEngaged ? attackPattern[nextAttackID].minAttackRange : attackPattern[nextAttackID].maxAttackRange);
+            return (Vector3.Distance(transform.position, target.transform.position) <= dist);
+        }
+        return false;
     }
 }
 

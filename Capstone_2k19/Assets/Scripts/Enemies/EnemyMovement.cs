@@ -49,7 +49,7 @@ public class EnemyMovement : MonoBehaviour
     /// <summary>
     /// Grabs Private References
     /// </summary>
-    protected void Awake()
+    protected virtual void Awake()
     {
         // Getting Reference to the MoveController
         controller = GetComponent<MoveController>();
@@ -66,18 +66,22 @@ public class EnemyMovement : MonoBehaviour
     /// <summary>
     /// Checks for Point Change
     /// </summary>
-    protected void FixedUpdate() { StateMachine(); }
+    protected void FixedUpdate() {
+        StateMachine();
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            Debug.Log(name + " is " + battleAI.DistanceToPlayer() + " away from player");
+        }
+    }
 
     /// <summary>
     /// Executes the finite state machine
     /// </summary>
     protected virtual void StateMachine()
     {
-        if (executeMovementAI)
-        {
+        if (executeMovementAI) {
             // Patrol AI / Patrol -> Chasing Transition
-            if (state == EnemyAIState.Patrolling)
-            {
+            if (state == EnemyAIState.Patrolling) {
                 // Patrolling AI
                 ExecutePatrolAI();
 
@@ -92,13 +96,11 @@ public class EnemyMovement : MonoBehaviour
                     state = EnemyAIState.Chasing;
                     return;
                 }
-            }
-            else if (state == EnemyAIState.Chasing)
-            {
+            } else if (state == EnemyAIState.Chasing) {
                 Debug.Log("Destination: " + agent.destination);
+                agent.destination = player.transform.position;
                 // Checking for Chase -> Attack Transition
-                if (battleAI.PlayerInAttackRange())
-                {
+                if (battleAI.PlayerInAttackRange()) {
                     state = EnemyAIState.Attacking;
                     battleAI.EngageAttackAI();
                     //executeMovementAI = false;
@@ -107,12 +109,9 @@ public class EnemyMovement : MonoBehaviour
 
                     return;
                 }
-            }
-            else if (state == EnemyAIState.Attacking)
-            {
+            } else if (state == EnemyAIState.Attacking) {
                 Debug.Log("Attacking");
-                if (!battleAI.PlayerInAttackRange())
-                {
+                if (!battleAI.PlayerInAttackRange()) {
                     // Disengaging from combat
                     battleAI.DisEngageAttackAI();
                     //executeMovementAI = true;

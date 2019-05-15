@@ -11,8 +11,11 @@ public class MeleeAI : BattleAI
     #region Attack Functions
     public void ClawSwipe()
     {
+        Debug.Log(name + " performed a claw swipe for " + clawDamage + " damage");
+
         // Dealing Damage
-        target.TakeDamage(clawDamage);
+        if (PlayerInAttackRange())
+            target.TakeDamage(clawDamage);
 
         // Attack Finished, reset AI state
         attackInProgress = false;
