@@ -8,47 +8,17 @@ public class MeleeAI : BattleAI
     [Header("Attacker State Variables")]
     [SerializeField] private float clawDamage = 10f;
 
-    [Header("Melee Attack Variables")]
-    [SerializeField] private Attack[] attackPattern = null;
-    private int nextAttackID = 0;
-    private float currentCooldown = 0f;
-
-    /// <summary>
-    /// Loop that executes the attack AI
-    /// </summary>
-    private void Update()
-    {
-        if (attackAIEngaged)
-        {
-            // Check if enemy is ready for the next attack
-            if (currentCooldown <= 0f)
-            {
-                // Execute the next attack
-                if (++nextAttackID > attackPattern.Length - 1)
-                    nextAttackID = 0;
-                attackPattern[nextAttackID].attackEvent.Invoke();
-
-                // Setting the Cooldown
-                currentCooldown = attackPattern[nextAttackID].attackCooldown;
-            }
-            else
-                currentCooldown -= Time.deltaTime;
-        }
-    }
-
     #region Attack Functions
     public void ClawSwipe()
     {
+        Debug.Log(name + " performed a claw swipe for " + clawDamage + " damage");
+
         // Dealing Damage
-        target.TakeDamage(clawDamage);
+        if (PlayerInAttackRange())
+            target.TakeDamage(clawDamage);
+
+        // Attack Finished, reset AI state
+        attackInProgress = false;
     }
     #endregion   
-}
-
-[System.Serializable]
-public class Attack
-{
-    // Attack Variables
-    public float attackCooldown = 0f;
-    public UnityEvent attackEvent = null;
 }

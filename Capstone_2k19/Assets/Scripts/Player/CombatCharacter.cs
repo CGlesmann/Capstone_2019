@@ -11,6 +11,8 @@ public class CombatCharacter : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float mana = 100f;
     [SerializeField] private float maxMana = 100f;
+    [SerializeField] private float damageReduction = 1f; //value between 0 and 1 reduces damage by the given percent
+
 
     [Header("Death Variables")]
     [SerializeField] private UnityEvent onDeath = null;
@@ -27,8 +29,10 @@ public class CombatCharacter : MonoBehaviour
         }
     }
 
+    public void SetDamageReduction(float dr) { damageReduction = Mathf.Clamp(dr, 0f, 1f); } 
+
     // Drain Methods
-    public void TakeDamage(float dmg) { health = Mathf.Clamp(health - dmg, 0f, maxHealth); }
+    public void TakeDamage(float dmg) { health = Mathf.Clamp(health - (dmg * damageReduction), 0f, maxHealth); }
     public void DrainMana(float drain) { mana = Mathf.Clamp(mana - drain, 0f, maxMana); }
 
     // Restore Methods
