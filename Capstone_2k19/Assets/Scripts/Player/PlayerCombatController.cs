@@ -13,7 +13,7 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField] private float magicBuildUp = 0;    
     private float maxMana = 100;
     private float mana = 100;
-    private float fireBallSpeed = 1000;
+    private float fireBallSpeed = 600;
     private float blockTimer = 0;
     private float coolDownTimer = 0;
     private float setTime = 10;
@@ -32,7 +32,7 @@ public class PlayerCombatController : MonoBehaviour
         Rigidbody fireBallInstance;
         fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
-        fireBallInstance.transform.localScale = new Vector3(1, 1, 1);
+        fireBallInstance.transform.localScale = new Vector3(.5f, .5f, .5f);
         gameObject.GetComponent<CombatCharacter>().DrainMana(5);
         mana -= 5;
         magicBuildUp = 0;
@@ -46,7 +46,7 @@ public class PlayerCombatController : MonoBehaviour
         Rigidbody fireBallInstance;
         fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
-        fireBallInstance.transform.localScale = new Vector3(3, 3, 3);
+        fireBallInstance.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         fireBallInstance.GetComponent<FireBall>().enabled = false;
         fireBallInstance.GetComponent<FireBall>().manaCharge(magicBuildUp);
         gameObject.GetComponent<CombatCharacter>().DrainMana(magicBuildUp);
