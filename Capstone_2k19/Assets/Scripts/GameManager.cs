@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         manager = this;
+        Application.targetFrameRate = 120;
     }
 
     // Called by boss GameManager.manager.SlowTime
