@@ -1,0 +1,260 @@
+fileFormatVersion: 2
+guid: 33ca4047d311d054d9a3ea4d9b20ed80
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BranchLeaf01
+    100002: BranchLeaf01 1
+    100004: BranchLeaf02
+    100006: BranchLeaf02 1
+    100008: BranchLeaf03
+    100010: BranchLeaf03 1
+    100012: BranchLeaf04
+    100014: BranchLeaf04 1
+    100016: BranchLeaf05
+    100018: BranchLeaf05 1
+    100020: BranchLeaf06
+    100022: BranchLeaf06 1
+    100024: BranchLeaf07
+    100026: BranchLeaf07 1
+    100028: BranchLeaf08
+    100030: BranchLeaf08 1
+    100032: BranchLeaf09
+    100034: BranchLeaf09 1
+    100036: Home_Door
+    100038: Home_Railing
+    100040: Home_Railing_Square_01
+    100042: Home_Railing_Square_02
+    100044: Leaves_And_Branches
+    100046: Leaves_Bot
+    100048: Leaves_Top
+    100050: Long_Railing_01
+    100052: Long_Railing_02
+    100054: Platform
+    100056: Short_Railing_01
+    100058: Short_Railing_02
+    100060: //RootNode
+    100062: Tree_Trunk1
+    400000: BranchLeaf01
+    400002: BranchLeaf01 1
+    400004: BranchLeaf02
+    400006: BranchLeaf02 1
+    400008: BranchLeaf03
+    400010: BranchLeaf03 1
+    400012: BranchLeaf04
+    400014: BranchLeaf04 1
+    400016: BranchLeaf05
+    400018: BranchLeaf05 1
+    400020: BranchLeaf06
+    400022: BranchLeaf06 1
+    400024: BranchLeaf07
+    400026: BranchLeaf07 1
+    400028: BranchLeaf08
+    400030: BranchLeaf08 1
+    400032: BranchLeaf09
+    400034: BranchLeaf09 1
+    400036: Home_Door
+    400038: Home_Railing
+    400040: Home_Railing_Square_01
+    400042: Home_Railing_Square_02
+    400044: Leaves_And_Branches
+    400046: Leaves_Bot
+    400048: Leaves_Top
+    400050: Long_Railing_01
+    400052: Long_Railing_02
+    400054: Platform
+    400056: Short_Railing_01
+    400058: Short_Railing_02
+    400060: //RootNode
+    400062: Tree_Trunk1
+    2100000: lambertTreeTrunkBark
+    2100002: lambertPlatform
+    2100004: lambertBranchLeafTest01
+    2100006: Wood_Railing_02
+    2100008: lambertHomeDoor
+    2300000: BranchLeaf01
+    2300002: BranchLeaf01 1
+    2300004: BranchLeaf02
+    2300006: BranchLeaf02 1
+    2300008: BranchLeaf03
+    2300010: BranchLeaf03 1
+    2300012: BranchLeaf04
+    2300014: BranchLeaf04 1
+    2300016: BranchLeaf05
+    2300018: BranchLeaf05 1
+    2300020: BranchLeaf06
+    2300022: BranchLeaf06 1
+    2300024: BranchLeaf07
+    2300026: BranchLeaf07 1
+    2300028: BranchLeaf08
+    2300030: BranchLeaf08 1
+    2300032: BranchLeaf09
+    2300034: BranchLeaf09 1
+    2300036: Home_Door
+    2300038: Long_Railing_01
+    2300040: Long_Railing_02
+    2300042: Platform
+    2300044: Short_Railing_01
+    2300046: Short_Railing_02
+    2300048: Tree_Trunk1
+    3300000: BranchLeaf01
+    3300002: BranchLeaf01 1
+    3300004: BranchLeaf02
+    3300006: BranchLeaf02 1
+    3300008: BranchLeaf03
+    3300010: BranchLeaf03 1
+    3300012: BranchLeaf04
+    3300014: BranchLeaf04 1
+    3300016: BranchLeaf05
+    3300018: BranchLeaf05 1
+    3300020: BranchLeaf06
+    3300022: BranchLeaf06 1
+    3300024: BranchLeaf07
+    3300026: BranchLeaf07 1
+    3300028: BranchLeaf08
+    3300030: BranchLeaf08 1
+    3300032: BranchLeaf09
+    3300034: BranchLeaf09 1
+    3300036: Home_Door
+    3300038: Long_Railing_01
+    3300040: Long_Railing_02
+    3300042: Platform
+    3300044: Short_Railing_01
+    3300046: Short_Railing_02
+    3300048: Tree_Trunk1
+    4300000: Platform
+    4300002: BranchLeaf03
+    4300004: BranchLeaf04
+    4300006: BranchLeaf01
+    4300008: BranchLeaf08
+    4300010: BranchLeaf02
+    4300012: BranchLeaf07
+    4300014: BranchLeaf05
+    4300016: BranchLeaf06
+    4300018: BranchLeaf09
+    4300020: BranchLeaf03
+    4300022: BranchLeaf04
+    4300024: BranchLeaf01
+    4300026: BranchLeaf08
+    4300028: BranchLeaf02
+    4300030: BranchLeaf07
+    4300032: BranchLeaf05
+    4300034: BranchLeaf06
+    4300036: BranchLeaf09
+    4300038: Short_Railing_01
+    4300040: Long_Railing_01
+    4300042: Short_Railing_02
+    4300044: Long_Railing_02
+    4300046: Tree_Trunk1
+    4300048: Home_Door
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Railing_02
+    second: {fileID: 2100000, guid: a8c28f445f898f64282e0e15b0da75f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertBranchLeafTest01
+    second: {fileID: 2100000, guid: 8cb8ec5fe5785fc4eb9b391a4592835c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertHomeDoor
+    second: {fileID: 2100000, guid: a08f349f0a5b7f94399e7790379e41ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertPlatform
+    second: {fileID: 2100000, guid: 308b1ae76b8242340a6b8922b920e817, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertTreeTrunkBark
+    second: {fileID: 2100000, guid: 687e9040a528f654aa1c6696133cc876, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

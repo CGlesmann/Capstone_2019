@@ -16527,7 +16527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 200302650, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -483.39642
+      value: -479.55
       objectReference: {fileID: 0}
     - target: {fileID: 200302650, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16535,7 +16535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 200302650, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -486.36948
+      value: -481
       objectReference: {fileID: 0}
     - target: {fileID: 200302650, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
       propertyPath: m_LocalRotation.x
@@ -31533,6 +31533,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorruptedDwarf (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 874315151180915754, guid: 9fe24bf4ef5978742b15c42ca9ca5e85,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 874315151180916177, guid: 9fe24bf4ef5978742b15c42ca9ca5e85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44066,7 +44071,7 @@ PrefabInstance:
     - target: {fileID: 5934287876978357276, guid: c8278cc7b37e75b42a42cc9c948eb762,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -542.7162
+      value: -541.91
       objectReference: {fileID: 0}
     - target: {fileID: 5934287876978357276, guid: c8278cc7b37e75b42a42cc9c948eb762,
         type: 3}
@@ -44076,7 +44081,7 @@ PrefabInstance:
     - target: {fileID: 5934287876978357276, guid: c8278cc7b37e75b42a42cc9c948eb762,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -466.95358
+      value: -461.02
       objectReference: {fileID: 0}
     - target: {fileID: 5934287876978357276, guid: c8278cc7b37e75b42a42cc9c948eb762,
         type: 3}
