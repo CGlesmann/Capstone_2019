@@ -260,7 +260,22 @@ ModelImporter:
     4300078: torch1
     4300080: Pole1
     4300082: Pole2
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Torch_Handle_01
+    second: {fileID: 2100000, guid: 6052946bb864b5d4f9cb458c8053e5b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Railing_02
+    second: {fileID: 2100000, guid: a8c28f445f898f64282e0e15b0da75f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertNewTorchCloth
+    second: {fileID: 2100000, guid: 06487fcc68566324ebca928528ca4127, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
