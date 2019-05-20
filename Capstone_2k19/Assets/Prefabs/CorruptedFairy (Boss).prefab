@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4632294859721325177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7074106, y: 14.37, z: -22.781677}
-  m_LocalScale: {x: 14.963, y: 14.963, z: 14.963}
+  m_LocalScale: {x: 3.5136223, y: 3.5136223, z: 3.5136223}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4632294859721325177}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 5f9aed1168692fd40baca7de1732187d, type: 3}
 --- !u!23 &4632294859721325183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 5f9aed1168692fd40baca7de1732187d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +105,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4632294859721325177}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.73
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -114,8 +114,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 3.38
+  m_BaseOffset: 2.28
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4632294859721325179
@@ -167,6 +167,7 @@ MonoBehaviour:
   wayPoints: []
   patrolSpeed: 5
   acceptanceRange: 1
+  pointIndex: 0
   playerLayer:
     serializedVersion: 2
     m_Bits: 1024
