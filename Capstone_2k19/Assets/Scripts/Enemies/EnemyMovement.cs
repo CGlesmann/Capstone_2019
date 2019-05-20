@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
 
     protected PatrolPoint currentPPoint = null;
     protected bool pathStarted = false;
-    protected int pointIndex = 0;
+    [SerializeField] protected int pointIndex = 0;
     protected float pauseTimer = 0f;
 
     [Header("Enemy Chase Variables")]
@@ -85,8 +85,10 @@ public class EnemyMovement : MonoBehaviour
     /// </summary>
     protected virtual void StateMachine()
     {
+        Debug.Log("State Machine");
         if (executeMovementAI)
         {
+            Debug.Log("Movement AI");
             // Patrol AI / Patrol -> Chasing Transition
             if (state == EnemyAIState.Patrolling) {
                 // Patrolling AI
@@ -106,6 +108,7 @@ public class EnemyMovement : MonoBehaviour
             }
             if (state == EnemyAIState.Chasing)
             {
+                Debug.Log("chasing");
                 agent.destination = player.transform.position;
 
                 // Checking for Chase -> Attack Transition
@@ -122,6 +125,7 @@ public class EnemyMovement : MonoBehaviour
             }
             else if (state == EnemyAIState.Attacking)
             {
+                Debug.Log("Attacking");
                 if (!battleAI.PlayerInAttackRange())
                 {
                     // Disengaging from combat
@@ -134,6 +138,18 @@ public class EnemyMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetChaseState()
+    {
+        // Grab the player
+        player = PlayerCombatController.controller.transform;
+
+        // Set the state to chase
+        state = EnemyAIState.Chasing;
+
+        agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
+        agent.speed = chaseSpeed;
     }
 
     #region Patrol AI Functions
@@ -192,7 +208,8 @@ public class EnemyMovement : MonoBehaviour
 
         // Setting the Point and Starting the Agent
         currentPPoint = wayPoints[pointIndex];
-        agent.destination = currentPPoint.wayPoint.transform.position;
+        if (currentPPoint != null && agent != null && currentPPoint.wayPoint != null)
+            agent.destination = currentPPoint.wayPoint.transform.position;
 
         // Setting the path
         pathStarted = true;
