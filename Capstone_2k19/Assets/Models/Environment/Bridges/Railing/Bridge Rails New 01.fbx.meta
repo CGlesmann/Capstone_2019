@@ -1,0 +1,363 @@
+fileFormatVersion: 2
+guid: 88c5d4f81a20f3d49b7df1e9ada5a859
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bridge_Rail_02
+    100004: Bridge_Rail_02 1
+    100006: Bridge_Rail_02 2
+    100008: Bridge_Rail_08
+    100010: Bridge_Rail_08 1
+    100012: Bridge_Rail_08 2
+    100014: Bridge_Rail_09
+    100016: Bridge_Rail_09 1
+    100018: Bridge_Rail_09 2
+    100020: Bridge_Rail_10
+    100022: Bridge_Rail_10 1
+    100024: Bridge_Rail_10 2
+    100026: Bridge_Rail_11
+    100028: Bridge_Rail_11 1
+    100030: Bridge_Rail_11 2
+    100032: Bridge_Rail_12
+    100034: Bridge_Rail_12 1
+    100036: Bridge_Rail_12 2
+    100038: Bridge_Rail_13
+    100040: Bridge_Rail_13 1
+    100042: Bridge_Rail_13 2
+    100044: Bridge_Rail_14
+    100046: Bridge_Rail_14 1
+    100048: Bridge_Rail_14 2
+    100050: Bridge_Rails_Grp_1
+    100052: Bridge_Rails_Grp_1 1
+    100054: Bridge_Rails_Grp_1 2
+    100056: Bridge_Rails_Grp_2
+    100058: Bridge_Rails_Grp_2 1
+    100060: Bridge_Rails_Grp_2 2
+    100062: Bridge_Rails_Grp_3
+    100064: Bridge_Rails_Grp_3 1
+    100066: Bridge_Rails_Grp_3 2
+    100068: Bridge_Rails_Grp_4
+    100070: Bridge_Rails_Grp_4 1
+    100072: Bridge_Rails_Grp_4 2
+    100074: Bridge_Rails_LOD0
+    100076: Bridge_Rails_LOD1
+    100078: Bridge_Rails_LOD2
+    100080: Bridge_Rails_Side_01
+    100082: Bridge_Rails_Side_01 1
+    100084: Bridge_Rails_Side_01 2
+    100086: Bridge_Rails_Side_02
+    100088: Bridge_Rails_Side_02 1
+    100090: Bridge_Rails_Side_02 2
+    100092: Pole
+    100094: Pole 1
+    100096: Pole 2
+    100098: Pole1
+    100100: Pole1 1
+    100102: Pole1 2
+    100104: Pole2
+    100106: Pole2 1
+    100108: Pole2 2
+    100110: torch
+    100112: torch 1
+    100114: torch 2
+    100116: torch1
+    100118: torch1 1
+    100120: torch1 2
+    100122: torch2
+    100124: torch2 1
+    100126: torch2 2
+    400000: //RootNode
+    400002: Bridge_Rail_02
+    400004: Bridge_Rail_02 1
+    400006: Bridge_Rail_02 2
+    400008: Bridge_Rail_08
+    400010: Bridge_Rail_08 1
+    400012: Bridge_Rail_08 2
+    400014: Bridge_Rail_09
+    400016: Bridge_Rail_09 1
+    400018: Bridge_Rail_09 2
+    400020: Bridge_Rail_10
+    400022: Bridge_Rail_10 1
+    400024: Bridge_Rail_10 2
+    400026: Bridge_Rail_11
+    400028: Bridge_Rail_11 1
+    400030: Bridge_Rail_11 2
+    400032: Bridge_Rail_12
+    400034: Bridge_Rail_12 1
+    400036: Bridge_Rail_12 2
+    400038: Bridge_Rail_13
+    400040: Bridge_Rail_13 1
+    400042: Bridge_Rail_13 2
+    400044: Bridge_Rail_14
+    400046: Bridge_Rail_14 1
+    400048: Bridge_Rail_14 2
+    400050: Bridge_Rails_Grp_1
+    400052: Bridge_Rails_Grp_1 1
+    400054: Bridge_Rails_Grp_1 2
+    400056: Bridge_Rails_Grp_2
+    400058: Bridge_Rails_Grp_2 1
+    400060: Bridge_Rails_Grp_2 2
+    400062: Bridge_Rails_Grp_3
+    400064: Bridge_Rails_Grp_3 1
+    400066: Bridge_Rails_Grp_3 2
+    400068: Bridge_Rails_Grp_4
+    400070: Bridge_Rails_Grp_4 1
+    400072: Bridge_Rails_Grp_4 2
+    400074: Bridge_Rails_LOD0
+    400076: Bridge_Rails_LOD1
+    400078: Bridge_Rails_LOD2
+    400080: Bridge_Rails_Side_01
+    400082: Bridge_Rails_Side_01 1
+    400084: Bridge_Rails_Side_01 2
+    400086: Bridge_Rails_Side_02
+    400088: Bridge_Rails_Side_02 1
+    400090: Bridge_Rails_Side_02 2
+    400092: Pole
+    400094: Pole 1
+    400096: Pole 2
+    400098: Pole1
+    400100: Pole1 1
+    400102: Pole1 2
+    400104: Pole2
+    400106: Pole2 1
+    400108: Pole2 2
+    400110: torch
+    400112: torch 1
+    400114: torch 2
+    400116: torch1
+    400118: torch1 1
+    400120: torch1 2
+    400122: torch2
+    400124: torch2 1
+    400126: torch2 2
+    2100000: Wood_Railing_02
+    2100002: Torch_Handle_01
+    2100004: lambertNewTorchCloth
+    2300000: Bridge_Rail_02
+    2300002: Bridge_Rail_02 1
+    2300004: Bridge_Rail_02 2
+    2300006: Bridge_Rail_08
+    2300008: Bridge_Rail_08 1
+    2300010: Bridge_Rail_08 2
+    2300012: Bridge_Rail_09
+    2300014: Bridge_Rail_09 1
+    2300016: Bridge_Rail_09 2
+    2300018: Bridge_Rail_10
+    2300020: Bridge_Rail_10 1
+    2300022: Bridge_Rail_10 2
+    2300024: Bridge_Rail_11
+    2300026: Bridge_Rail_11 1
+    2300028: Bridge_Rail_11 2
+    2300030: Bridge_Rail_12
+    2300032: Bridge_Rail_12 1
+    2300034: Bridge_Rail_12 2
+    2300036: Bridge_Rail_13
+    2300038: Bridge_Rail_13 1
+    2300040: Bridge_Rail_13 2
+    2300042: Bridge_Rail_14
+    2300044: Bridge_Rail_14 1
+    2300046: Bridge_Rail_14 2
+    2300048: Pole
+    2300050: Pole 1
+    2300052: Pole 2
+    2300054: Pole1
+    2300056: Pole1 1
+    2300058: Pole1 2
+    2300060: Pole2
+    2300062: Pole2 1
+    2300064: Pole2 2
+    2300066: torch
+    2300068: torch 1
+    2300070: torch 2
+    2300072: torch1
+    2300074: torch1 1
+    2300076: torch1 2
+    2300078: torch2
+    2300080: torch2 1
+    2300082: torch2 2
+    3300000: Bridge_Rail_02
+    3300002: Bridge_Rail_02 1
+    3300004: Bridge_Rail_02 2
+    3300006: Bridge_Rail_08
+    3300008: Bridge_Rail_08 1
+    3300010: Bridge_Rail_08 2
+    3300012: Bridge_Rail_09
+    3300014: Bridge_Rail_09 1
+    3300016: Bridge_Rail_09 2
+    3300018: Bridge_Rail_10
+    3300020: Bridge_Rail_10 1
+    3300022: Bridge_Rail_10 2
+    3300024: Bridge_Rail_11
+    3300026: Bridge_Rail_11 1
+    3300028: Bridge_Rail_11 2
+    3300030: Bridge_Rail_12
+    3300032: Bridge_Rail_12 1
+    3300034: Bridge_Rail_12 2
+    3300036: Bridge_Rail_13
+    3300038: Bridge_Rail_13 1
+    3300040: Bridge_Rail_13 2
+    3300042: Bridge_Rail_14
+    3300044: Bridge_Rail_14 1
+    3300046: Bridge_Rail_14 2
+    3300048: Pole
+    3300050: Pole 1
+    3300052: Pole 2
+    3300054: Pole1
+    3300056: Pole1 1
+    3300058: Pole1 2
+    3300060: Pole2
+    3300062: Pole2 1
+    3300064: Pole2 2
+    3300066: torch
+    3300068: torch 1
+    3300070: torch 2
+    3300072: torch1
+    3300074: torch1 1
+    3300076: torch1 2
+    3300078: torch2
+    3300080: torch2 1
+    3300082: torch2 2
+    4300000: Bridge_Rail_02
+    4300002: Bridge_Rail_09
+    4300004: Bridge_Rail_10
+    4300006: Bridge_Rail_08
+    4300008: Pole
+    4300010: torch
+    4300012: torch2
+    4300014: Bridge_Rail_13
+    4300016: Bridge_Rail_14
+    4300018: Bridge_Rail_11
+    4300020: Bridge_Rail_12
+    4300022: torch1
+    4300024: Pole1
+    4300026: Pole2
+    4300028: Bridge_Rail_02
+    4300030: Bridge_Rail_09
+    4300032: Bridge_Rail_10
+    4300034: Bridge_Rail_08
+    4300036: Pole
+    4300038: torch
+    4300040: torch2
+    4300042: Bridge_Rail_13
+    4300044: Bridge_Rail_14
+    4300046: Bridge_Rail_11
+    4300048: Bridge_Rail_12
+    4300050: torch1
+    4300052: Pole1
+    4300054: Pole2
+    4300056: Bridge_Rail_02
+    4300058: Bridge_Rail_09
+    4300060: Bridge_Rail_10
+    4300062: Bridge_Rail_08
+    4300064: Pole
+    4300066: torch
+    4300068: torch2
+    4300070: Bridge_Rail_13
+    4300072: Bridge_Rail_14
+    4300074: Bridge_Rail_11
+    4300076: Bridge_Rail_12
+    4300078: torch1
+    4300080: Pole1
+    4300082: Pole2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Torch_Handle_01
+    second: {fileID: 2100000, guid: 6052946bb864b5d4f9cb458c8053e5b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Railing_02
+    second: {fileID: 2100000, guid: a8c28f445f898f64282e0e15b0da75f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertNewTorchCloth
+    second: {fileID: 2100000, guid: 06487fcc68566324ebca928528ca4127, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

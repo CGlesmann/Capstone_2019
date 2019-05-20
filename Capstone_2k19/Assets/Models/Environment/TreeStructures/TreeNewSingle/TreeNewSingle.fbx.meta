@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 83cb83af772eae44384cfb0c704999b4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BranchLeaf01
+    100002: BranchLeaf01 1
+    100004: BranchLeaf01 2
+    100006: BranchLeaf01 3
+    100008: BranchLeaf02
+    100010: BranchLeaf02 1
+    100012: BranchLeaf02 2
+    100014: BranchLeaf02 3
+    100016: BranchLeaf03
+    100018: BranchLeaf03 1
+    100020: BranchLeaf03 2
+    100022: BranchLeaf03 3
+    100024: BranchLeaf04
+    100026: BranchLeaf04 1
+    100028: BranchLeaf04 2
+    100030: BranchLeaf04 3
+    100032: BranchLeaf05
+    100034: BranchLeaf05 1
+    100036: BranchLeaf05 2
+    100038: BranchLeaf05 3
+    100040: BranchLeaf06
+    100042: BranchLeaf06 1
+    100044: BranchLeaf06 2
+    100046: BranchLeaf06 3
+    100048: BranchLeaf07
+    100050: BranchLeaf07 1
+    100052: BranchLeaf07 2
+    100054: BranchLeaf07 3
+    100056: BranchLeaf08
+    100058: BranchLeaf08 1
+    100060: BranchLeaf08 2
+    100062: BranchLeaf08 3
+    100064: BranchLeaf09
+    100066: BranchLeaf09 1
+    100068: BranchLeaf09 2
+    100070: BranchLeaf09 3
+    100072: Leaves_And_Branches
+    100074: Leaves_And_Branches 1
+    100076: Leaves_Bot
+    100078: Leaves_Bot 1
+    100080: Leaves_Top
+    100082: Leaves_Top 1
+    100084: Tree_Trunk
+    100086: Tree_Trunk 1
+    100088: //RootNode
+    100090: TreeNewSingle_LOD0
+    100092: TreeNewSingle_LOD1
+    400000: BranchLeaf01
+    400002: BranchLeaf01 1
+    400004: BranchLeaf01 2
+    400006: BranchLeaf01 3
+    400008: BranchLeaf02
+    400010: BranchLeaf02 1
+    400012: BranchLeaf02 2
+    400014: BranchLeaf02 3
+    400016: BranchLeaf03
+    400018: BranchLeaf03 1
+    400020: BranchLeaf03 2
+    400022: BranchLeaf03 3
+    400024: BranchLeaf04
+    400026: BranchLeaf04 1
+    400028: BranchLeaf04 2
+    400030: BranchLeaf04 3
+    400032: BranchLeaf05
+    400034: BranchLeaf05 1
+    400036: BranchLeaf05 2
+    400038: BranchLeaf05 3
+    400040: BranchLeaf06
+    400042: BranchLeaf06 1
+    400044: BranchLeaf06 2
+    400046: BranchLeaf06 3
+    400048: BranchLeaf07
+    400050: BranchLeaf07 1
+    400052: BranchLeaf07 2
+    400054: BranchLeaf07 3
+    400056: BranchLeaf08
+    400058: BranchLeaf08 1
+    400060: BranchLeaf08 2
+    400062: BranchLeaf08 3
+    400064: BranchLeaf09
+    400066: BranchLeaf09 1
+    400068: BranchLeaf09 2
+    400070: BranchLeaf09 3
+    400072: Leaves_And_Branches
+    400074: Leaves_And_Branches 1
+    400076: Leaves_Bot
+    400078: Leaves_Bot 1
+    400080: Leaves_Top
+    400082: Leaves_Top 1
+    400084: Tree_Trunk
+    400086: Tree_Trunk 1
+    400088: //RootNode
+    400090: TreeNewSingle_LOD0
+    400092: TreeNewSingle_LOD1
+    2100000: lambertTreeTrunkBark
+    2100002: lambertBranchLeafTest01
+    2300000: BranchLeaf01
+    2300002: BranchLeaf01 1
+    2300004: BranchLeaf01 2
+    2300006: BranchLeaf01 3
+    2300008: BranchLeaf02
+    2300010: BranchLeaf02 1
+    2300012: BranchLeaf02 2
+    2300014: BranchLeaf02 3
+    2300016: BranchLeaf03
+    2300018: BranchLeaf03 1
+    2300020: BranchLeaf03 2
+    2300022: BranchLeaf03 3
+    2300024: BranchLeaf04
+    2300026: BranchLeaf04 1
+    2300028: BranchLeaf04 2
+    2300030: BranchLeaf04 3
+    2300032: BranchLeaf05
+    2300034: BranchLeaf05 1
+    2300036: BranchLeaf05 2
+    2300038: BranchLeaf05 3
+    2300040: BranchLeaf06
+    2300042: BranchLeaf06 1
+    2300044: BranchLeaf06 2
+    2300046: BranchLeaf06 3
+    2300048: BranchLeaf07
+    2300050: BranchLeaf07 1
+    2300052: BranchLeaf07 2
+    2300054: BranchLeaf07 3
+    2300056: BranchLeaf08
+    2300058: BranchLeaf08 1
+    2300060: BranchLeaf08 2
+    2300062: BranchLeaf08 3
+    2300064: BranchLeaf09
+    2300066: BranchLeaf09 1
+    2300068: BranchLeaf09 2
+    2300070: BranchLeaf09 3
+    2300072: Tree_Trunk
+    2300074: Tree_Trunk 1
+    3300000: BranchLeaf01
+    3300002: BranchLeaf01 1
+    3300004: BranchLeaf01 2
+    3300006: BranchLeaf01 3
+    3300008: BranchLeaf02
+    3300010: BranchLeaf02 1
+    3300012: BranchLeaf02 2
+    3300014: BranchLeaf02 3
+    3300016: BranchLeaf03
+    3300018: BranchLeaf03 1
+    3300020: BranchLeaf03 2
+    3300022: BranchLeaf03 3
+    3300024: BranchLeaf04
+    3300026: BranchLeaf04 1
+    3300028: BranchLeaf04 2
+    3300030: BranchLeaf04 3
+    3300032: BranchLeaf05
+    3300034: BranchLeaf05 1
+    3300036: BranchLeaf05 2
+    3300038: BranchLeaf05 3
+    3300040: BranchLeaf06
+    3300042: BranchLeaf06 1
+    3300044: BranchLeaf06 2
+    3300046: BranchLeaf06 3
+    3300048: BranchLeaf07
+    3300050: BranchLeaf07 1
+    3300052: BranchLeaf07 2
+    3300054: BranchLeaf07 3
+    3300056: BranchLeaf08
+    3300058: BranchLeaf08 1
+    3300060: BranchLeaf08 2
+    3300062: BranchLeaf08 3
+    3300064: BranchLeaf09
+    3300066: BranchLeaf09 1
+    3300068: BranchLeaf09 2
+    3300070: BranchLeaf09 3
+    3300072: Tree_Trunk
+    3300074: Tree_Trunk 1
+    4300000: Tree_Trunk
+    4300002: BranchLeaf03
+    4300004: BranchLeaf04
+    4300006: BranchLeaf01
+    4300008: BranchLeaf08
+    4300010: BranchLeaf02
+    4300012: BranchLeaf07
+    4300014: BranchLeaf05
+    4300016: BranchLeaf06
+    4300018: BranchLeaf09
+    4300020: BranchLeaf03
+    4300022: BranchLeaf04
+    4300024: BranchLeaf01
+    4300026: BranchLeaf08
+    4300028: BranchLeaf02
+    4300030: BranchLeaf07
+    4300032: BranchLeaf05
+    4300034: BranchLeaf06
+    4300036: BranchLeaf09
+    4300038: Tree_Trunk
+    4300040: BranchLeaf03
+    4300042: BranchLeaf04
+    4300044: BranchLeaf01
+    4300046: BranchLeaf08
+    4300048: BranchLeaf02
+    4300050: BranchLeaf07
+    4300052: BranchLeaf05
+    4300054: BranchLeaf06
+    4300056: BranchLeaf09
+    4300058: BranchLeaf03
+    4300060: BranchLeaf04
+    4300062: BranchLeaf01
+    4300064: BranchLeaf08
+    4300066: BranchLeaf02
+    4300068: BranchLeaf07
+    4300070: BranchLeaf05
+    4300072: BranchLeaf06
+    4300074: BranchLeaf09
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertBranchLeafTest01
+    second: {fileID: 2100000, guid: 8cb8ec5fe5785fc4eb9b391a4592835c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambertTreeTrunkBark
+    second: {fileID: 2100000, guid: 687e9040a528f654aa1c6696133cc876, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
