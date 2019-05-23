@@ -3316,6 +3316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055577011584145303}
+  - component: {fileID: 6212930978446141633}
   m_Layer: 0
   m_Name: JunctionNew01
   m_TagString: Untagged
@@ -3340,6 +3341,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 112.254005, z: 0}
+--- !u!205 &6212930978446141633
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055577011584306103}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 274.18347, y: 0, z: -472.11096}
+  m_Size: 7927.8926
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.76378065
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1055577011586569703}
+    - renderer: {fileID: 1055577011586569723}
+    - renderer: {fileID: 1055577011586569719}
+    - renderer: {fileID: 1055577011586569699}
+    - renderer: {fileID: 1055577011586569715}
+    - renderer: {fileID: 1055577011586569615}
+    - renderer: {fileID: 1055577011586569519}
+    - renderer: {fileID: 1055577011586569511}
+    - renderer: {fileID: 1055577011586569535}
+    - renderer: {fileID: 1055577011586569527}
+    - renderer: {fileID: 1055577011586569679}
+    - renderer: {fileID: 1055577011586569671}
+    - renderer: {fileID: 1055577011586569695}
+    - renderer: {fileID: 1055577011586569687}
+    - renderer: {fileID: 1055577011586569711}
+    - renderer: {fileID: 1055577011586569517}
+    - renderer: {fileID: 1055577011586569509}
+    - renderer: {fileID: 1055577011586569533}
+    - renderer: {fileID: 1055577011586569525}
+    - renderer: {fileID: 1055577011586569677}
+    - renderer: {fileID: 1055577011586569669}
+    - renderer: {fileID: 1055577011586569693}
+    - renderer: {fileID: 1055577011586569685}
+    - renderer: {fileID: 1055577011586569709}
+    - renderer: {fileID: 1055577011586569727}
+    - renderer: {fileID: 1055577011586569611}
+  - screenRelativeHeight: 0.3902285
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1055577011586569701}
+    - renderer: {fileID: 1055577011586569721}
+    - renderer: {fileID: 1055577011586569717}
+    - renderer: {fileID: 1055577011586569697}
+    - renderer: {fileID: 1055577011586569713}
+    - renderer: {fileID: 1055577011586569613}
+    - renderer: {fileID: 1055577011586569515}
+    - renderer: {fileID: 1055577011586569507}
+    - renderer: {fileID: 1055577011586569531}
+    - renderer: {fileID: 1055577011586569523}
+    - renderer: {fileID: 1055577011586569675}
+    - renderer: {fileID: 1055577011586569667}
+    - renderer: {fileID: 1055577011586569691}
+    - renderer: {fileID: 1055577011586569683}
+    - renderer: {fileID: 1055577011586569707}
+    - renderer: {fileID: 1055577011586569513}
+    - renderer: {fileID: 1055577011586569505}
+    - renderer: {fileID: 1055577011586569529}
+    - renderer: {fileID: 1055577011586569521}
+    - renderer: {fileID: 1055577011586569673}
+    - renderer: {fileID: 1055577011586569665}
+    - renderer: {fileID: 1055577011586569689}
+    - renderer: {fileID: 1055577011586569681}
+    - renderer: {fileID: 1055577011586569705}
+    - renderer: {fileID: 1055577011586569725}
+    - renderer: {fileID: 1055577011586569609}
+  m_Enabled: 1
 --- !u!1 &1055577011584306105
 GameObject:
   m_ObjectHideFlags: 0
