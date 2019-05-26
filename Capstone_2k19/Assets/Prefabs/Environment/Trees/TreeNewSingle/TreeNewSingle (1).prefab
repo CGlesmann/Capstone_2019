@@ -1333,6 +1333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4325417957231502209}
+  - component: {fileID: 1861920094589566592}
   m_Layer: 0
   m_Name: TreeNewSingle (1)
   m_TagString: Untagged
@@ -1357,6 +1358,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &1861920094589566592
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325417957231869857}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 274.19226, y: 0, z: -472.2472}
+  m_Size: 7927.8926
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4325417957229601081}
+    - renderer: {fileID: 4325417957229601073}
+    - renderer: {fileID: 4325417957229601065}
+    - renderer: {fileID: 4325417957229601057}
+    - renderer: {fileID: 4325417957229601241}
+    - renderer: {fileID: 4325417957229601233}
+    - renderer: {fileID: 4325417957229601225}
+    - renderer: {fileID: 4325417957229601217}
+    - renderer: {fileID: 4325417957229601273}
+    - renderer: {fileID: 4325417957229601083}
+    - renderer: {fileID: 4325417957229601075}
+    - renderer: {fileID: 4325417957229601067}
+    - renderer: {fileID: 4325417957229601059}
+    - renderer: {fileID: 4325417957229601243}
+    - renderer: {fileID: 4325417957229601235}
+    - renderer: {fileID: 4325417957229601227}
+    - renderer: {fileID: 4325417957229601219}
+    - renderer: {fileID: 4325417957229601275}
+    - renderer: {fileID: 4325417957229601265}
+  - screenRelativeHeight: 0.39264727
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4325417957229601085}
+    - renderer: {fileID: 4325417957229601077}
+    - renderer: {fileID: 4325417957229601069}
+    - renderer: {fileID: 4325417957229601061}
+    - renderer: {fileID: 4325417957229601245}
+    - renderer: {fileID: 4325417957229601237}
+    - renderer: {fileID: 4325417957229601229}
+    - renderer: {fileID: 4325417957229601221}
+    - renderer: {fileID: 4325417957229601277}
+    - renderer: {fileID: 4325417957229601087}
+    - renderer: {fileID: 4325417957229601079}
+    - renderer: {fileID: 4325417957229601071}
+    - renderer: {fileID: 4325417957229601063}
+    - renderer: {fileID: 4325417957229601247}
+    - renderer: {fileID: 4325417957229601239}
+    - renderer: {fileID: 4325417957229601231}
+    - renderer: {fileID: 4325417957229601223}
+    - renderer: {fileID: 4325417957229601279}
+    - renderer: {fileID: 4325417957229601267}
+  m_Enabled: 1
 --- !u!1 &4325417957231869859
 GameObject:
   m_ObjectHideFlags: 0
