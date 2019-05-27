@@ -27,7 +27,6 @@ public class PauseManager : MonoBehaviour
         // Setting the Cursor Lock
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
     }
 
     /// <summary>
@@ -50,5 +49,5 @@ public class PauseManager : MonoBehaviour
     public void PauseGame() { pauseMenu.SetActive(true); isPaused = true; Cursor.lockState = CursorLockMode.None; Cursor.visible = true; }
     public void UnPauseGame() { pauseMenu.SetActive(false); isPaused = false; Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
 
-    public void ExitGame() { Application.Quit(); }
+    public void ExitGame() { Debug.Log("Quitting"); Application.Quit(); }
 }
