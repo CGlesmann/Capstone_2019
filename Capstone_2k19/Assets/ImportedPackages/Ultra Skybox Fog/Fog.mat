@@ -157,11 +157,11 @@ Material:
     - _EnableSpecularOcclusion: 0
     - _EnableWind: 0
     - _EnergyConservingSpecularColor: 1
-    - _Exposure: 1
+    - _Exposure: 0.68
     - _FogBottom: 1
-    - _FogEnd: 0.295
+    - _FogEnd: 0.183
     - _FogIntens: 1
-    - _FogStart: 0.451
+    - _FogStart: 0.075
     - _HdrpVersion: 2
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
@@ -180,8 +180,8 @@ Material:
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
-    - _MieIntens: 0.241
-    - _MieSize: 0.8
+    - _MieIntens: 0.162
+    - _MieSize: 0.071
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _PPDLodThreshold: 5
@@ -208,7 +208,7 @@ Material:
     - _StencilWriteMaskMV: 128
     - _Stiffness: 1
     - _SubsurfaceMask: 1
-    - _SunDir: 10
+    - _SunDir: 0
     - _SupportDecals: 1
     - _SurfaceType: 0
     - _TexWorldScale: 1
@@ -235,13 +235,13 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FogCol: {r: 0.2991723, g: 0.7830189, b: 0.4760293, a: 0.5}
+    - _FogCol: {r: 0.5257654, g: 0.8018868, b: 0.6259707, a: 0.5}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _MieTint: {r: 0.4738341, g: 0.8301887, b: 0.52438825, a: 0.5}
+    - _MieTint: {r: 0.8244927, g: 0.9056604, b: 0.8360881, a: 0.5}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Tint: {r: 0.118948035, g: 0.9339623, b: 0.5030424, a: 0.5}
+    - _Tint: {r: 0.5974546, g: 0.9245283, b: 0.7515567, a: 0.5}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
