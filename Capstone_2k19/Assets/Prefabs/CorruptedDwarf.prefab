@@ -139,7 +139,7 @@ MonoBehaviour:
     pauseHere: 1
     pauseLength: 1.5
   patrolSpeed: 10
-  acceptanceRange: 1
+  acceptanceRange: 5
   pointIndex: 0
   playerLayer:
     serializedVersion: 2

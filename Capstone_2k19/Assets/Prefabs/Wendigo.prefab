@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 8697226200860221705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 47.5, y: 106, z: -97.8}
-  m_LocalScale: {x: 2.30793, y: 2.30793, z: 2.30793}
+  m_LocalScale: {x: 4.2684608, y: 4.2684608, z: 4.2684608}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
     pauseHere: 0
     pauseLength: 0
   patrolSpeed: 5
-  acceptanceRange: 1
+  acceptanceRange: 5
   pointIndex: 0
   playerLayer:
     serializedVersion: 2
