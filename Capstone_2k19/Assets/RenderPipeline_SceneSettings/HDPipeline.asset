@@ -153,7 +153,7 @@ MonoBehaviour:
     supportSSAO: 1
     supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
-    supportVolumetrics: 0
+    supportVolumetrics: 1
     increaseResolutionOfVolumetrics: 0
     supportLightLayers: 0
     supportDistortion: 1
