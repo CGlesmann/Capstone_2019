@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Test
+  m_Shader: {fileID: 4800000, guid: 9270f0f051bae2345908582351ca4b14, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2900
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_63B9F91:
+        m_Texture: {fileID: 2800000, guid: 2dcb33568e8012749b1afb087dc9061e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_7F5919D8: 2
+    - Vector1_8B89783B: 0.1
+    - Vector1_8D31D295: 1.2
+    - Vector1_E5A4F367: 0
+    m_Colors:
+    - Color_10164726: {r: 0.4376951, g: 4.28316, b: 2.823356, a: 0}
+    - Vector2_1D81E283: {r: 0.1, g: 0.5, b: 0, a: 0}
+    - Vector2_AFBD7B2B: {r: 0, g: 0.2, b: 0, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
