@@ -4756,7 +4756,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: af81ce32e82e6b54ba4872054844e1ba, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4967,6 +4967,7 @@ GameObject:
   - component: {fileID: 1744788885}
   - component: {fileID: 5575628547597658801}
   - component: {fileID: 3978701779429856097}
+  - component: {fileID: 3434139076101667093}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -5273,13 +5274,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf5825dac92cf54ca5fe42a4a5deb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 0}
   fireBallPrefab: {fileID: 8908094258037918525, guid: 45ebc1196ba95e840a1afc8050579135,
     type: 3}
   magicHand: {fileID: 8889365172373566897}
-  EnemySpawn: {fileID: 0}
   magicBuildUp: 0
-  Attacking: 0
+  attacking: 0
+--- !u!114 &3434139076101667093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744788882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d727f058b58ed14ab87e67daa6b00a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossTrigger: 
+  spawnerTrigger: 
+  lightTrigger: Torch
 --- !u!1 &4598135064118437109
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,39 +12,17 @@ public class LightTrigger : MonoBehaviour
     /// <summary>
     /// Sets the torch to be off by default
     /// </summary>
-    private void Awake()
+    private void Awake() { DeactivateLight(); }
+
+    public void ActivateLight()
+    {
+        lightSource.SetActive(true);
+        fireEffect.SetActive(true);
+    }
+
+    public void DeactivateLight()
     {
         lightSource.SetActive(false);
         fireEffect.SetActive(false);
-    }
-
-    /// <summary>
-    /// Activate the light and particle effect
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
-    {
-        GameObject obj = other.gameObject;
-
-        if (obj.CompareTag("Player"))
-        {
-            lightSource.SetActive(true);
-            fireEffect.SetActive(true);
-        }
-    }
-
-    /// <summary>
-    /// De-activates the light and particle effect
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerExit(Collider other)
-    {
-        GameObject obj = other.gameObject;
-
-        if (obj.CompareTag("Player"))
-        {
-            lightSource.SetActive(false);
-            fireEffect.SetActive(false);
-        }
     }
 }

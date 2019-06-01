@@ -13955,6 +13955,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ef60b25c2afaed44cb9a22af25272593, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 983fcb68f73ff6748a91659d7e5db707, type: 3}
+--- !u!1 &758578841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1744788882, guid: 983fcb68f73ff6748a91659d7e5db707,
+    type: 3}
+  m_PrefabInstance: {fileID: 758578840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &758578842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758578841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d727f058b58ed14ab87e67daa6b00a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossTrigger: 
+  spawnerTrigger: 
+  lightTrigger: Torch
 --- !u!1 &773558713
 GameObject:
   m_ObjectHideFlags: 0
