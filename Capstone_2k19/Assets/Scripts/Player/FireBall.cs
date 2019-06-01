@@ -24,16 +24,16 @@ public class FireBall : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             
-            if(gameObject.transform.localScale == new Vector3(3,3,3))
+            if(gameObject.transform.localScale == new Vector3(1.5f,1.5f,1.5f))
             {
                 float dmgMod = (manaBuildUp / 10) * basicDMG;
                 col.gameObject.GetComponent<CombatCharacter>().TakeDamage(dmgMod);
                 Destroy(gameObject);
             }
 
-            if (gameObject.transform.localScale == new Vector3(1, 1, 1))
+            if (gameObject.transform.localScale == new Vector3(.5f, .5f, .5f))
             {                
-                col.gameObject.GetComponent<CombatCharacter>().TakeDamage(30);
+                col.gameObject.GetComponent<CombatCharacter>().TakeDamage(basicDMG);
                 Destroy(gameObject);
             }           
         }

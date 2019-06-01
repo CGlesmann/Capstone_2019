@@ -47,10 +47,32 @@ public class CombatCharacter : MonoBehaviour
         if (gameObject.tag == "Enemy")
         {
             GameObject Player = GameObject.Find("Player");
-            float award = 30;
-            //can add moe if statements to check each creature type and award mana/health in different amounts  
-            Player.GetComponent<CombatCharacter>().RestoreMana(award/2);
-            Player.GetComponent<CombatCharacter>().RestoreHealth(award/2);
+            float award = 0;
+
+            if (gameObject.name.Contains("CorruptedDwarf")) { award = 30; }
+            if (gameObject.name.Contains("Wendigo")) { award = 60; }
+            if (gameObject.name.Contains("CorruptedFairy")) { award = 100; }
+            
+            //This coding restores both player mana and health if the play if missing health and mana.
+            if (Player.GetComponent<CombatCharacter>().mana < maxMana && Player.GetComponent<CombatCharacter>().health < maxHealth)
+            {
+                Player.GetComponent<CombatCharacter>().RestoreHealth(award/2);
+                Player.GetComponent<CombatCharacter>().RestoreMana(award/2);
+                Player.GetComponent<PlayerCombatController>().RestoreMana(award/2);
+            }
+
+            //This coding restores the players mana and not the player's health.
+            if (Player.GetComponent<CombatCharacter>().mana < maxMana && Player.GetComponent<CombatCharacter>().health >= maxHealth)
+            {
+                Player.GetComponent<CombatCharacter>().RestoreMana(award);
+                Player.GetComponent<PlayerCombatController>().RestoreMana(award);
+            }
+
+            //This coding restores the players health and not the player's mana.
+            if (Player.GetComponent<CombatCharacter>().mana >= maxMana && Player.GetComponent<CombatCharacter>().health < maxHealth)
+            {
+                Player.GetComponent<CombatCharacter>().RestoreHealth(award);
+            }
         }
         GameObject.Destroy(gameObject);
     }
