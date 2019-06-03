@@ -1,0 +1,259 @@
+fileFormatVersion: 2
+guid: adccfce1247c18b478f1c4b60d785a33
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: joint10
+    100004: joint10 1
+    100006: joint11
+    100008: joint11 1
+    100010: joint12
+    100012: joint12 1
+    100014: joint13
+    100016: joint13 1
+    100018: joint14
+    100020: joint15
+    100022: joint15 1
+    100024: joint16
+    100026: joint16 1
+    100028: joint17
+    100030: joint17 1
+    100032: joint18
+    100034: joint18 1
+    100036: joint2
+    100038: joint24
+    100040: joint3
+    100042: joint30
+    100044: joint31
+    100046: joint32
+    100048: joint33
+    100050: joint34
+    100052: joint35
+    100054: joint36
+    100056: joint37
+    100058: joint38
+    100060: joint39
+    100062: joint4
+    100064: joint40
+    100066: joint41
+    100068: joint42
+    100070: joint43
+    100072: joint44
+    100074: joint45
+    100076: joint46
+    100078: joint47
+    100080: joint48
+    100082: joint49
+    100084: joint5
+    100086: joint50
+    100088: joint6
+    100090: joint7
+    100092: joint9
+    100094: Mesh_Dwarf_Rat1
+    100096: Root_Joint
+    400000: //RootNode
+    400002: joint10
+    400004: joint10 1
+    400006: joint11
+    400008: joint11 1
+    400010: joint12
+    400012: joint12 1
+    400014: joint13
+    400016: joint13 1
+    400018: joint14
+    400020: joint15
+    400022: joint15 1
+    400024: joint16
+    400026: joint16 1
+    400028: joint17
+    400030: joint17 1
+    400032: joint18
+    400034: joint18 1
+    400036: joint2
+    400038: joint24
+    400040: joint3
+    400042: joint30
+    400044: joint31
+    400046: joint32
+    400048: joint33
+    400050: joint34
+    400052: joint35
+    400054: joint36
+    400056: joint37
+    400058: joint38
+    400060: joint39
+    400062: joint4
+    400064: joint40
+    400066: joint41
+    400068: joint42
+    400070: joint43
+    400072: joint44
+    400074: joint45
+    400076: joint46
+    400078: joint47
+    400080: joint48
+    400082: joint49
+    400084: joint5
+    400086: joint50
+    400088: joint6
+    400090: joint7
+    400092: joint9
+    400094: Mesh_Dwarf_Rat1
+    400096: Root_Joint
+    2100000: Dwarf_Rat_2_Material
+    4300000: Mesh_Dwarf_Rat1
+    7400000: Dwarf_Walk
+    7400002: Dwarf_Claw_Swipe
+    9500000: //RootNode
+    13700000: Mesh_Dwarf_Rat1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dwarf_Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dwarf_Claw_Swipe
+      takeName: Take 001
+      firstFrame: 61
+      lastFrame: 108
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.75384617
+        functionName: ClawSwipe
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 49934624d6b606645aa190fb1988fb49,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
