@@ -38,7 +38,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] protected float chaseSpeed = 7.5f;
 
     protected Transform player = null;
-    protected Animator anim = null;
 
     [Header("Enemy Battle AI")]
     protected BattleAI battleAI = null;
@@ -64,8 +63,6 @@ public class EnemyMovement : MonoBehaviour
 
         // Movement Behavior from combat character
         battleAI = GetComponent<BattleAI>();
-
-        anim = GetComponent<Animator>();
 
         // Setting the Initial Path
         if (state == EnemyAIState.Patrolling)
@@ -121,7 +118,6 @@ public class EnemyMovement : MonoBehaviour
                     agent.isStopped = true;
                     agent.velocity = Vector3.zero;
                     agent.speed = 0f;
-                    anim.SetBool("Walking", false);
 
                     state = EnemyAIState.Attacking;
                     return;
@@ -138,7 +134,6 @@ public class EnemyMovement : MonoBehaviour
 
                     // Setting State
                     state = EnemyAIState.Chasing;
-                    anim.SetBool("Walking", true);
                     return;
                 }
             }
@@ -194,7 +189,6 @@ public class EnemyMovement : MonoBehaviour
 
                 // Toggling the path
                 pathStarted = false;
-                anim.SetBool("Walking", false);
 
                 // Setting the Pause Timer (if Needed)
                 if (currentPPoint.pauseHere)
@@ -220,9 +214,6 @@ public class EnemyMovement : MonoBehaviour
         // Setting the path
         pathStarted = true;
         agent.isStopped = false;
-
-        // Set Walking Trigger
-        anim.SetBool("Walking", true);
     }
     #endregion
 
@@ -249,7 +240,6 @@ public class EnemyMovement : MonoBehaviour
         agent.speed = chaseSpeed;
 
         agent.isStopped = false;
-        anim.SetBool("Walking", true);
     }
     #endregion
 }
