@@ -100,59 +100,62 @@ public class PlayerCombatController : MonoBehaviour
 
     void Update()
     {
-        //FireBall Scripting
-        if (coolDownTimer == 0)
+        if (!PauseManager.manager.isPaused)
         {
-            //builds up magic counter
-            if (Input.GetButton("Fire1") && magicBuildUp < mana){ magicBuildUp += .25f; }
-            
-            //checks if magic counter is greater than 10 if so triggers big FireBall
-            if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10){ RangedAttackBig(); }            
-            
-            //if magic counter is less than 10 makes small FireBall            
-            else if(Input.GetButtonUp("Fire1") && mana > 1){ RangedAttackSmall(); }
-        }        
-        else //this is subtracking from cool down timer         
-        { coolDownTimer -= 1; }
-
-        //Blocking
-        //has time counter to ceck if you are wanting to block
-        //if you are wanting to block than triggers code to start blocking
-        if(Input.GetButton("Fire2"))
-        {
-            blockTimer += 1;
-
-            if (blockTimer >= 30)
+            //FireBall Scripting
+            if (coolDownTimer == 0)
             {
-                Blocking();
-                Debug.Log("Blocking");
-            }
-        }
-        //Melee Attack Scripting
-        //checks to see if you are blocking if not than triggers a melee attack
-        if (Input.GetButtonUp("Fire2"))
-        {
-            if (blocking == false)
-            {
-                MeleeAttack();
-                blockTimer = 0;
-            }
-            //if you are finished blocking than triggers code to allow to to attack again
-            else if(blocking == true)
-            {
-                blocking = false;
-                blockTimer = 0;
-            }
-        }
+                //builds up magic counter
+                if (Input.GetButton("Fire1") && magicBuildUp < mana) { magicBuildUp += .25f; }
 
-        //Melee Attack reset timer.
-        if (attacking == true && attackTimer > 0)
-        {
-            attackTimer -= 1;
-        }
-        else if(attacking == true && attackTimer <= 0)
-        {
-            MeleeReset();
+                //checks if magic counter is greater than 10 if so triggers big FireBall
+                if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10) { RangedAttackBig(); }
+
+                //if magic counter is less than 10 makes small FireBall            
+                else if (Input.GetButtonUp("Fire1") && mana > 1) { RangedAttackSmall(); }
+            }
+            else //this is subtracking from cool down timer         
+            { coolDownTimer -= 1; }
+
+            //Blocking
+            //has time counter to ceck if you are wanting to block
+            //if you are wanting to block than triggers code to start blocking
+            if (Input.GetButton("Fire2"))
+            {
+                blockTimer += 1;
+
+                if (blockTimer >= 30)
+                {
+                    Blocking();
+                    Debug.Log("Blocking");
+                }
+            }
+            //Melee Attack Scripting
+            //checks to see if you are blocking if not than triggers a melee attack
+            if (Input.GetButtonUp("Fire2"))
+            {
+                if (blocking == false)
+                {
+                    MeleeAttack();
+                    blockTimer = 0;
+                }
+                //if you are finished blocking than triggers code to allow to to attack again
+                else if (blocking == true)
+                {
+                    blocking = false;
+                    blockTimer = 0;
+                }
+            }
+
+            //Melee Attack reset timer.
+            if (attacking == true && attackTimer > 0)
+            {
+                attackTimer -= 1;
+            }
+            else if (attacking == true && attackTimer <= 0)
+            {
+                MeleeReset();
+            }
         }
     }
 }
