@@ -189,8 +189,8 @@ MonoBehaviour:
       maxEnvLightsOnScreen: 64
       maxDecalsOnScreen: 512
     hdShadowInitParams:
-      shadowAtlasResolution: 128
-      maxShadowRequests: 300
+      shadowAtlasResolution: 512
+      maxShadowRequests: 128
       shadowMapsDepthBits: 32
       useDynamicViewportRescale: 1
       shadowQuality: 0
