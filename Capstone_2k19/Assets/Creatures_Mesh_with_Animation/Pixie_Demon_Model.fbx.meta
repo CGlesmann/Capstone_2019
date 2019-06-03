@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 00e472c443d9ebd4294a393f1ff6e84b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: joint2
+    100002: joint3
+    100004: joint35
+    100006: joint36
+    100008: joint36 1
+    100010: joint37
+    100012: joint37 1
+    100014: joint38
+    100016: joint39
+    100018: joint39 1
+    100020: joint4
+    100022: joint40
+    100024: joint40 1
+    100026: joint44
+    100028: joint48
+    100030: joint49
+    100032: joint5
+    100034: joint50
+    100036: joint50 1
+    100038: joint51
+    100040: joint51 1
+    100042: joint52
+    100044: joint52 1
+    100046: joint53
+    100048: joint53 1
+    100050: joint59
+    100052: joint6
+    100054: joint60
+    100056: joint61
+    100058: joint61 1
+    100060: joint62
+    100062: joint62 1
+    100064: joint63
+    100066: joint63 1
+    100068: joint64
+    100070: joint64 1
+    100072: joint65
+    100074: joint65 1
+    100076: joint7
+    100078: joint72
+    100080: Pixie_Demon_Body_Base3
+    100082: //RootNode
+    100084: Root_Joint
+    400000: joint2
+    400002: joint3
+    400004: joint35
+    400006: joint36
+    400008: joint36 1
+    400010: joint37
+    400012: joint37 1
+    400014: joint38
+    400016: joint39
+    400018: joint39 1
+    400020: joint4
+    400022: joint40
+    400024: joint40 1
+    400026: joint44
+    400028: joint48
+    400030: joint49
+    400032: joint5
+    400034: joint50
+    400036: joint50 1
+    400038: joint51
+    400040: joint51 1
+    400042: joint52
+    400044: joint52 1
+    400046: joint53
+    400048: joint53 1
+    400050: joint59
+    400052: joint6
+    400054: joint60
+    400056: joint61
+    400058: joint61 1
+    400060: joint62
+    400062: joint62 1
+    400064: joint63
+    400066: joint63 1
+    400068: joint64
+    400070: joint64 1
+    400072: joint65
+    400074: joint65 1
+    400076: joint7
+    400078: joint72
+    400080: Pixie_Demon_Body_Base3
+    400082: //RootNode
+    400084: Root_Joint
+    2100000: Pixie_Demon_Material
+    4300000: Pixie_Demon_Body_Base3
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Pixie_Demon_Body_Base3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

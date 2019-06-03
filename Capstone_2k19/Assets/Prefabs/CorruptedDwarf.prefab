@@ -9,14 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874315151180916177}
-  - component: {fileID: 874315151180916182}
-  - component: {fileID: 874315151180916183}
+  - component: {fileID: 2133008155834886716}
+  - component: {fileID: 6911372168103403764}
+  - component: {fileID: 2543943555853311759}
   - component: {fileID: 874315151180916181}
   - component: {fileID: 874315151180916179}
   - component: {fileID: 874315151180916176}
   - component: {fileID: 874315151180916189}
   - component: {fileID: 874315151180916178}
-  - component: {fileID: 2543943555853311759}
   m_Layer: 11
   m_Name: CorruptedDwarf
   m_TagString: Enemy
@@ -32,22 +32,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874315151180915754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.5, y: 106, z: -97.8}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.30793, y: 2.30793, z: 2.30793}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &874315151180916182
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874315151180915754}
-  m_Mesh: {fileID: 4300000, guid: 47ba3b2feb864d14493e37e03051121b, type: 3}
---- !u!23 &874315151180916183
-MeshRenderer:
+--- !u!137 &2133008155834886716
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -83,6 +75,53 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: 47ba3b2feb864d14493e37e03051121b, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 400096, guid: 554359766ad23754b822b721b671e04c, type: 3}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.80383205, y: 0.65520257, z: 2.166699}
+  m_DirtyAABB: 0
+--- !u!95 &6911372168103403764
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874315151180915754}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 554359766ad23754b822b721b671e04c, type: 3}
+  m_Controller: {fileID: 9100000, guid: a0ae34a53efbc4f4eaf5be019069dd77, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &2543943555853311759
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874315151180915754}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!136 &874315151180916181
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -199,12 +238,12 @@ MonoBehaviour:
   attackPattern:
   - minAttackRange: 5
     maxAttackRange: 3
-    attackCooldown: 1.25
+    attackCooldown: 0.5
     attackEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 874315151180916178}
-          m_MethodName: ClawSwipe
+          m_MethodName: BeginSwipe
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -222,19 +261,3 @@ MonoBehaviour:
   attackAIEngaged: 0
   attackInProgress: 0
   clawDamage: 10
---- !u!54 &2543943555853311759
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874315151180915754}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0

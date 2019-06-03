@@ -6,7 +6,7 @@ public class WendigoMovement : EnemyMovement
 {
     [Header("Jump State Variable")]
     [SerializeField] private float jumpCooldown = 3f;
-    private float jumpTimer = 0f;
+    [SerializeField] private float jumpTimer = 0f;
 
     [Header("Jump Collision Variables")]
     [SerializeField] private float jumpRange = 1f;
@@ -22,7 +22,8 @@ public class WendigoMovement : EnemyMovement
     /// </summary>
     protected virtual void Update()
     {
-        if (jumping) {
+        if (jumping)
+        {
             // Agent is no longer moving
             if (agent.velocity == Vector3.zero)
             {
@@ -37,10 +38,14 @@ public class WendigoMovement : EnemyMovement
 
                 // Set the Chase Path
                 SetChasePath();
+                anim.SetBool("Dashing", false);
             }
         }
         else if (jumpTimer > 0f)
+        {
             jumpTimer -= Time.deltaTime;
+            anim.SetBool("Dashing", true);
+        }
     }
 
     protected override void StateMachine()
@@ -66,8 +71,9 @@ public class WendigoMovement : EnemyMovement
             else if (state == EnemyAIState.Chasing)
             {
                 agent.destination = player.transform.position;
-                if (Vector3.Distance(transform.position, player.position) > jumpRange || jumpTimer > 0f)
+                if (battleAI.PlayerInAttackRange() || Vector3.Distance(transform.position, player.position) > jumpRange || jumpTimer > 0f)
                 {
+                    Debug.Log("Not Checking Jump");
                     // Checking for Chase -> Attack Transition
                     if (battleAI.PlayerInAttackRange())
                     {
@@ -76,11 +82,14 @@ public class WendigoMovement : EnemyMovement
                         //executeMovementAI = false;
                         agent.isStopped = true;
                         agent.speed = 0f;
+                        anim.SetBool("Walking", false);
 
                         return;
                     }
-                } else if (jumpTimer <= 0f && Physics.Raycast(transform.position, transform.forward, 15f, playerLayer)) {
-                    BeginJump();
+                } else {
+                    Debug.Log("Checking Jump");
+                    if (jumpTimer <= 0f && Physics.Raycast(transform.position, transform.forward, 15f, playerLayer))
+                        BeginJump();
                 }
             }
             else if (state == EnemyAIState.Attacking)
@@ -94,6 +103,7 @@ public class WendigoMovement : EnemyMovement
 
                     // Setting State
                     state = EnemyAIState.Chasing;
+                    anim.SetBool("Walking", true);
                     return;
                 }
             }
