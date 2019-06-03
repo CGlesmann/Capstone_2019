@@ -14,11 +14,12 @@ public class PlayerCombatController : MonoBehaviour
     private float mana = 100;
     private float fireBallSpeed = 600;
     private float blockTimer = 0;
+    private float attackTimer = 10;
     private float coolDownTimer = 0;
-    private float setTime = 10;
-    private bool blocking = false;
+    private float setTime = 10;       
     private float smallFireBall = .5f;
     private float bigFireBall = 1.5f;
+    private bool blocking = false;
     public bool attacking = false;
 
     public void RangedAttackSmall()
@@ -56,6 +57,7 @@ public class PlayerCombatController : MonoBehaviour
         BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
         
         boxCollider.enabled = true;
+        attacking = true;
         Debug.Log("Attack");            
     }
 
@@ -65,6 +67,16 @@ public class PlayerCombatController : MonoBehaviour
         blocking = true;
         DR = maxMana / (mana * 10);
         gameObject.GetComponent<CombatCharacter>().SetDamageReduction(DR);
+    }
+
+    private void MeleeReset()
+    {
+        GameObject hitbox = GameObject.Find("HitBox");
+        BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
+
+        boxCollider.enabled = false;
+        attacking = false;
+        attackTimer = 10;
     }
 
     public void RestoreMana(float award)
@@ -131,6 +143,16 @@ public class PlayerCombatController : MonoBehaviour
                 blocking = false;
                 blockTimer = 0;
             }
+        }
+
+        //Melee Attack reset timer.
+        if (attacking == true && attackTimer > 0)
+        {
+            attackTimer -= 1;
+        }
+        else if(attacking == true && attackTimer <= 0)
+        {
+            MeleeReset();
         }
     }
 }
