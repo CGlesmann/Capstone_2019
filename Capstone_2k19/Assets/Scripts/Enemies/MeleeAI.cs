@@ -9,6 +9,8 @@ public class MeleeAI : BattleAI
     [SerializeField] private float clawDamage = 10f;
 
     #region Attack Functions
+    public void BeginSwipe() { anim.SetTrigger("ClawSwipe"); }
+
     public void ClawSwipe()
     {
         Debug.Log(name + " performed a claw swipe for " + clawDamage + " damage");
