@@ -9,14 +9,15 @@ public class PlayerCombatController : MonoBehaviour
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
     
-    [SerializeField] private float magicBuildUp = 0;    
+    [SerializeField] private float magicBuildUp = 0;
+    [SerializeField] private float collectTimer = 0;     
     private float maxMana = 100;
     private float mana = 100;
     private float fireBallSpeed = 600;
     private float blockTimer = 0;
     private float attackTimer = 10;
     private float coolDownTimer = 0;
-    private float setTime = 10;       
+    private float setTime = 10;   
     private float smallFireBall = .5f;
     private float bigFireBall = 1.5f;
     private bool blocking = false;
@@ -146,7 +147,6 @@ public class PlayerCombatController : MonoBehaviour
                     blockTimer = 0;
                 }
             }
-
             //Melee Attack reset timer.
             if (attacking == true && attackTimer > 0)
             {

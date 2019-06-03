@@ -6,17 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class CombatCharacter : MonoBehaviour
 {
+    public Rigidbody enemyPrefab;
+    public Transform enemyP;
+
     [Header("Combat Stats")]
     [SerializeField] private float health = 100f;
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float mana = 100f;
     [SerializeField] private float maxMana = 100f;
     [SerializeField] private float damageReduction = 1f; //value between 0 and 1 reduces damage by the given percent
+    
 
 
     [Header("Death Variables")]
     [SerializeField] private UnityEvent onDeath = null;
-
+    public bool meleeAttacked = false;
     /// <summary>
     /// Checks for death
     /// Invokes onDeath event when the combat dies
@@ -52,26 +56,33 @@ public class CombatCharacter : MonoBehaviour
             if (gameObject.name.Contains("CorruptedDwarf")) { award = 30; }
             if (gameObject.name.Contains("Wendigo")) { award = 60; }
             if (gameObject.name.Contains("CorruptedFairy")) { award = 100; }
-            
+
             //This coding restores both player mana and health if the play if missing health and mana.
-            if (Player.GetComponent<CombatCharacter>().mana < maxMana && Player.GetComponent<CombatCharacter>().health < maxHealth)
+            if (meleeAttacked == true)
             {
-                Player.GetComponent<CombatCharacter>().RestoreHealth(award/2);
-                Player.GetComponent<CombatCharacter>().RestoreMana(award/2);
-                Player.GetComponent<PlayerCombatController>().RestoreMana(award/2);
-            }
+                if (Player.GetComponent<CombatCharacter>().mana < maxMana && Player.GetComponent<CombatCharacter>().health < maxHealth)
+                {
+                    Player.GetComponent<CombatCharacter>().RestoreHealth(award / 2);
+                    Player.GetComponent<CombatCharacter>().RestoreMana(award / 2);
+                    Player.GetComponent<PlayerCombatController>().RestoreMana(award / 2);
+                }
 
-            //This coding restores the players mana and not the player's health.
-            if (Player.GetComponent<CombatCharacter>().mana < maxMana && Player.GetComponent<CombatCharacter>().health >= maxHealth)
-            {
-                Player.GetComponent<CombatCharacter>().RestoreMana(award);
-                Player.GetComponent<PlayerCombatController>().RestoreMana(award);
-            }
+                //This coding restores the players mana and not the player's health.
+                if (Player.GetComponent<CombatCharacter>().mana < maxMana && Player.GetComponent<CombatCharacter>().health >= maxHealth)
+                {
+                    Player.GetComponent<CombatCharacter>().RestoreMana(award);
+                    Player.GetComponent<PlayerCombatController>().RestoreMana(award);
+                }
 
-            //This coding restores the players health and not the player's mana.
-            if (Player.GetComponent<CombatCharacter>().mana >= maxMana && Player.GetComponent<CombatCharacter>().health < maxHealth)
+                //This coding restores the players health and not the player's mana.
+                if (Player.GetComponent<CombatCharacter>().mana >= maxMana && Player.GetComponent<CombatCharacter>().health < maxHealth)
+                {
+                    Player.GetComponent<CombatCharacter>().RestoreHealth(award);
+                }
+            }
+            else
             {
-                Player.GetComponent<CombatCharacter>().RestoreHealth(award);
+                Instantiate(enemyPrefab, enemyPrefab.position, enemyPrefab.rotation);
             }
         }
         GameObject.Destroy(gameObject);
