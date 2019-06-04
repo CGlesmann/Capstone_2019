@@ -181,6 +181,9 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  meleeAttacked: 0
+  deadPrefab: {fileID: 872089683110259377, guid: d08316d30a1951f46962df8e8d8c708f,
+    type: 3}
 --- !u!114 &874315151180916178
 MonoBehaviour:
   m_ObjectHideFlags: 0
