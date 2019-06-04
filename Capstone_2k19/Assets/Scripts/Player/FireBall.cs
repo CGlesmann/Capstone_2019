@@ -28,12 +28,14 @@ public class FireBall : MonoBehaviour
             {
                 float dmgMod = (manaBuildUp / 10) * basicDMG;
                 col.gameObject.GetComponent<CombatCharacter>().TakeDamage(dmgMod);
+                col.gameObject.GetComponent<CombatCharacter>().meleeAttacked = false;
                 Destroy(gameObject);
             }
 
             if (gameObject.transform.localScale == new Vector3(.5f, .5f, .5f))
             {                
                 col.gameObject.GetComponent<CombatCharacter>().TakeDamage(basicDMG);
+                col.gameObject.GetComponent<CombatCharacter>().meleeAttacked = false;
                 Destroy(gameObject);
             }           
         }

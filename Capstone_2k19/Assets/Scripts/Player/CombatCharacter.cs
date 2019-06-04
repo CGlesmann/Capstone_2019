@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CombatCharacter : MonoBehaviour
 {
-    public Rigidbody enemyPrefab;
-    public Transform enemyP;
+    
 
     [Header("Combat Stats")]
     [SerializeField] private float health = 100f;
@@ -21,6 +20,7 @@ public class CombatCharacter : MonoBehaviour
     [Header("Death Variables")]
     [SerializeField] private UnityEvent onDeath = null;
     public bool meleeAttacked = false;
+    public Rigidbody deadPrefab;
     /// <summary>
     /// Checks for death
     /// Invokes onDeath event when the combat dies
@@ -80,9 +80,10 @@ public class CombatCharacter : MonoBehaviour
                     Player.GetComponent<CombatCharacter>().RestoreHealth(award);
                 }
             }
-            else
+            else if(meleeAttacked == false)
             {
-                Instantiate(enemyPrefab, enemyPrefab.position, enemyPrefab.rotation);
+                Debug.Log("died from fireball");
+                //Rigidbody deadEnemy = Instantiate(deadPrefab, transform.position, transform.rotation) as Rigidbody;
             }
         }
         GameObject.Destroy(gameObject);

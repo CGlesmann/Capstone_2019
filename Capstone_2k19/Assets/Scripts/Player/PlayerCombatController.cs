@@ -5,12 +5,10 @@ using UnityEngine;
 public class PlayerCombatController : MonoBehaviour
 {
     public static PlayerCombatController controller = null;
-    public GameObject enemyPrefab;
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
     
-    [SerializeField] private float magicBuildUp = 0;
-    [SerializeField] private float collectTimer = 0;     
+    [SerializeField] private float magicBuildUp = 0;   
     private float maxMana = 100;
     private float mana = 100;
     private float fireBallSpeed = 600;
@@ -147,6 +145,9 @@ public class PlayerCombatController : MonoBehaviour
                     blockTimer = 0;
                 }
             }
+            
+            //Collecting Mana from dead enemies
+
             //Melee Attack reset timer.
             if (attacking == true && attackTimer > 0)
             {
