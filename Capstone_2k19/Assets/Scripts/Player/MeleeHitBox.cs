@@ -10,8 +10,9 @@ public class MeleeHitBox : MonoBehaviour
     public void OnTriggerEnter(Collider col)
     {
         BoxCollider hitbox = gameObject.GetComponent<BoxCollider>();
+        GameObject Player = GameObject.Find("Player");
 
-        if (col.gameObject.tag == "Enemy" && gameObject.GetComponent<PlayerCombatController>().attacking == true)
+        if (col.gameObject.tag == "Enemy" && Player.gameObject.GetComponent<PlayerCombatController>().attacking == true)
         {                    
             col.gameObject.GetComponent<CombatCharacter>().TakeDamage(20);
             col.gameObject.GetComponent<CombatCharacter>().meleeAttacked = true;
