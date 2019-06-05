@@ -20,6 +20,7 @@ public class PlayerCombatController : MonoBehaviour
     private float bigFireBall = 1.5f;
     private bool blocking = false;
     public bool attacking = false;
+    public bool collecting = false;
 
     public void RangedAttackSmall()
     {
@@ -57,6 +58,8 @@ public class PlayerCombatController : MonoBehaviour
         
         boxCollider.enabled = true;
         attacking = true;
+        collecting = false;
+        blocking = false;
         Debug.Log("Attack");            
     }
 
@@ -64,6 +67,8 @@ public class PlayerCombatController : MonoBehaviour
     {
         float DR;
         blocking = true;
+        collecting = false;
+        attacking = false;
         DR = maxMana / (mana * 10);
         gameObject.GetComponent<CombatCharacter>().SetDamageReduction(DR);
     }
@@ -145,8 +150,37 @@ public class PlayerCombatController : MonoBehaviour
                     blockTimer = 0;
                 }
             }
-            
+
             //Collecting Mana from dead enemies
+            if (Input.GetKeyDown("f"))
+            {
+                GameObject hitbox = GameObject.Find("HitBox");
+                BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
+
+                if (collecting == false)
+                {
+                    Debug.Log("Collecting");
+                    collecting = true;
+                    attacking = false;
+                    blocking = false;
+                    boxCollider.enabled = true;
+                }
+            }
+
+            if (Input.GetKeyUp("f"))
+            {
+                GameObject hitbox = GameObject.Find("HitBox");
+                BoxCollider boxCollider = hitbox.GetComponent<BoxCollider>();
+
+                if (collecting == true)
+                {
+                    Debug.Log("Not Collecting");
+                    collecting = false;
+                    attacking = false;
+                    blocking = false;
+                    boxCollider.enabled = false;
+                }
+            }
 
             //Melee Attack reset timer.
             if (attacking == true && attackTimer > 0)

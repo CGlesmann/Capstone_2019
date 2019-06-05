@@ -160,6 +160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c9f12fa5f8caa4a805822984262579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadPrefab: {fileID: 6036269935928594101, guid: 55c0c77c61367754eb1abc34c763636a,
+    type: 3}
+  meleeAttacked: 0
   health: 100
   maxHealth: 100
   mana: 100
@@ -181,9 +184,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  meleeAttacked: 0
-  deadPrefab: {fileID: 872089683110259377, guid: d08316d30a1951f46962df8e8d8c708f,
-    type: 3}
 --- !u!114 &874315151180916178
 MonoBehaviour:
   m_ObjectHideFlags: 0
