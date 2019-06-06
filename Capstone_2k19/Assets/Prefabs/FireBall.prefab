@@ -227,11 +227,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2467911321720865128}
     m_Modifications:
-    - target: {fileID: 5936517938765183132, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerFire
-      objectReference: {fileID: 0}
     - target: {fileID: 8874774971157407916, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -286,6 +281,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5936517938765183132, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493850558899117972, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493850558916089904, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493850558916089904, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493850558916089904, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493850558916089904, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c8381b908ca4fd4d80d60f1c4ecc82e, type: 3}
