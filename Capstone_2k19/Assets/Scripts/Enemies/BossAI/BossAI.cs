@@ -13,6 +13,7 @@ public class BossAI : MeleeAI
     public void EnvironmentAttack()
     {
         StartCoroutine(SpawnEnvironmentHazards());
+        anim.SetBool("Spawning", true);
     }
 
     private IEnumerator SpawnEnvironmentHazards()
@@ -35,6 +36,7 @@ public class BossAI : MeleeAI
     {
         Debug.Log("Tongue Attack");
         TongueStrike();
+        anim.SetTrigger("ClawSwipe");
     }
 
     private void TongueStrike()

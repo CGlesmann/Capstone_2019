@@ -60,26 +60,28 @@ public class WendigoMovement : EnemyMovement
 
                     // Setting State
                     state = EnemyAIState.Chasing;
+                    anim.SetBool("Walking", true);
                     return;
                 }
             }
             else if (state == EnemyAIState.Chasing)
             {
                 agent.destination = player.transform.position;
-                if (Vector3.Distance(transform.position, player.position) > jumpRange || jumpTimer > 0f)
+                if (battleAI.PlayerInAttackRange() || Vector3.Distance(transform.position, player.position) > jumpRange || jumpTimer > 0f)
                 {
                     // Checking for Chase -> Attack Transition
                     if (battleAI.PlayerInAttackRange())
                     {
                         state = EnemyAIState.Attacking;
                         battleAI.EngageAttackAI();
+                        anim.SetBool("Walking", false);
                         //executeMovementAI = false;
                         agent.isStopped = true;
                         agent.speed = 0f;
 
                         return;
                     }
-                } else if (jumpTimer <= 0f && Physics.Raycast(transform.position, transform.forward, 15f, playerLayer)) {
+                } else if (jumpTimer <= 0f && Physics.Raycast(new Vector3(transform.position.x, player.position.y, transform.position.z), transform.forward, 15f, playerLayer)) {
                     BeginJump();
                 }
             }
@@ -94,6 +96,7 @@ public class WendigoMovement : EnemyMovement
 
                     // Setting State
                     state = EnemyAIState.Chasing;
+                    anim.SetBool("Walking", true);
                     return;
                 }
             }
@@ -112,5 +115,6 @@ public class WendigoMovement : EnemyMovement
 
         // Set the state to jumping
         jumping = true;
+        anim.SetBool("Dashing", true);
     }
 }

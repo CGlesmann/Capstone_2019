@@ -25,6 +25,7 @@ public class BossMovement : EnemyMovement
 
         // Setting State
         state = EnemyAIState.Chasing;
+        anim.SetBool("Walking", true);
         return;
     }
 
@@ -43,6 +44,7 @@ public class BossMovement : EnemyMovement
                 agent.speed = 0f;
 
                 state = EnemyAIState.Attacking;
+                anim.SetBool("Walking", false);
                 return;
             }
         }
@@ -56,6 +58,7 @@ public class BossMovement : EnemyMovement
 
                 // Setting State
                 state = EnemyAIState.Chasing;
+                anim.SetBool("Walking", true);
                 return;
             }
         }
