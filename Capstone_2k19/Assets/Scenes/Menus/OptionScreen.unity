@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 127531165}
   m_Layer: 0
-  m_Name: Book
+  m_Name: Menu Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,13 +633,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470170746}
-  m_LocalRotation: {x: 0.7120989, y: 0.046531558, z: 0.045678556, w: 0.69904476}
+  m_LocalRotation: {x: 0.7127604, y: 0.05815891, z: 0.03382118, w: 0.6981736}
   m_LocalPosition: {x: 0, y: 0, z: 171.3}
   m_LocalScale: {x: 0.27236065, y: 0.27236074, z: 0.86011523}
   m_Children: []
   m_Father: {fileID: 971373789}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 97.552, y: -81.90799, z: -81.97699}
+  m_LocalEulerAnglesHint: {x: 97.552, y: -80, z: -81.97699}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1321.1, y: -279.75}
@@ -1223,13 +1223,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820584406}
-  m_LocalRotation: {x: 0.00091474835, y: -0.0012785066, z: 0.020733412, w: 0.9997839}
+  m_LocalRotation: {x: 0.00086933, y: -0.003468454, z: 0.020735368, w: 0.9997786}
   m_LocalPosition: {x: 122.7, y: -14.520996, z: 10}
   m_LocalScale: {x: 10.814296, y: 9.521303, z: 14.773424}
   m_Children: []
   m_Father: {fileID: 127531165}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0.108, y: -0.14400001, z: 2.3760002}
+  m_LocalEulerAnglesHint: {x: 0.108, y: -0.395, z: 2.3760002}
 --- !u!23 &820584409
 MeshRenderer:
   m_ObjectHideFlags: 0
