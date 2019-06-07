@@ -6,6 +6,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class BossMovement : EnemyMovement
 {
+    public static BossMovement boss = null;
+
     [Header("Movement Settings")]
     public bool fightingEngaged = false;
 
@@ -15,52 +17,73 @@ public class BossMovement : EnemyMovement
         player = PlayerCombatController.controller.transform;
 
         // Resetting the NavMesh
-        agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
-        agent.speed = chaseSpeed;
+        if (fightingEngaged)
+        {
+            agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
+            agent.speed = chaseSpeed;
+        }
     }
 
     protected override void Awake()
     {
         base.Awake();
 
+        // Singleton
+        if (boss == null)
+            boss = this;
+        else
+            GameObject.Destroy(gameObject);
+
         // Setting State
-        state = EnemyAIState.Chasing;
-        anim.SetBool("Walking", true);
+        if (fightingEngaged)
+        {
+            state = EnemyAIState.Chasing;
+            anim.SetBool("Walking", true);
+        }
+        else
+            anim.SetBool("Walking", false);
+
         return;
     }
 
     protected override void StateMachine()
     {
-        if (state == EnemyAIState.Chasing)
+        if (fightingEngaged)
         {
-            agent.destination = player.transform.position;
-
-            // Checking for Chase -> Attack Transition
-            if (battleAI.PlayerInAttackRange())
+            if (state == EnemyAIState.Chasing)
             {
-                battleAI.EngageAttackAI();
-                agent.isStopped = true;
-                agent.velocity = Vector3.zero;
-                agent.speed = 0f;
+                agent.destination = player.transform.position;
+                agent.speed = chaseSpeed;
 
-                state = EnemyAIState.Attacking;
-                anim.SetBool("Walking", false);
-                return;
+                // Checking for Chase -> Attack Transition
+                if (battleAI.PlayerInAttackRange())
+                {
+                    battleAI.EngageAttackAI();
+                    agent.isStopped = true;
+                    agent.velocity = Vector3.zero;
+                    agent.speed = 0f;
+
+                    state = EnemyAIState.Attacking;
+                    anim.SetBool("Walking", false);
+                    return;
+                }
             }
-        }
-        else if (state == EnemyAIState.Attacking)
-        {
-            if (!battleAI.PlayerInAttackRange())
+            else if (state == EnemyAIState.Attacking)
             {
-                // Disengaging from combat
-                battleAI.DisEngageAttackAI();
-                SetChasePath();
+                if (!battleAI.PlayerInAttackRange())
+                {
+                    // Disengaging from combat
+                    battleAI.DisEngageAttackAI();
+                    SetChasePath();
 
-                // Setting State
-                state = EnemyAIState.Chasing;
-                anim.SetBool("Walking", true);
-                return;
+                    // Setting State
+                    state = EnemyAIState.Chasing;
+                    anim.SetBool("Walking", true);
+                    return;
+                }
             }
         }
     }
+
+    public void EngageFight() { fightingEngaged = true; }
 }

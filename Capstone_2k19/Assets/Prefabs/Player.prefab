@@ -4968,6 +4968,7 @@ GameObject:
   - component: {fileID: 5575628547597658801}
   - component: {fileID: 3978701779429856097}
   - component: {fileID: 3434139076101667093}
+  - component: {fileID: 8872101827316162879}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -5295,6 +5296,20 @@ MonoBehaviour:
   bossTrigger: 
   spawnerTrigger: 
   lightTrigger: Torch
+--- !u!114 &8872101827316162879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744788882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04160adf8144c2942a48cbf50abe4776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  manaBar: {fileID: 0}
 --- !u!1 &4598135064118437109
 GameObject:
   m_ObjectHideFlags: 0

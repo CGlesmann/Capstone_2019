@@ -25,5 +25,7 @@ public class PlayerTriggerManager : MonoBehaviour
 
         // Check for a light
         if (obj.CompareTag(lightTrigger)) { obj.GetComponent<LightTrigger>().DeactivateLight(); }
+        if (obj.CompareTag(spawnerTrigger)) { obj.GetComponent<EnemySpawner>().StartSpawnEnemies(); }
+        if (obj.CompareTag(bossTrigger)) { BossMovement.boss.EngageFight(); }
     }
 }

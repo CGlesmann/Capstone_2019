@@ -15,16 +15,47 @@ public class EnemySpawner : MonoBehaviour
     [Header("Enemy Settings")]
     [SerializeField] private GameObject[] enemiesToSpawn = null;
 
-    public void StartSpawnEnemies() { StartCoroutine("SpawnEnemies"); }
+    private GameObject[] spawnedEnemies = null;
+    private bool enemiesSpawned = false;
+
+    /// <summary>
+    /// Set Initial Variables
+    /// </summary>
+    private void Start() { enemiesSpawned = false; }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            StartSpawnEnemies();
+        // Check for Area Completion
+        if (enemiesSpawned)
+        {
+            // Check each reference to make sure the enemy is dead
+            foreach (GameObject enemy in spawnedEnemies)
+                if (enemy != null)
+                    return;
+
+            // All enemies are dead, area complete
+            areaComplete = true;
+        }
     }
 
+    /// <summary>
+    /// Begin Enemy spawn loop
+    /// </summary>
+    public void StartSpawnEnemies() {
+        if (!areaComplete && !enemiesSpawned)
+            StartCoroutine("SpawnEnemies");
+    }
+
+    /// <summary>
+    /// Spawning Loop
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator SpawnEnemies()
     {
+        // Initialize the spawnedEnemies array
+        int counter = 0;
+        spawnedEnemies = new GameObject[enemiesToSpawn.Length];
+
         foreach (GameObject enemy in enemiesToSpawn)
         {
             // Get the point the spawn the enemy
@@ -34,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
 
             // Instantiate the clone of an enemy
             GameObject newEnemy = Instantiate(enemy, point, Quaternion.Euler(Vector3.zero));
-            //newEnemy.transform.position = point;
+            spawnedEnemies[counter++] = newEnemy;
 
             // Setting the State of the Enemy
             newEnemy.GetComponent<EnemyMovement>().SetChaseState();
@@ -42,6 +73,9 @@ public class EnemySpawner : MonoBehaviour
             // Add an artifical delay
             yield return new WaitForSeconds(0.1f);
         }
+
+        // Set spawned to True
+        enemiesSpawned = true;
     }
 
     // Draw the spawn area
