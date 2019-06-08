@@ -1382,9 +1382,9 @@ GameObject:
   - component: {fileID: 845436352}
   - component: {fileID: 845436353}
   - component: {fileID: 845436354}
-  - component: {fileID: 845436357}
+  - component: {fileID: 2744062563584320110}
   m_Layer: 0
-  m_Name: Dwarf_Rat_Model
+  m_Name: CorruptedDwarf_v2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   sightOffset: {x: 10, y: 0, z: 25}
   sightRange: {x: 15, y: 6, z: 45}
   chaseSpeed: 12.5
---- !u!195 &845436357
+--- !u!195 &2744062563584320110
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
