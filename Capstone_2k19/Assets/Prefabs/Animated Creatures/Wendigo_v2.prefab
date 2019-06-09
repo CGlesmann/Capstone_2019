@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c9f12fa5f8caa4a805822984262579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadPrefab: {fileID: 0}
+  meleeAttacked: 0
   health: 100
   maxHealth: 100
   mana: 100
@@ -323,7 +325,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 210e410b5e30ab648b5bab4a4f3c6fa7, type: 3}
+  - {fileID: 2100000, guid: cc7d19d0a190c994fa0d4e60f3b2670c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
