@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9638480584839cd4a88736ae5175ae9e
+guid: 3dea07fe5ca4eed419a45fdd148e7e96
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -147,15 +147,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.69876546
-        functionName: SignalFireBall
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: d05c76828ab9bce429e8472750effe43,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

@@ -754,6 +754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c9f12fa5f8caa4a805822984262579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadPrefab: {fileID: 0}
+  meleeAttacked: 0
   health: 100
   maxHealth: 100
   mana: 100
@@ -920,7 +922,7 @@ MonoBehaviour:
   sightOffset: {x: 0, y: 0, z: 0}
   sightRange: {x: 0, y: 0, z: 0}
   chaseSpeed: 7.5
-  fightingEngaged: 1
+  fightingEngaged: 0
 --- !u!136 &8172173716300399832
 CapsuleCollider:
   m_ObjectHideFlags: 0

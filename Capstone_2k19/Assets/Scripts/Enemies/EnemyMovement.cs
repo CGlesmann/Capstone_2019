@@ -154,6 +154,8 @@ public class EnemyMovement : MonoBehaviour
 
         agent.destination = new Vector3(player.position.x, transform.position.y, player.position.z);
         agent.speed = chaseSpeed;
+
+        anim.SetBool("Walking", true);
     }
 
     #region Patrol AI Functions

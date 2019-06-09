@@ -1,73 +1,25 @@
 fileFormatVersion: 2
-guid: 9638480584839cd4a88736ae5175ae9e
+guid: 425b938dbe2ddeb48a6e42ca799af2ea
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: joint27
-    100002: joint28
-    100004: joint29
-    100006: joint30
-    100008: joint31
-    100010: joint32
-    100012: joint33
-    100014: joint34
-    100016: joint35
-    100018: joint36
-    100020: joint37
-    100022: joint38
-    100024: joint39
-    100026: joint40
-    100028: joint41
-    100030: joint42
-    100032: joint43
-    100034: joint44
-    100036: joint45
-    100038: joint46
-    100040: joint47
-    100042: joint48
-    100044: joint49
-    100046: joint50
-    100048: joint51
-    100050: joint52
-    100052: joint53
-    100054: //RootNode
-    100056: Mesh_Player_Hand_Left
-    400000: joint27
-    400002: joint28
-    400004: joint29
-    400006: joint30
-    400008: joint31
-    400010: joint32
-    400012: joint33
-    400014: joint34
-    400016: joint35
-    400018: joint36
-    400020: joint37
-    400022: joint38
-    400024: joint39
-    400026: joint40
-    400028: joint41
-    400030: joint42
-    400032: joint43
-    400034: joint44
-    400036: joint45
-    400038: joint46
-    400040: joint47
-    400042: joint48
-    400044: joint49
-    400046: joint50
-    400048: joint51
-    400050: joint52
-    400052: joint53
-    400054: //RootNode
-    400056: Mesh_Player_Hand_Left
-    2100000: lambert3
-    4300000: Mesh_Player_Hand_Left
-    7400000: Left_Handle_Idle
+    100000: joint54
+    100002: joint55
+    100004: joint56
+    100006: Mesh_Player_Hand_Right4
+    100008: //RootNode
+    400000: joint54
+    400002: joint55
+    400004: joint56
+    400006: Mesh_Player_Hand_Right4
+    400008: //RootNode
+    2100000: lambert2
+    4300000: Mesh_Player_Hand_Right4
+    7400000: Idle_Right
     7400002: Fireball_Shot
-    7400004: Fireball_Charging
+    7400004: Staff_Hit
     9500000: //RootNode
-    13700000: Mesh_Player_Hand_Left
+    13700000: Mesh_Player_Hand_Right4
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -97,7 +49,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Left_Handle_Idle
+      name: Idle_Right
       takeName: Take 001
       firstFrame: 1
       lastFrame: 24
@@ -128,7 +80,7 @@ ModelImporter:
       name: Fireball_Shot
       takeName: Take 001
       firstFrame: 25
-      lastFrame: 72
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -147,31 +99,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.69876546
-        functionName: SignalFireBall
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: d05c76828ab9bce429e8472750effe43,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Fireball_Charging
+      name: Staff_Hit
       takeName: Take 001
-      firstFrame: 36
-      lastFrame: 37
+      firstFrame: 61
+      lastFrame: 96
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

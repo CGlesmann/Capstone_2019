@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Spawner
   - Torch
+  - Boss
   layers:
   - Default
   - TransparentFX
