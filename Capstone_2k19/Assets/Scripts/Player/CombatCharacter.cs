@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class CombatCharacter : MonoBehaviour
 {
-    
+    public Rigidbody deadPrefab;
+    public bool meleeAttacked = false;
 
     [Header("Combat Stats")]
     [SerializeField] private float health = 100f;
@@ -19,8 +20,8 @@ public class CombatCharacter : MonoBehaviour
 
     [Header("Death Variables")]
     [SerializeField] private UnityEvent onDeath = null;
-    public bool meleeAttacked = false;
-    public Rigidbody deadPrefab;
+    
+    
     /// <summary>
     /// Checks for death
     /// Invokes onDeath event when the combat dies
@@ -32,6 +33,10 @@ public class CombatCharacter : MonoBehaviour
             onDeath.Invoke();
         }
     }
+
+    // Getter Methods
+    public float GetHealthPercent() { return (health / maxHealth); }
+    public float GetManaPercent() { return (mana / maxMana); }
 
     public void SetDamageReduction(float dr) { damageReduction = Mathf.Clamp(dr, 0f, 1f); } 
 
@@ -83,7 +88,7 @@ public class CombatCharacter : MonoBehaviour
             else if(meleeAttacked == false)
             {
                 Debug.Log("died from fireball");
-                //Rigidbody deadEnemy = Instantiate(deadPrefab, transform.position, transform.rotation) as Rigidbody;
+                Rigidbody deadEnemy = Instantiate(deadPrefab, transform.position, transform.rotation) as Rigidbody;
             }
         }
         GameObject.Destroy(gameObject);
