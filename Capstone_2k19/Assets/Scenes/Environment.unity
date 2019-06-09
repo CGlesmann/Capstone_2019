@@ -1019,6 +1019,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorruptedDwarf_v2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4498424067099056723, guid: 9ab97e38cce58a04c8fb523c071c6217,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4498424067099346547, guid: 9ab97e38cce58a04c8fb523c071c6217,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1722,7 +1727,7 @@ Transform:
   m_Children:
   - {fileID: 1211119520}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &170076736
 MonoBehaviour:
@@ -1976,6 +1981,7 @@ Transform:
   - {fileID: 45872382}
   - {fileID: 541121467}
   - {fileID: 910702141}
+  - {fileID: 1914944988}
   m_Father: {fileID: 729071343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2274,6 +2280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CorruptedDwarf_v2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498424067099056723, guid: 9ab97e38cce58a04c8fb523c071c6217,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4498424067099346547, guid: 9ab97e38cce58a04c8fb523c071c6217,
         type: 3}
@@ -3001,6 +3012,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorruptedDwarf_v2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4498424067099056723, guid: 9ab97e38cce58a04c8fb523c071c6217,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4498424067099346547, guid: 9ab97e38cce58a04c8fb523c071c6217,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3093,6 +3109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wendigo_v2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 792012412181773700, guid: e3c5256071334cc4bbcd9bac499b8aff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 792012412181864932, guid: e3c5256071334cc4bbcd9bac499b8aff,
         type: 3}
@@ -3383,7 +3404,7 @@ Transform:
   m_Children:
   - {fileID: 1913684628}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -3.5070002, y: 68.594, z: 0.97200006}
 --- !u!23 &395284621
 MeshRenderer:
@@ -6379,6 +6400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wendigo_v2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 792012412181773700, guid: e3c5256071334cc4bbcd9bac499b8aff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 792012412181864932, guid: e3c5256071334cc4bbcd9bac499b8aff,
         type: 3}
@@ -9429,7 +9455,7 @@ Transform:
   - {fileID: 286902298}
   - {fileID: 694235463}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &731900127
 GameObject:
@@ -10738,6 +10764,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wendigo_v2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 792012412181773700, guid: e3c5256071334cc4bbcd9bac499b8aff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 792012412181864932, guid: e3c5256071334cc4bbcd9bac499b8aff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11261,7 +11292,7 @@ Transform:
   - {fileID: 837370608}
   - {fileID: 458576025}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1010783783
 MonoBehaviour:
@@ -12556,7 +12587,7 @@ Transform:
   m_LocalScale: {x: 1949.4613, y: 64.933784, z: 5287.096}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1169968453
 GameObject:
@@ -14442,7 +14473,7 @@ RectTransform:
   - {fileID: 1516623605}
   - {fileID: 1112946102}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17682,6 +17713,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorruptedDwarf_v2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4498424067099056723, guid: 9ab97e38cce58a04c8fb523c071c6217,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4498424067099346547, guid: 9ab97e38cce58a04c8fb523c071c6217,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19542,7 +19578,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1818149418
 PrefabInstance:
@@ -21813,7 +21849,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 174374825}
     m_Modifications:
     - target: {fileID: 9189658765507756583, guid: 9a7ffc426fc67bc46ad552db8c01aa88,
         type: 3}
@@ -21858,7 +21894,7 @@ PrefabInstance:
     - target: {fileID: 9189658765507599879, guid: 9a7ffc426fc67bc46ad552db8c01aa88,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9189658765507599879, guid: 9a7ffc426fc67bc46ad552db8c01aa88,
         type: 3}
@@ -21878,7 +21914,7 @@ PrefabInstance:
     - target: {fileID: 9189658765507599879, guid: 9a7ffc426fc67bc46ad552db8c01aa88,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 46.308243
+      value: 46.30825
       objectReference: {fileID: 0}
     - target: {fileID: 9189658765507599879, guid: 9a7ffc426fc67bc46ad552db8c01aa88,
         type: 3}
@@ -21888,10 +21924,16 @@ PrefabInstance:
     - target: {fileID: 9189658765507599879, guid: 9a7ffc426fc67bc46ad552db8c01aa88,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 38.898144
+      value: 38.89816
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a7ffc426fc67bc46ad552db8c01aa88, type: 3}
+--- !u!4 &1914944988 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9189658765507599879, guid: 9a7ffc426fc67bc46ad552db8c01aa88,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914944987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937751491
 GameObject:
   m_ObjectHideFlags: 0
@@ -22339,7 +22381,7 @@ Transform:
   m_Children:
   - {fileID: 309524888}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -3.2020001, y: -8.0460005, z: -1.7310001}
 --- !u!23 &1985193312
 MeshRenderer:
