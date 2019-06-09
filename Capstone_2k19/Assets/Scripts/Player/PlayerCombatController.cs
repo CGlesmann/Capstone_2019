@@ -10,7 +10,8 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField] private Animator leftArmAnim;
     [SerializeField] private Animator rightArmAnim;
     
-    [SerializeField] private float magicBuildUp = 0;   
+    [SerializeField] private float magicBuildUp = 0;
+    private bool animating = false;
     private float maxMana = 100;
     private float mana = 100;
     private float fireBallSpeed = 600;
@@ -32,6 +33,8 @@ public class PlayerCombatController : MonoBehaviour
         } else if (mana > 1) {
             RangedAttackSmall();
         }
+
+        animating = false;
     }
 
     public void RangedAttackSmall()
@@ -122,13 +125,17 @@ public class PlayerCombatController : MonoBehaviour
             if (coolDownTimer == 0)
             {
                 //builds up magic counter
-                if (Input.GetButton("Fire1") && magicBuildUp < mana) { leftArmAnim.SetBool("Charging", true); magicBuildUp += .25f; }
+                if (Input.GetButton("Fire1") && magicBuildUp < mana) {
+                    leftArmAnim.SetBool("Charging", true);
+                    magicBuildUp += .25f;
+                }
 
                 if (Input.GetButtonUp("Fire1"))
                 {
                     leftArmAnim.SetBool("Charging", false);
                     leftArmAnim.SetTrigger("Fireball");
                     rightArmAnim.SetTrigger("Fireball");
+                    animating = false;
                 }
                 /*
                 //checks if magic counter is greater than 10 if so triggers big FireBall
