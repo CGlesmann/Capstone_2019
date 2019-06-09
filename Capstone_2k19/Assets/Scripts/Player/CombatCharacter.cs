@@ -34,6 +34,10 @@ public class CombatCharacter : MonoBehaviour
         }
     }
 
+    // Getter Methods
+    public float GetHealthPercent() { return (health / maxHealth); }
+    public float GetManaPercent() { return (mana / maxMana); }
+
     public void SetDamageReduction(float dr) { damageReduction = Mathf.Clamp(dr, 0f, 1f); } 
 
     // Drain Methods
