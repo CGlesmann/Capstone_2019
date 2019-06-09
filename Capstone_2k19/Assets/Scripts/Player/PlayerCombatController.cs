@@ -7,6 +7,8 @@ public class PlayerCombatController : MonoBehaviour
     public static PlayerCombatController controller = null;
     public Rigidbody fireBallPrefab;
     public Transform magicHand;
+    [SerializeField] private Animator leftArmAnim;
+    [SerializeField] private Animator rightArmAnim;
     
     [SerializeField] private float magicBuildUp = 0;   
     private float maxMana = 100;
@@ -21,6 +23,16 @@ public class PlayerCombatController : MonoBehaviour
     private bool blocking = false;
     public bool attacking = false;
     public bool collecting = false;
+
+    public void ShootFireBall()
+    {
+        //checks if magic counter is greater than 10 if so triggers big FireBall
+        if (magicBuildUp >= 10) {
+            RangedAttackBig();
+        } else if (mana > 1) {
+            RangedAttackSmall();
+        }
+    }
 
     public void RangedAttackSmall()
     {
@@ -110,13 +122,21 @@ public class PlayerCombatController : MonoBehaviour
             if (coolDownTimer == 0)
             {
                 //builds up magic counter
-                if (Input.GetButton("Fire1") && magicBuildUp < mana) { magicBuildUp += .25f; }
+                if (Input.GetButton("Fire1") && magicBuildUp < mana) { leftArmAnim.SetBool("Charging", true); magicBuildUp += .25f; }
 
+                if (Input.GetButtonUp("Fire1"))
+                {
+                    leftArmAnim.SetBool("Charging", false);
+                    leftArmAnim.SetTrigger("Fireball");
+                    rightArmAnim.SetTrigger("Fireball");
+                }
+                /*
                 //checks if magic counter is greater than 10 if so triggers big FireBall
                 if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10) { RangedAttackBig(); }
 
                 //if magic counter is less than 10 makes small FireBall            
                 else if (Input.GetButtonUp("Fire1") && mana > 1) { RangedAttackSmall(); }
+                */
             }
             else //this is subtracking from cool down timer         
             { coolDownTimer -= 1; }
@@ -140,7 +160,8 @@ public class PlayerCombatController : MonoBehaviour
             {
                 if (blocking == false)
                 {
-                    MeleeAttack();
+                    //MeleeAttack();
+                    rightArmAnim.SetTrigger("Staff");
                     blockTimer = 0;
                 }
                 //if you are finished blocking than triggers code to allow to to attack again
