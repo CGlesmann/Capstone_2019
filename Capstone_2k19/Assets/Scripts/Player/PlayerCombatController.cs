@@ -23,6 +23,7 @@ public class PlayerCombatController : MonoBehaviour
     private float bigFireBall = 1.5f;
     private bool blocking = false;
     public bool attacking = false;
+    public bool shooting = false;
     public bool collecting = false;
 
     public void ShootFireBall()
@@ -34,7 +35,7 @@ public class PlayerCombatController : MonoBehaviour
             RangedAttackSmall();
         }
 
-        animating = false;
+        shooting = false;
     }
 
     public void RangedAttackSmall()
@@ -124,18 +125,22 @@ public class PlayerCombatController : MonoBehaviour
             //FireBall Scripting
             if (coolDownTimer == 0)
             {
-                //builds up magic counter
-                if (Input.GetButton("Fire1") && magicBuildUp < mana) {
-                    leftArmAnim.SetBool("Charging", true);
-                    magicBuildUp += .25f;
-                }
-
-                if (Input.GetButtonUp("Fire1"))
+                if (!attacking && !shooting)
                 {
-                    leftArmAnim.SetBool("Charging", false);
-                    leftArmAnim.SetTrigger("Fireball");
-                    rightArmAnim.SetTrigger("Fireball");
-                    animating = false;
+                    //builds up magic counter
+                    if (Input.GetButtonDown("Fire1") && magicBuildUp < mana)
+                    {
+                        leftArmAnim.SetBool("Charging", true);
+                        magicBuildUp += .25f;
+                    }
+
+                    if (Input.GetButtonUp("Fire1") && magicBuildUp > 0f)
+                    {
+                        leftArmAnim.SetBool("Charging", false);
+                        leftArmAnim.SetTrigger("Fireball");
+                        rightArmAnim.SetTrigger("Fireball");
+                        shooting = true;
+                    }
                 }
                 /*
                 //checks if magic counter is greater than 10 if so triggers big FireBall

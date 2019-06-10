@@ -163,8 +163,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Fireball_Charging
       takeName: Take 001
-      firstFrame: 41
-      lastFrame: 61
+      firstFrame: 36
+      lastFrame: 37
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
