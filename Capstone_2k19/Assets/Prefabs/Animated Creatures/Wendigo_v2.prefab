@@ -183,7 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c9f12fa5f8caa4a805822984262579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadPrefab: {fileID: 0}
+  deadPrefab: {fileID: 6036269935928594101, guid: 55c0c77c61367754eb1abc34c763636a,
+    type: 3}
   meleeAttacked: 0
   health: 100
   maxHealth: 100
