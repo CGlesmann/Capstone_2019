@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public float timeMult = 1f;
     [SerializeField] private bool timeSlowed = false;
 
+    [Header("Navigation Settings")]
+    [SerializeField] private string mainMenu = "";
+
     private float timeLost = 0f;
 
     private void Awake()
@@ -61,5 +64,6 @@ public class GameManager : MonoBehaviour
     /// Restarts the Game
     /// </summary>
     public void RestartGame() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+    public void ReturnToMainMenu() { SceneManager.LoadScene(mainMenu); }
 
 }

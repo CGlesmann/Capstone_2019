@@ -16,17 +16,11 @@ public class PauseManager : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        if (manager == null)
-        {
-            manager = this;
-            GameObject.DontDestroyOnLoad(gameObject);
-        }
-        else
-            GameObject.Destroy(gameObject);
+        manager = this;
 
         // Setting the Cursor Lock
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     /// <summary>
