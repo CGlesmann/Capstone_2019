@@ -237,8 +237,9 @@ MonoBehaviour:
   sightRange: {x: 0, y: 0, z: 0}
   chaseSpeed: 7.5
   jumpCooldown: 3
-  jumpRange: 1
-  jumpForce: 3
+  jumpRange: 15
+  jumpLength: 15
+  jumpForce: 5
   jumpAcceptanceRange: 1
   jumping: 0
 --- !u!114 &1481407921695899061

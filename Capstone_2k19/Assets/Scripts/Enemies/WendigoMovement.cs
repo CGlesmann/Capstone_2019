@@ -10,6 +10,7 @@ public class WendigoMovement : EnemyMovement
 
     [Header("Jump Collision Variables")]
     [SerializeField] private float jumpRange = 1f;
+    [SerializeField] private float jumpLength = 15f;
 
     [Header("Jump Attack Variables")]
     [SerializeField] private float jumpForce = 3f;
@@ -34,6 +35,7 @@ public class WendigoMovement : EnemyMovement
                 jumping = false;
                 jumpTimer = jumpCooldown;
                 agent.isStopped = false;
+                anim.SetBool("Dashing", false);
 
                 // Set the Chase Path
                 SetChasePath();
@@ -81,7 +83,7 @@ public class WendigoMovement : EnemyMovement
 
                         return;
                     }
-                } else if (jumpTimer <= 0f && Physics.Raycast(new Vector3(transform.position.x, player.position.y, transform.position.z), transform.forward, 15f, playerLayer)) {
+                } else if (jumpTimer <= 0f && Physics.Raycast(new Vector3(transform.position.x, player.position.y, transform.position.z), transform.forward, jumpLength, playerLayer)) {
                     BeginJump();
                 }
             }
@@ -116,5 +118,11 @@ public class WendigoMovement : EnemyMovement
         // Set the state to jumping
         jumping = true;
         anim.SetBool("Dashing", true);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawRay(transform.position, transform.forward * jumpLength);
     }
 }

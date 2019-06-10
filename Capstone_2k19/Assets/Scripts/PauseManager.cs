@@ -32,16 +32,16 @@ public class PauseManager : MonoBehaviour
         {
             if (!isPaused)
                 PauseGame();
-            else
-                UnPauseGame();
         }
     }
 
+    public void DisplayPauseMenu() { pauseMenu.SetActive(true); }
+    public void HidePauseMenu() { pauseMenu.SetActive(false); }
     /// <summary>
     /// Pause Toggles
     /// </summary>
-    public void PauseGame() { pauseMenu.SetActive(true); isPaused = true; Cursor.lockState = CursorLockMode.None; Cursor.visible = true; }
-    public void UnPauseGame() { pauseMenu.SetActive(false); isPaused = false; Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
+    public void PauseGame() { DisplayPauseMenu(); isPaused = true; Cursor.lockState = CursorLockMode.None; Cursor.visible = true; }
+    public void UnPauseGame() { HidePauseMenu(); isPaused = false; Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false; }
 
     public void ExitGame() { Debug.Log("Quitting"); Application.Quit(); }
 }
