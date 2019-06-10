@@ -3113,11 +3113,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wendigo_v2 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 792012412181773700, guid: e3c5256071334cc4bbcd9bac499b8aff,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 792012412181864932, guid: e3c5256071334cc4bbcd9bac499b8aff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3172,11 +3167,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3670421495873683573, guid: e3c5256071334cc4bbcd9bac499b8aff,
-        type: 3}
-      propertyPath: wayPoints.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3670421495873683573, guid: e3c5256071334cc4bbcd9bac499b8aff,
         type: 3}
