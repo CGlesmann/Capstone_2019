@@ -6,6 +6,7 @@ public class PlayerCombatController : MonoBehaviour
 {
     public static PlayerCombatController controller = null;
     public Rigidbody fireBallPrefab;
+    public Rigidbody fireBallBigPrefab;
     public Transform magicHand;
     [SerializeField] private Animator leftArmAnim;
     [SerializeField] private Animator rightArmAnim;
@@ -57,7 +58,7 @@ public class PlayerCombatController : MonoBehaviour
         //this is code for creating a FireBall with speed direction, size, and resets the timers
         //this big FireBall enables gravity and subtracts the mana you built up from the mana you have
         Rigidbody fireBallInstance;
-        fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
+        fireBallInstance = Instantiate(fireBallBigPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(bigFireBall, bigFireBall, bigFireBall);
         fireBallInstance.GetComponent<FireBall>().manaCharge(magicBuildUp);
