@@ -5376,7 +5376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf5825dac92cf54ca5fe42a4a5deb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireBallPrefab: {fileID: 8908094258037918525, guid: 45ebc1196ba95e840a1afc8050579135,
+  smallFireBallPrefab: {fileID: 8908094258037918525, guid: 45ebc1196ba95e840a1afc8050579135,
+    type: 3}
+  bigFireBallPrefab: {fileID: 7745407008192177951, guid: 91ebeb9f207117c4b8fe375e7613c074,
     type: 3}
   magicHand: {fileID: 7895344113242298415}
   leftArmAnim: {fileID: 3177093097574151053}

@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerCombatController : MonoBehaviour
 {
     public static PlayerCombatController controller = null;
-    public Rigidbody fireBallPrefab;
+    public Rigidbody smallFireBallPrefab;
+    public Rigidbody bigFireBallPrefab;
     public Transform magicHand;
     [SerializeField] private Animator leftArmAnim;
     [SerializeField] private Animator rightArmAnim;
@@ -43,7 +44,7 @@ public class PlayerCombatController : MonoBehaviour
         //this is code for creating a FireBall with speed direction, size, and resets the timers
         //this small FireBall disables gravity and subtracts a small amount of mana from the mana you have
         Rigidbody fireBallInstance;
-        fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
+        fireBallInstance = Instantiate(smallFireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(smallFireBall, smallFireBall, smallFireBall);
         gameObject.GetComponent<CombatCharacter>().DrainMana(5);
@@ -57,7 +58,7 @@ public class PlayerCombatController : MonoBehaviour
         //this is code for creating a FireBall with speed direction, size, and resets the timers
         //this big FireBall enables gravity and subtracts the mana you built up from the mana you have
         Rigidbody fireBallInstance;
-        fireBallInstance = Instantiate(fireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
+        fireBallInstance = Instantiate(bigFireBallPrefab, magicHand.position, magicHand.rotation) as Rigidbody;
         fireBallInstance.AddForce(magicHand.forward * fireBallSpeed);
         fireBallInstance.transform.localScale = new Vector3(bigFireBall, bigFireBall, bigFireBall);
         fireBallInstance.GetComponent<FireBall>().manaCharge(magicBuildUp);
@@ -136,6 +137,9 @@ public class PlayerCombatController : MonoBehaviour
                         shooting = true;
                     }
                 }
+
+                if (Input.GetButton("Fire1"))
+                    magicBuildUp = Mathf.Clamp(magicBuildUp + 0.25f, 0, mana);
                 /*
                 //checks if magic counter is greater than 10 if so triggers big FireBall
                 if (Input.GetButtonUp("Fire1") && magicBuildUp >= 10) { RangedAttackBig(); }
