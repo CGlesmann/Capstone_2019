@@ -109,13 +109,7 @@ public class PlayerCombatController : MonoBehaviour
 
     private void Awake()
     {
-        if (controller == null)
-        {
-            controller = this;
-            GameObject.DontDestroyOnLoad(gameObject);
-        }
-        else
-            GameObject.Destroy(gameObject);
+        controller = this;
     }
 
     void Update()
