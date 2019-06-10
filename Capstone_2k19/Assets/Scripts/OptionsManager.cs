@@ -15,6 +15,9 @@ public class OptionsManager : MonoBehaviour
     [SerializeField] private Slider musicSlider = null;
     [SerializeField] private Slider sfxSlider = null;
 
+    [Header("Navigation Settings")]
+    [SerializeField] private string tutorialScene = "";
+
     private void Awake()
     {
         // Music Volume
@@ -25,6 +28,8 @@ public class OptionsManager : MonoBehaviour
         sfxMixer.audioMixer.GetFloat("Volume", out float sVal);
         sfxSlider.value = sVal;
     }
+
+    public void NavigateToTutorial() { SceneManager.LoadScene(tutorialScene); }
 
     public void SetMusicVolume() { musicMixer.audioMixer.SetFloat("Volume", musicSlider.value); }
     public void SetSfxVolume() { sfxMixer.audioMixer.SetFloat("Volume", sfxSlider.value); }

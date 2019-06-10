@@ -499,7 +499,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1338.4, y: -273.55487}
-  m_SizeDelta: {x: 480, y: 90}
+  m_SizeDelta: {x: 133.7, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330345819
 MonoBehaviour:
@@ -537,7 +537,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 330345820}
+  m_TargetGraphic: {fileID: 434908114}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -658,8 +658,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4285098345
+  m_fontColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -882,8 +882,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4285098345
+  m_fontColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2262,6 +2262,7 @@ MonoBehaviour:
   sfxMixer: {fileID: 24300002, guid: cf49c813f4323b34cbb699fa14a51e4f, type: 2}
   musicSlider: {fileID: 842070037}
   sfxSlider: {fileID: 638939435}
+  tutorialScene: TutorialScreen
 --- !u!4 &1153406270
 Transform:
   m_ObjectHideFlags: 0
@@ -2528,7 +2529,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299099492}
   m_LocalRotation: {x: 0.72910404, y: 0.089140035, z: 0.08234895, w: 0.6735578}
-  m_LocalPosition: {x: 0, y: 0, z: 93.09996}
+  m_LocalPosition: {x: 0, y: 0, z: 94.3}
   m_LocalScale: {x: 0.25307295, y: 0.25307295, z: 0.25307295}
   m_Children:
   - {fileID: 1385915455}
@@ -2537,8 +2538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 104.645996, y: -71.774994, z: -72.32999}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1319.4968, y: -273.75488}
-  m_SizeDelta: {x: 480, y: 90}
+  m_AnchoredPosition: {x: 1316.7, y: -273.75488}
+  m_SizeDelta: {x: 210.3, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299099494
 MonoBehaviour:
@@ -2576,13 +2577,13 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1299099495}
+  m_TargetGraphic: {fileID: 1385915456}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1153406269}
-        m_MethodName: ExitOptions
-        m_Mode: 5
+        m_MethodName: NavigateToTutorial
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2607,7 +2608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2806,7 +2807,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385915454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1299099493}
@@ -2847,8 +2848,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4285098345
+  m_fontColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2884,7 +2885,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3139,7 +3140,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1299.7, y: -273.75488}
-  m_SizeDelta: {x: 480, y: 90}
+  m_SizeDelta: {x: 137.3, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1515021773
 MonoBehaviour:
@@ -3208,7 +3209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
