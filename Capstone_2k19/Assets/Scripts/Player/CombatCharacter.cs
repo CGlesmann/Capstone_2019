@@ -10,6 +10,7 @@ public class CombatCharacter : MonoBehaviour
     public bool meleeAttacked = false;
 
     [Header("Combat Stats")]
+    [SerializeField] private bool canDamage = true;
     [SerializeField] private float health = 100f;
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private float mana = 100f;
@@ -28,20 +29,25 @@ public class CombatCharacter : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (health <= 0f)
+        if (health <= 0f && canDamage)
         {
             onDeath.Invoke();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+            if (CompareTag("Player"))
+                canDamage = !canDamage;
     }
 
     // Getter Methods
+    public void SetInvurnable(bool canHurt) { canDamage = canHurt; } 
     public float GetHealthPercent() { return (health / maxHealth); }
     public float GetManaPercent() { return (mana / maxMana); }
 
     public void SetDamageReduction(float dr) { damageReduction = Mathf.Clamp(dr, 0f, 1f); } 
 
     // Drain Methods
-    public void TakeDamage(float dmg) { health = Mathf.Clamp(health - (dmg * damageReduction), 0f, maxHealth); }
+    public void TakeDamage(float dmg) { if (canDamage) health = Mathf.Clamp(health - (dmg * damageReduction), 0f, maxHealth); }
     public void DrainMana(float drain) { mana = Mathf.Clamp(mana - drain, 0f, maxMana); }
 
     // Restore Methods

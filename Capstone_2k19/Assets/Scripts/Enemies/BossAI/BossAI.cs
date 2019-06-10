@@ -21,6 +21,12 @@ public class BossAI : MeleeAI
         Debug.Log("Beginning Spawning");
         for(int i = 0; i < numOfShots; i++)
         {
+            if (PauseManager.manager.isPaused)
+            {
+                i--;
+                yield return null;
+            }
+
             // Spawn the new hazard
             Vector3 spawnPoint = new Vector3(target.transform.position.x, target.transform.position.y - (target.transform.localScale.y * 2f), target.transform.position.z);
             GameObject newHazard = Instantiate(environmentAttackPrefab);
@@ -30,12 +36,12 @@ public class BossAI : MeleeAI
             yield return new WaitForSeconds(spawnDelay);
         }
         attackInProgress = false;
+        anim.SetBool("Spawning", false);
     }
 
     public void TongueAttack()
     {
         Debug.Log("Tongue Attack");
-        TongueStrike();
         anim.SetTrigger("ClawSwipe");
     }
 

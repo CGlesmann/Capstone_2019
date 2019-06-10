@@ -5399,6 +5399,7 @@ MonoBehaviour:
   bossTrigger: Boss
   spawnerTrigger: Spawner
   lightTrigger: Torch
+  hazardTrigger: Hazard
 --- !u!114 &5065960959806333364
 MonoBehaviour:
   m_ObjectHideFlags: 0

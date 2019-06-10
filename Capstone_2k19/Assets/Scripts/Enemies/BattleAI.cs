@@ -32,29 +32,32 @@ public class BattleAI : MonoBehaviour
     /// </summary>
     protected virtual void Update()
     {
-        if (attackAIEngaged)
+        if (!PauseManager.manager.isPaused)
         {
-            if (!attackInProgress && PlayerInAttackRange())
+            if (attackAIEngaged)
             {
-                // Check if enemy is ready for the next attack
-                if (currentCooldown <= 0f)
+                if (!attackInProgress && PlayerInAttackRange())
                 {
-                    // Execute the next attack
-                    if (nextAttackID > attackPattern.Length - 1)
-                        nextAttackID = 0;
-
-                    attackInProgress = true;
-                    attackPattern[nextAttackID].attackEvent.Invoke();
-
-                    // Setting the Cooldown
-                    currentCooldown = attackPattern[nextAttackID].attackCooldown;
-                }
-                else
-                {
-                    currentCooldown -= Time.deltaTime;
+                    // Check if enemy is ready for the next attack
                     if (currentCooldown <= 0f)
-                        if (++nextAttackID >= attackPattern.Length)
+                    {
+                        // Execute the next attack
+                        if (nextAttackID > attackPattern.Length - 1)
                             nextAttackID = 0;
+
+                        attackInProgress = true;
+                        attackPattern[nextAttackID].attackEvent.Invoke();
+
+                        // Setting the Cooldown
+                        currentCooldown = attackPattern[nextAttackID].attackCooldown;
+                    }
+                    else
+                    {
+                        currentCooldown -= Time.deltaTime;
+                        if (currentCooldown <= 0f)
+                            if (++nextAttackID >= attackPattern.Length)
+                                nextAttackID = 0;
+                    }
                 }
             }
         }

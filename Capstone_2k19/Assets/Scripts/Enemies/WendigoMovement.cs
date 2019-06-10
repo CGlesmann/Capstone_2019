@@ -23,26 +23,30 @@ public class WendigoMovement : EnemyMovement
     /// </summary>
     protected virtual void Update()
     {
-        if (jumping) {
-            // Agent is no longer moving
-            if (agent.velocity == Vector3.zero)
+        if (!PauseManager.manager.isPaused)
+        {
+            if (jumping)
             {
-                // Checking for a hit
-                if (Vector3.Distance(transform.position, player.position) <= jumpAcceptanceRange)
-                    player.GetComponent<CombatCharacter>().TakeDamage(20f);
+                // Agent is no longer moving
+                if (agent.velocity == Vector3.zero)
+                {
+                    // Checking for a hit
+                    if (Vector3.Distance(transform.position, player.position) <= jumpAcceptanceRange)
+                        player.GetComponent<CombatCharacter>().TakeDamage(20f);
 
-                // Resetting the enemy state
-                jumping = false;
-                jumpTimer = jumpCooldown;
-                agent.isStopped = false;
-                anim.SetBool("Dashing", false);
+                    // Resetting the enemy state
+                    jumping = false;
+                    jumpTimer = jumpCooldown;
+                    agent.isStopped = false;
+                    anim.SetBool("Dashing", false);
 
-                // Set the Chase Path
-                SetChasePath();
+                    // Set the Chase Path
+                    SetChasePath();
+                }
             }
+            else if (jumpTimer > 0f)
+                jumpTimer -= Time.deltaTime;
         }
-        else if (jumpTimer > 0f)
-            jumpTimer -= Time.deltaTime;
     }
 
     protected override void StateMachine()

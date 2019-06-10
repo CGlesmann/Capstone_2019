@@ -22,21 +22,24 @@ public class WendigoAI : MeleeAI
 
     protected override void Update()
     {
-        // Call the base update method from BattleAI
-        base.Update();
-
-        // Check for jump landing
-        if (jumping && agent.velocity == Vector3.zero)
+        if (!PauseManager.manager.isPaused)
         {
-            // Damage the player if in range
-            if (Vector3.Distance(transform.position, target.transform.position) <= jumpAcceptanceRange)
-                target.TakeDamage(20f);
+            // Call the base update method from BattleAI
+            base.Update();
 
-            // Reset attack state vars
-            jumping = false;
-            attackInProgress = false;
+            // Check for jump landing
+            if (jumping && agent.velocity == Vector3.zero)
+            {
+                // Damage the player if in range
+                if (Vector3.Distance(transform.position, target.transform.position) <= jumpAcceptanceRange)
+                    target.TakeDamage(20f);
 
-            GetComponent<NavMeshAgent>().isStopped = false;
+                // Reset attack state vars
+                jumping = false;
+                attackInProgress = false;
+
+                GetComponent<NavMeshAgent>().isStopped = false;
+            }
         }
     }
 

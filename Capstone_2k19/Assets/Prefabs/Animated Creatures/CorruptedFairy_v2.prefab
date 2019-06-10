@@ -757,8 +757,9 @@ MonoBehaviour:
   deadPrefab: {fileID: 6036269935928594101, guid: 55c0c77c61367754eb1abc34c763636a,
     type: 3}
   meleeAttacked: 0
-  health: 100
-  maxHealth: 100
+  canDamage: 0
+  health: 600
+  maxHealth: 600
   mana: 100
   maxMana: 100
   damageReduction: 1

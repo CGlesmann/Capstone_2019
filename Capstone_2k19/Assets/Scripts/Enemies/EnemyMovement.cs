@@ -75,10 +75,14 @@ public class EnemyMovement : MonoBehaviour
     /// Checks for Point Change
     /// </summary>
     protected void FixedUpdate() {
-        StateMachine();
+        if (!PauseManager.manager.isPaused)
+        {
+            StateMachine();
 
-        if (Input.GetKeyDown(KeyCode.E)) {
-            Debug.Log(name + " is " + battleAI.DistanceToPlayer() + " away from player");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log(name + " is " + battleAI.DistanceToPlayer() + " away from player");
+            }
         }
     }
 

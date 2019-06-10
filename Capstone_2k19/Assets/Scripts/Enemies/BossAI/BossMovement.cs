@@ -85,5 +85,8 @@ public class BossMovement : EnemyMovement
         }
     }
 
-    public void EngageFight() { fightingEngaged = true; }
+    public void EngageFight() {
+        fightingEngaged = true;
+        GetComponent<CombatCharacter>().SetInvurnable(true);
+    }
 }
