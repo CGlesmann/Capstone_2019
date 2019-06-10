@@ -794,7 +794,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663564970}
   m_LocalRotation: {x: 0.000000059604638, y: 0.024337884, z: -0.00043966103, w: 0.9997037}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.5342097, y: 0.5342097, z: 0.5342097}
   m_Children: []
   m_Father: {fileID: 1439423957}
@@ -802,7 +802,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0.001, y: 2.789, z: -0.05}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.4, y: -72.8}
+  m_AnchoredPosition: {x: -32.2, y: -65.7}
   m_SizeDelta: {x: 540, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &663564972
@@ -1939,7 +1939,6 @@ GameObject:
   - component: {fileID: 1543634141}
   - component: {fileID: 1543634140}
   - component: {fileID: 1543634139}
-  - component: {fileID: 1543634138}
   m_Layer: 0
   m_Name: Page border
   m_TagString: Untagged
@@ -1947,20 +1946,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1543634138
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543634137}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1543634139
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2134,7 +2119,6 @@ GameObject:
   - component: {fileID: 1640272595}
   - component: {fileID: 1640272598}
   - component: {fileID: 1640272597}
-  - component: {fileID: 1640272596}
   m_Layer: 0
   m_Name: Page border (1)
   m_TagString: Untagged
@@ -2156,20 +2140,6 @@ Transform:
   m_Father: {fileID: 1274520716}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.11800001, y: -0.136, z: 6.695}
---- !u!64 &1640272596
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640272594}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1640272597
 MeshRenderer:
   m_ObjectHideFlags: 0
