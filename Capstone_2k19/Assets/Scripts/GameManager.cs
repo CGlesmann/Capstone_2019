@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Restarts the Game
     /// </summary>
-    public void RestartGame() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+    public void RestartGame() { SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); }
     public void ReturnToMainMenu() { SceneManager.LoadScene(mainMenu); }
 
 }
